@@ -28,16 +28,17 @@ export const Navigation: FC<ComponentType> = ({ className }) => {
 	return (
 		<div className={className}>
 			<ul className={styles.list}>
-				{Object.keys(SOCIAL).map((key) => {
-					const subItem = SOCIAL[key];
-					return (
-						<li key={key} className={styles.item}>
-							<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="large">
-								{key}
-							</NavLink>
-						</li>
-					);
-				})}
+				{/*{Object.keys(SOCIAL).map((key) => {*/}
+				{/*	const subItem = SOCIAL[key];*/}
+				{/*	return (*/}
+				{/*		<li key={key} className={styles.item}>*/}
+				{/*			<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="large">*/}
+				{/*				{key}*/}
+				{/*			</NavLink>*/}
+				{/*		</li>*/}
+				{/*	);*/}
+				{/*})}*/}
+				<button>Join Club</button>
 			</ul>
 		</div>
 	);

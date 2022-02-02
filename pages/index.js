@@ -4,7 +4,7 @@ import { Home } from "../src/pages/home";
 
 const Index = pageWithLayout(
 	() => <Home />,
-	() => <Layout title="Chain Swap" description="Crosschain asset, one click crosschain deployment." />
+	() => <Layout title="Bubble" description="" />
 );
 
 export default Index;

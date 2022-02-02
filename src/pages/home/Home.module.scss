@@ -37,11 +37,9 @@
 
 .footer {
   display: grid;
-  align-items: center;
-
   width: 100%;
 
-  background-color: rgba(var(--black), 1);
+  background-color: rgba(var(--white), 1);
 }
 
 .wrapper {
@@ -53,6 +51,8 @@
   margin: 0 auto;
 
   box-sizing: border-box;
+  background-image: url("./assets/img.png");
+  background-size: 100%;
 
   @include mixin.until(media.$sm) {
     justify-items: start;
@@ -60,13 +60,29 @@
 
   @include mixin.from(media.$md) {
     grid-auto-flow: column;
-    align-items: center;
     justify-content: space-between;
   }
 }
 
 .title {
   margin: 0;
+}
+
+.body1 {
+  width: 100%;
+  display: flex;
+}
+
+.img1 {
+  width: 16rem;
+  margin-top: 8rem;
+  height: fit-content;
+}
+
+.img2 {
+  width: 16rem;
+  margin-top: 2rem;
+  height: fit-content;
 }
 
 .text {
