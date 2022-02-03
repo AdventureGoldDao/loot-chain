@@ -13,18 +13,17 @@ export const useWindowSize = (): WindowSize => {
 
 	useEffect(() => {
 		if (window) {
-			const r = document.documentElement;
-			const a = r.getBoundingClientRect().width;
-			const rem = (a * 4) / 320;
-			console.log("rem", rem);
-			r.style.fontSize = rem + "px";
 			const onresize = () => setWindowSize(getWindowSize);
 			window.addEventListener("resize", onresize);
 			onresize();
 			return () => window.removeEventListener("resize", onresize);
 		}
+
 		return () => null;
 	}, []);
-	console.log("windowSize", windowSize);
+	const r = document.documentElement;
+	const a = r.getBoundingClientRect().width;
+	const rem = (a * 4) / 320;
+	r.style.fontSize = rem + "px";
 	return windowSize;
 };
