@@ -2,20 +2,8 @@
 @use "../../helper/style/media";
 
 .component {
-  display: grid;
   grid-template-rows: 55.5vw 1fr;
-
   height: calc(var(--window-height) - var(--header-height));
-
-  @include mixin.from(media.$sm) {
-    grid-template-rows: 1.5fr 1fr;
-
-    height: var(--window-height);
-  }
-
-  @include mixin.from(media.$md) {
-    grid-template-rows: 1fr auto;
-  }
 }
 
 .video {
@@ -35,33 +23,42 @@
   object-fit: cover;
 }
 
-.footer {
+.body {
   display: grid;
   width: 100%;
-
   background-color: rgba(var(--white), 1);
+}
+
+.footer {
+  background: linear-gradient(0deg, #8AECFF, #8AECFF);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.footer_title {
+  color: #161616;
+  margin-top: 9rem;
+  font-size: 2rem;
+}
+
+.footer_text {
+  color: #6F6F6F;
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 .wrapper {
   display: grid;
 
   width: 100%;
-  max-width: var(--max-width);
-  padding: 4.5rem var(--gutters);
+  padding: 0 0 6rem 0;
   margin: 0 auto;
 
   box-sizing: border-box;
   background-image: url("./assets/img.png");
-  background-size: 100%;
-
-  @include mixin.until(media.$sm) {
-    justify-items: start;
-  }
-
-  @include mixin.from(media.$md) {
-    grid-auto-flow: column;
-    justify-content: space-between;
-  }
+  background-size: 100% auto;
 }
 
 .title {
@@ -73,33 +70,116 @@
   display: flex;
 }
 
+.body2 {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+.bridge {
+  width: 19rem;
+  height: fit-content;
+  margin-top: 9rem;
+  margin-left: 12rem;
+}
+
+.dance {
+  width: 12rem;
+  height: fit-content;
+  margin-top: 10.2rem;
+  margin-left: -6.4rem;
+}
+
+.win {
+  width: 20.5rem;
+  height: fit-content;
+  margin-top: 2.2rem;
+  margin-left: 18.5rem;
+}
+
+.body3 {
+  width: 100%;
+  display: flex;
+}
+
+.body2_content {
+  color: #161616;
+  margin-left: -8rem;
+  margin-top: 19.5rem;
+}
+
+.body2_title {
+  font-size: 2rem;
+}
+
+.body2_text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: -0.5rem;
+}
+
+.body3_content {
+  color: #161616;
+  margin-left: 3rem;
+  margin-top: 12rem;
+}
+
+.body3_title {
+  font-size: 2rem;
+}
+
+.body3_text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 2.5rem;
+}
+
+.button {
+  background: #292929;
+  border-radius: 8px;
+  width: 8rem;
+  height: 2.8rem;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
 .img1 {
-  width: 16rem;
-  margin-top: 8rem;
+  width: 24rem;
+  margin-top: 18.2rem;
+  margin-left: 6.5rem;
   height: fit-content;
 }
 
 .img2 {
-  width: 16rem;
-  margin-top: 2rem;
+  width: 18.6rem;
+  margin-top: 6.8rem;
+  margin-left: 3.2rem;
+  height: fit-content;
+}
+
+.line {
+  width: 26rem;
+  margin-top: 4.8rem;
+  margin-left: 1rem;
+  height: fit-content;
+}
+
+.idea {
+  width: 34rem;
+  margin-top: 14.5rem;
+  margin-left: 2rem;
   height: fit-content;
 }
 
 .text {
-  margin: 0;
-  margin-top: 1.5rem;
-
-  @include mixin.until(media.$md) {
-    display: grid;
-  }
-
-  @include mixin.from(media.$sm) {
-    margin-top: 2.5rem;
-  }
-
-  @include mixin.from(media.$md) {
-    margin: 0;
-  }
+  margin-top: 11.4rem;
+  color: rgba(var(--black), 1);
+  text-align: center;
+  font-size: 2.1rem;
+  margin-left: -1.5rem;
+  line-height: 3rem;
 }
 
 .launch {

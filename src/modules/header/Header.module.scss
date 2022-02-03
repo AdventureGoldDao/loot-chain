@@ -30,10 +30,8 @@
   flex-direction: row;
   align-items: center;
 
-  max-width: var(--max-width);
   height: var(--header-height);
   padding: 0 var(--gutters);
-  margin: 0 auto;
 
   box-sizing: border-box;
 
@@ -64,9 +62,7 @@
 }
 
 .navigation {
-  @include mixin.until(media.$sm) {
-    display: none;
-  }
+
 }
 
 .launch {

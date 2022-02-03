@@ -38,7 +38,7 @@ export const Navigation: FC<ComponentType> = ({ className }) => {
 				{/*		</li>*/}
 				{/*	);*/}
 				{/*})}*/}
-				<button>Join Club</button>
+				<button className={styles.button}>Join Club</button>
 			</ul>
 		</div>
 	);

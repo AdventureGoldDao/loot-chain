@@ -24,14 +24,7 @@ export const Layout: FC<LayoutType> = ({
 	const windowHeight = useWindowSize()[1];
 
 	return (
-		<div
-			className={classNames(styles.component, className)}
-			style={
-				{
-					"--height": windowHeight ? `${windowHeight}px` : "var(--default-height)",
-				} as CSSProperties
-			}
-		>
+		<div className={classNames(styles.component, className)}>
 			<Head>
 				<title>{title}</title>
 				<meta name="Description" content={description} />
