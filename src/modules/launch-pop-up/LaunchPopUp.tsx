@@ -6,7 +6,7 @@ import styles from "./LaunchPopUp.module.scss";
 
 const LINKS = [
 	{
-		caption: "Cross chain assets",
+		caption: "",
 		href: "#",
 	},
 	{
