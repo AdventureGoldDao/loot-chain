@@ -21,9 +21,11 @@ export const useWindowSize = (): WindowSize => {
 
 		return () => null;
 	}, []);
-	const r = document.documentElement;
-	const a = r.getBoundingClientRect().width;
-	const rem = (a * 4) / 320;
-	r.style.fontSize = rem + "px";
+	if (typeof window !== "undefined") {
+		const r = document.documentElement;
+		const a = r.getBoundingClientRect().width;
+		const rem = (a * 4) / 320;
+		r.style.fontSize = rem + "px";
+	}
 	return windowSize;
 };
