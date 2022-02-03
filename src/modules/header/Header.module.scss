@@ -45,14 +45,10 @@
 }
 
 .logo {
-  width: 7.5rem;
+  width: 11.5rem;
   margin-right: auto;
 
   color: rgba(var(--white), 1);
-
-  @include mixin.from(media.$md) {
-    width: 11.75rem;
-  }
 }
 
 

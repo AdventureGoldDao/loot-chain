@@ -90,7 +90,9 @@ export const Home: FC<HomeType> = () => {
 						<br />
 						begin your journey
 					</p>
-					<button className={styles.button}>Join Club</button>
+					<button style={{ marginTop: "0.5rem" }} className={styles.button}>
+						Join Club
+					</button>
 				</div>
 			</section>
 			{/*{popUp.defined && <LaunchPopUp control={popUp} close={close}/>}*/}

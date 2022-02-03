@@ -30,24 +30,28 @@
 }
 
 .footer {
-  background: linear-gradient(0deg, #8AECFF, #8AECFF);
+  background: linear-gradient(0deg, rgba(138, 236, 255, 0.7), rgba(138, 236, 255, 0.7));
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 4rem;
-  margin-top: -4rem;
+  margin-top: -4.75rem;
 }
 
 .footer_title {
+  font-family: IBMPlexSansDevanagari-Medium;
   color: #161616;
-  margin-top: 9rem;
+  margin-top: 10rem;
   font-size: 2rem;
+  line-height: 0rem;
 }
 
 .footer_text {
+  font-family: IBMPlexSansDevanagari-Thin;
   color: #6F6F6F;
   text-align: center;
   font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 .wrapper {
@@ -111,10 +115,12 @@
 }
 
 .body2_title {
+  font-family: IBMPlexSansDevanagari-Medium;
   font-size: 2rem;
 }
 
 .body2_text {
+  font-family: IBMPlexSansDevanagari-Light;
   font-size: 1.4rem;
   line-height: 2rem;
   margin-top: -0.5rem;
@@ -128,9 +134,11 @@
 
 .body3_title {
   font-size: 2rem;
+  font-family: IBMPlexSansDevanagari-Medium;
 }
 
 .body3_text {
+  font-family: IBMPlexSansDevanagari-Light;
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 2.5rem;
@@ -187,7 +195,7 @@
   font-size: 2.1rem;
   margin-left: -1.5rem;
   line-height: 3rem;
-  font-family: IBM Plex Sans Devanagari;
+  font-family: IBMPlexSansDevanagari-Medium;
 }
 
 .launch {
