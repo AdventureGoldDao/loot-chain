@@ -2,29 +2,11 @@
 @use "../../helper/style/media";
 
 .component {
-  grid-template-rows: 55.5vw 1fr;
+  width: 100%;
   height: calc(var(--window-height) - var(--header-height));
 }
 
-.video {
-  position: relative;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .body {
-  display: grid;
   width: 100%;
   background-color: rgba(var(--white), 1);
 }
@@ -32,6 +14,7 @@
 .footer {
   background: linear-gradient(0deg, rgba(138, 236, 255, 0.7), rgba(138, 236, 255, 0.7));
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   padding-bottom: 4rem;
@@ -86,7 +69,6 @@
 
   @include mixin.until(media.$sm) {
     background-image: url("./assets/img_mobile.png");
-    padding: 0 0 19rem 0;
   }
 }
 
@@ -109,6 +91,11 @@
   justify-content: left;
   text-align: left;
   flex-flow: wrap;
+  margin: 0;
+
+  @include mixin.until(media.$sm) {
+    flex-direction: column;
+  }
 }
 
 .bridge {
@@ -121,6 +108,7 @@
     width: 60rem;
     margin-top: 6rem;
     margin-left: 10rem;
+    object-fit: contain;
   }
 }
 
@@ -161,8 +149,8 @@
 
   @include mixin.until(media.$sm) {
     font-size: 5rem;
-    margin-left: -9.5rem;
-    margin-top: 6.8rem;
+    margin-top: 9rem;
+    margin-left: 33.8rem;
     word-spacing: 1rem;
   }
 }
@@ -174,9 +162,10 @@
   margin-top: -0.5rem;
   @include mixin.until(media.$sm) {
     font-size: 3.3rem;
-    margin-left: -10rem;
-    line-height: 5rem;
+    margin-left: 34rem;
+    line-height: 4.8rem;
     word-spacing: 1.5rem;
+    margin-top: -1rem;
   }
 }
 
@@ -230,6 +219,7 @@
     color: #ffffff;
   }
   @include mixin.until(media.$sm) {
+    font-size: 3rem;
     width: 22rem;
     height: 7rem;
     margin-top: 4rem;
@@ -239,13 +229,13 @@
 
 .img1 {
   width: 21.3rem;
-  margin-top: 14rem;
+  margin-top: 12rem;
   margin-left: 6.7rem;
   height: fit-content;
 
   @include mixin.until(media.$sm) {
     width: 68rem;
-    margin-top: 4rem;
+    margin-top: 10rem;
     margin-left: 1rem;
   }
 }
@@ -270,9 +260,11 @@
   height: fit-content;
 
   @include mixin.until(media.$sm) {
-    width: 50rem;
-    margin-left: -6rem;
-    margin-top: 6rem;
+    width: 42rem;
+    margin-left: 0;
+    margin-top: -38rem;
+    object-fit: contain;
+    position: absolute;
   }
 }
 
@@ -286,6 +278,7 @@
     width: 76rem;
     margin-left: 4rem;
     margin-top: 2rem;
+    object-fit: contain;
   }
 }
 

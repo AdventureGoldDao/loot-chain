@@ -3,7 +3,6 @@
 
 .component {
   --default-height: 100vh;
-
   display: flex;
   flex-direction: column;
 
@@ -15,8 +14,4 @@
 }
 
 .main {
-  flex-grow: 1;
-
-  display: grid;
-  align-content: start;
 }

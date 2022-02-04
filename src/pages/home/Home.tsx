@@ -6,6 +6,7 @@ import bodyImg1Mobile from "./assets/body1_img1_mobile.png";
 import bodyImg2 from "./assets/body1_img2.png";
 import bodyImg2Mobile from "./assets/body1_img2_mobile.png";
 import line from "./assets/line.png";
+import line_mobile from "./assets/line_mobile.png";
 import bridge from "./assets/bridge.png";
 import dance from "./assets/dance.png";
 import dance_mobile from "./assets/dance_mobile.png";
@@ -36,10 +37,10 @@ export const Home: FC<HomeType> = () => {
 							<img className={styles.img2} src={winHeight > 765 ? bodyImg2 : bodyImg2Mobile} />
 						</Body1>
 						<div className={styles.body2}>
-							<img className={styles.line} src={line} />
+							<img className={styles.line} src={winHeight > 768 ? line : line_mobile} />
 							<div className={styles.body2_content}>
 								<p className={styles.body2_title}>Our Mission</p>
-								{winHeight > 756 ? (
+								{winHeight > 758 ? (
 									<p className={styles.body2_text}>
 										We build meaningful bonds in an
 										<br />
@@ -76,7 +77,7 @@ export const Home: FC<HomeType> = () => {
 									</p>
 								)}
 							</div>
-							<img className={styles.idea} src={winHeight > 765 ? idea : idea_mobile} />
+							<img className={styles.idea} src={winHeight > 768 ? idea : idea_mobile} />
 						</div>
 					</div>
 					<div className={styles.body2}>
