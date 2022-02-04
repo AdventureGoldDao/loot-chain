@@ -160,7 +160,7 @@ export const Home: FC<HomeType> = () => {
 					)}
 
 					<button
-						style={{ marginTop: winHeight > 768 ? "0.5rem" : "8rem" }}
+						style={{ marginTop: winHeight > 768 ? "2rem" : "8rem" }}
 						className={styles.button}
 					>
 						Join Club

@@ -47,6 +47,7 @@
   text-align: center;
   font-size: 1.4rem;
   line-height: 2rem;
+  margin-top: 3rem;
 
   @include mixin.until(media.$sm) {
     margin-top: 4rem;
@@ -159,7 +160,7 @@
   font-family: IBMPlexSansDevanagari-Light;
   font-size: 1.4rem;
   line-height: 2rem;
-  margin-top: -0.5rem;
+  margin-top: 2rem;
   @include mixin.until(media.$sm) {
     font-size: 3.3rem;
     margin-left: 34rem;
@@ -182,6 +183,7 @@
 .body3_title {
   font-size: 2.2rem;
   font-family: IBMPlexSansDevanagari-Medium;
+  margin-top: 1.6rem;
 
   @include mixin.until(media.$sm) {
     font-size: 5rem;
@@ -194,9 +196,9 @@
 
 .body3_text {
   font-family: IBMPlexSansDevanagari-Light;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 
   @include mixin.until(media.$sm) {
     font-size: 3.6rem;
