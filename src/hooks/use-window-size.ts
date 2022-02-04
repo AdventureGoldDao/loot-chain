@@ -24,7 +24,7 @@ export const useWindowSize = (): WindowSize => {
 	if (typeof window !== "undefined") {
 		const r = document.documentElement;
 		const a = r.getBoundingClientRect().width;
-		const rem = (a * 4) / 320;
+		let rem = (a * 4) / 320;
 		r.style.fontSize = rem + "px";
 	}
 	return windowSize;

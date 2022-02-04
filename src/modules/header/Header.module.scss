@@ -2,11 +2,7 @@
 @use "../../helper/style/media";
 
 .component {
-  position: relative;
-
-  @include mixin.from(media.$sm) {
-    position: absolute;
-  }
+  position: absolute;
 
   &::after {
     position: absolute;
@@ -35,20 +31,23 @@
 
   box-sizing: border-box;
 
-  @include mixin.until(media.$sm) {
-    background-color: rgba(var(--black), 1);
-  }
-
-  @include mixin.from(media.$lg) {
-    padding: 0 calc(var(--gutters) / 2);
-  }
+  //@include mixin.until(media.$sm) {
+  //  background-color: rgba(var(--black), 1);
+  //}
+  //
+  //@include mixin.from(media.$lg) {
+  //  padding: 0 calc(var(--gutters) / 2);
+  //}
 }
 
 .logo {
   width: 9.5rem;
   margin-right: auto;
-
   color: rgba(var(--white), 1);
+
+  @include mixin.until(media.$sm) {
+    width: 20rem;
+  }
 }
 
 

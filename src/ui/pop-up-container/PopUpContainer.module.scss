@@ -116,8 +116,8 @@
   width: 7.5rem;
   height: auto;
 
-  @include mixin.from(media.$sm) {
-    display: none;
+  @include mixin.until(media.$sm) {
+    width: 20rem;
   }
 }
 

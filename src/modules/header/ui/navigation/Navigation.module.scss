@@ -1,3 +1,6 @@
+@use "../../../../helper/style/mixin";
+@use "../../../../helper/style/media";
+
 .component {}
 
 
@@ -26,6 +29,11 @@
   &:hover {
     background: #292929;
     color: #ffffff;
+  }
+
+  @include mixin.until(media.$sm) {
+    width: 22rem;
+    height: 6rem;
   }
 }
 

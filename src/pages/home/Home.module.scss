@@ -36,6 +36,11 @@
   align-items: center;
   padding-bottom: 4rem;
   margin-top: -4.75rem;
+
+  @include mixin.until(media.$sm) {
+    margin-top: -12rem;
+    padding-bottom: 40rem;
+  }
 }
 
 .footer_title {
@@ -44,6 +49,13 @@
   margin-top: 10rem;
   font-size: 2rem;
   line-height: 0rem;
+
+  @include mixin.until(media.$sm) {
+    margin-top: 36rem;
+    font-size: 5rem;
+    margin-left: -6rem;
+    word-spacing: 1.5rem;
+  }
 }
 
 .footer_text {
@@ -52,6 +64,13 @@
   text-align: center;
   font-size: 1.4rem;
   line-height: 2rem;
+
+  @include mixin.until(media.$sm) {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-left: -4rem;
+  }
 }
 
 .wrapper {
@@ -64,6 +83,11 @@
   box-sizing: border-box;
   background-image: url("./assets/img.png");
   background-size: 100% auto;
+
+  @include mixin.until(media.$sm) {
+    background-image: url("./assets/img_mobile.png");
+    padding: 0 0 19rem 0;
+  }
 }
 
 .title {
@@ -73,6 +97,10 @@
 .body1 {
   width: 100%;
   display: flex;
+
+  @include mixin.until(media.$sm) {
+    flex-direction: column-reverse;
+  }
 }
 
 .body2 {
@@ -80,6 +108,7 @@
   display: flex;
   justify-content: left;
   text-align: left;
+  flex-flow: wrap;
 }
 
 .bridge {
@@ -87,6 +116,12 @@
   height: fit-content;
   margin-top: 9rem;
   margin-left: 12rem;
+
+  @include mixin.until(media.$sm) {
+    width: 60rem;
+    margin-top: 6rem;
+    margin-left: 10rem;
+  }
 }
 
 .dance {
@@ -101,6 +136,12 @@
   height: fit-content;
   margin-top: 2.2rem;
   margin-left: 18.5rem;
+
+  @include mixin.until(media.$sm) {
+    width: 50rem;
+    margin-top: 15rem;
+    margin-left: 37rem;
+  }
 }
 
 .body3 {
@@ -117,6 +158,13 @@
 .body2_title {
   font-family: IBMPlexSansDevanagari-Medium;
   font-size: 2rem;
+
+  @include mixin.until(media.$sm) {
+    font-size: 5rem;
+    margin-left: -9.5rem;
+    margin-top: 6.8rem;
+    word-spacing: 1rem;
+  }
 }
 
 .body2_text {
@@ -124,24 +172,46 @@
   font-size: 1.4rem;
   line-height: 2rem;
   margin-top: -0.5rem;
+  @include mixin.until(media.$sm) {
+    font-size: 3.3rem;
+    margin-left: -10rem;
+    line-height: 5rem;
+    word-spacing: 1.5rem;
+  }
 }
 
 .body3_content {
   color: #161616;
   margin-left: 3rem;
   margin-top: 12rem;
+
+  @include mixin.until(media.$sm) {
+    margin: auto;
+  }
 }
 
 .body3_title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: IBMPlexSansDevanagari-Medium;
+
+  @include mixin.until(media.$sm) {
+    font-size: 5rem;
+    margin-top: 12rem;
+    margin-bottom: 7rem;
+    text-align: center;
+  }
 }
 
 .body3_text {
   font-family: IBMPlexSansDevanagari-Light;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2rem;
   margin-top: 2.5rem;
+
+  @include mixin.until(media.$sm) {
+    font-size: 3.6rem;
+    line-height: 4.7rem;
+  }
 }
 
 .button {
@@ -159,20 +229,38 @@
     background: #292929;
     color: #ffffff;
   }
+  @include mixin.until(media.$sm) {
+    width: 22rem;
+    height: 7rem;
+    margin-top: 4rem;
+    margin-left: -6rem;
+  }
 }
 
 .img1 {
-  width: 24rem;
-  margin-top: 18.2rem;
-  margin-left: 6.5rem;
+  width: 21.3rem;
+  margin-top: 14rem;
+  margin-left: 6.7rem;
   height: fit-content;
+
+  @include mixin.until(media.$sm) {
+    width: 68rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+  }
 }
 
 .img2 {
   width: 18.6rem;
-  margin-top: 6.8rem;
-  margin-left: 3.2rem;
+  margin-top: 8.6rem;
+  margin-left: 2rem;
   height: fit-content;
+
+  @include mixin.until(media.$sm) {
+    width: 57rem;
+    margin-top: 14rem;
+    margin-left: 20.5rem;
+  }
 }
 
 .line {
@@ -180,23 +268,41 @@
   margin-top: 4.8rem;
   margin-left: 1rem;
   height: fit-content;
+
+  @include mixin.until(media.$sm) {
+    width: 50rem;
+    margin-left: -6rem;
+    margin-top: 6rem;
+  }
 }
 
 .idea {
-  width: 34rem;
-  margin-top: 14.5rem;
-  margin-left: 2rem;
+  width: 29rem;
+  margin-top: 17.2rem;
+  margin-left: 7.4rem;
   height: fit-content;
+
+  @include mixin.until(media.$sm) {
+    width: 76rem;
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
 }
 
 .text {
-  margin-top: 11.4rem;
+  margin-top: 12.4rem;
   color: rgba(var(--black), 1);
   text-align: center;
   font-size: 2.1rem;
-  margin-left: -1.5rem;
+  margin-left: 0.5rem;
   line-height: 3rem;
   font-family: IBMPlexSansDevanagari-Medium;
+
+  @include mixin.until(media.$sm) {
+    font-size: 5.3rem;
+    margin-top: 5rem;
+    line-height: 7rem;
+  }
 }
 
 .launch {
