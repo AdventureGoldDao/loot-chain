@@ -188,6 +188,7 @@
     margin-top: 12rem;
     margin-bottom: 7rem;
     text-align: center;
+    margin-left: -10rem;
   }
 }
 
@@ -200,6 +201,7 @@
   @include mixin.until(media.$sm) {
     font-size: 3.6rem;
     line-height: 4.7rem;
+    margin-left: -10rem;
   }
 }
 
