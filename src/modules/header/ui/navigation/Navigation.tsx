@@ -38,7 +38,15 @@ export const Navigation: FC<ComponentType> = ({ className }) => {
 				{/*		</li>*/}
 				{/*	);*/}
 				{/*})}*/}
-				<button className={styles.button}>Join Club</button>
+				<a
+					target={"_blank"}
+					href={
+						"https://docs.google.com/forms/d/e/1FAIpQLSecgM-klm3nFPed0fyc6FEimlD8ulW7pHN3zr_n6Is6CifIzg/viewform?usp=sf_link"
+					}
+					className={styles.button}
+				>
+					Join Waitlist
+				</a>
 			</ul>
 		</div>
 	);

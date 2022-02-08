@@ -208,16 +208,21 @@
 }
 
 .button {
+  display: block;
+  margin: auto;
   font-family: HappyMonkey-Regular;
   background: transparent;
   border-radius: 8px;
   width: 8rem;
-  height: 2.8rem;
   font-size: 1rem;
   margin-top: 2rem;
   color: #000000;
   border: 2px solid #000000;
   cursor: pointer;
+  text-align: center;
+  line-height: 2.8rem;
+  text-decoration: none;
+  height: 2.8rem;
   &:hover {
     background: #292929;
     color: #ffffff;

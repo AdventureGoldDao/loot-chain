@@ -32,7 +32,15 @@ export const Home: FC<HomeType> = () => {
 								<br />
 								meeting through crypto.
 								<br />
-								<button className={styles.button}>Join Club</button>
+								<a
+									className={styles.button}
+									target={"_blank"}
+									href={
+										"https://docs.google.com/forms/d/e/1FAIpQLSecgM-klm3nFPed0fyc6FEimlD8ulW7pHN3zr_n6Is6CifIzg/viewform?usp=sf_link"
+									}
+								>
+									Join Waitlist
+								</a>
 							</p>
 							<img className={styles.img2} src={winHeight > 765 ? bodyImg2 : bodyImg2Mobile} />
 						</Body1>
@@ -159,12 +167,16 @@ export const Home: FC<HomeType> = () => {
 						</p>
 					)}
 
-					<button
+					<a
 						style={{ marginTop: winHeight > 768 ? "2rem" : "8rem" }}
 						className={styles.button}
+						target={"_blank"}
+						href={
+							"https://docs.google.com/forms/d/e/1FAIpQLSecgM-klm3nFPed0fyc6FEimlD8ulW7pHN3zr_n6Is6CifIzg/viewform?usp=sf_link"
+						}
 					>
-						Join Club
-					</button>
+						Join Waitlist
+					</a>
 				</div>
 			</section>
 			{/*{popUp.defined && <LaunchPopUp control={popUp} close={close}/>}*/}

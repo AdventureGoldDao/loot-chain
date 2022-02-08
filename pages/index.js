@@ -4,7 +4,7 @@ import { Home } from "../src/pages/home";
 
 const Index = pageWithLayout(
 	() => <Home />,
-	() => <Layout title="Bubble" description="" />
+	() => <Layout title="Bubble DAO" description="" />
 );
 
 export default Index;
