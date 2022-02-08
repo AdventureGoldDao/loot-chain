@@ -4,7 +4,12 @@ import { Home } from "../src/pages/home";
 
 const Index = pageWithLayout(
 	() => <Home />,
-	() => <Layout title="Bubble DAO" description="" />
+	() => (
+		<Layout
+			title="Bubble DAO"
+			description="A poppin’ community of singles meeting through crypto."
+		/>
+	)
 );
 
 export default Index;
