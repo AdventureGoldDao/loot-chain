@@ -4,7 +4,7 @@ import styles from "./MobileNavigation.module.scss";
 import { MaybeWithClassName } from "../../../../helper/react/types";
 import { NavLink } from "../../../../ui/button";
 import { SOCIAL } from "../../../../const/const";
-import { Envelop, GitHub, Medium, Telegram, Twitter } from "../../../../ui/icons/Icons";
+import { Envelop, Medium, Telegram, Twitter } from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
 
@@ -20,7 +20,6 @@ type NavigationType = {
 type ComponentType = NavigationType & MaybeWithClassName;
 
 const ICONS = {
-	Github: <GitHub />,
 	Twitter: <Twitter />,
 	Telegram: <Telegram />,
 	Medium: <Medium />,
