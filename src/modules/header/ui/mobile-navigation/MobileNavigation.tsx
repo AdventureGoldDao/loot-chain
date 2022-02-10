@@ -8,10 +8,10 @@ import { Envelop, Medium, Telegram, Twitter } from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
 
-export type LinkType = {
-	link: string;
-	links: Record<string, string>;
-};
+// export type LinkType = {
+// 	link: string;
+// 	links: Record<string, string>;
+// };
 
 type NavigationType = {
 	sideEffect?: ReactNode;
