@@ -94,7 +94,7 @@ export const Home: FC<HomeType> = () => {
 								<img src={bridge} className={styles.bridge} />
 								<img src={dance} className={styles.dance} />
 								<div className={styles.body3_content}>
-									<p className={styles.body3_title}>Exclusively in New York City</p>
+									<p className={styles.body3_title}>Founded in New York City</p>
 									<p className={styles.body3_text}>
 										We are a group of single New Yorkers bringing
 										<br />
