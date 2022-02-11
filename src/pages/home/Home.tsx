@@ -118,7 +118,7 @@ export const Home: FC<HomeType> = () => {
 							<>
 								<div className={styles.body3_content}>
 									<p className={styles.body3_title}>
-										Exclusively in
+										Founded in
 										<br />
 										New York City
 									</p>
