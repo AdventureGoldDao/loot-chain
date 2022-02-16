@@ -14,6 +14,9 @@ import idea from "./assets/idea.png";
 import idea_mobile from "./assets/idea_mobile.png";
 import openWindow from "./assets/openWindow.png";
 import { useWindowSize } from "../../hooks/use-window-size";
+import { Twitter } from "../../ui/icons/Icons";
+import { Navigation } from "../../modules/header/ui/navigation";
+import { NavLink } from "../../ui/button";
 
 type HomeType = {};
 
@@ -177,6 +180,14 @@ export const Home: FC<HomeType> = () => {
 					>
 						Join Waitlist
 					</a>
+					<NavLink
+						className={styles.link}
+						href={"https://mobile.twitter.com/BubbleDAO_love"}
+						icon={<Twitter style={{ width: winHeight > 768 ? "2rem" : "6rem" }} />}
+						size="large"
+					>
+						twitter
+					</NavLink>
 				</div>
 			</section>
 			{/*{popUp.defined && <LaunchPopUp control={popUp} close={close}/>}*/}

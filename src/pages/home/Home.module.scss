@@ -22,7 +22,7 @@
 
   @include mixin.until(media.$sm) {
     margin-top: -12rem;
-    padding-bottom: 40rem;
+    padding-bottom: 12rem;
   }
 }
 
@@ -75,6 +75,10 @@
 
 .title {
   margin: 0;
+}
+
+.twitter:hover {
+  fill: black;
 }
 
 .body1 {
@@ -233,6 +237,30 @@
     height: 7rem;
     line-height: 7rem;
     margin-top: 4rem;
+  }
+}
+
+.link {
+  margin-top: 6rem;
+  color: #ADADAD;
+
+  transition-timing-function: linear;
+  transition-duration: 250ms;
+  transition-property: background-color, color;
+  @include mixin.until(media.$sm) {
+    margin-top: 24rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(var(--black), 1);
+  }
+}
+
+.icon {
+  width: 4rem;
+  @include mixin.until(media.$sm) {
+    width: 24rem;
   }
 }
 
