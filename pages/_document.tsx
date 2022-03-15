@@ -21,7 +21,7 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap"
 						rel="stylesheet"
 					/>
-					<link rel="stylesheet" href="/fonts/Helvetica/stylesheet.css" />
+					<link rel="stylesheet" href="/fonts/stylesheet.css" />
 				</Head>
 				<body>
 					<Main />

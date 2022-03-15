@@ -16,30 +16,14 @@
   list-style: none;
 }
 
-.button {
-  background: transparent;
-  border-radius: 8px;
-  width: 8rem;
-  height: 2.8rem;
-  font-size: 1rem;
-  color: #000000;
-  border: 2px solid #000000;
+.videoButton {
+  width: 10.6rem;
+  background: #FFB800;
+  box-shadow: -15px 20px 50px rgba(255, 184, 0, 0.3);
+  color: #6001D3;
+  outline: none;
   cursor: pointer;
-  font-family: HappyMonkey-Regular;
-  text-align: center;
-  line-height: 2.8rem;
-  text-decoration: none;
-  &:hover {
-    background: #292929;
-    color: #ffffff;
-  }
-
-  @include mixin.until(media.$sm) {
-    width: 22rem;
-    height: 6rem;
-    line-height: 6rem;
-    font-size: 3rem;
-  }
+  border: none;
 }
 
 .item {
@@ -51,20 +35,25 @@
 }
 
 .link {
-  color: rgba(var(--white), 0.6);
-
+  color: rgba(112, 121, 139, 1);
+  font-size: 1rem;
   transition-timing-function: linear;
   transition-duration: 250ms;
   transition-property: background-color, color;
 
   &:hover,
   &:focus {
-    color: rgba(var(--white), 1);
+    color: rgba(8, 20, 32, 1);
+    font-weight: 700;
   }
 }
 
 .link svg {
-
+  width: 1rem;
+  color: #ffffff;
+  &:hover {
+    color: rgba(var(--white), 0.6);
+  }
 }
 
 

@@ -1,7 +1,17 @@
 import type { FC } from "react";
 import styles from "./Navigation.module.scss";
 import { MaybeWithClassName } from "../../../../helper/react/types";
-import { Envelop, Medium, Telegram, Twitter } from "../../../../ui/icons/Icons";
+import {
+	Discord,
+	Envelop,
+	Facebook,
+	Medium,
+	Telegram,
+	Twitter,
+	Youtube,
+} from "../../../../ui/icons/Icons";
+import { SOCIAL, NAVS } from "../../../../const/const";
+import { NavLink } from "../../../../ui/button";
 
 export type LinkType = {
 	link: string;
@@ -10,40 +20,53 @@ export type LinkType = {
 
 type NavigationType = {
 	links?: Record<string, string | LinkType>;
+	withButton?: boolean;
 };
 
 type ComponentType = NavigationType & MaybeWithClassName;
 
 const ICONS = {
+	Discord: <Discord />,
+	Facebook: <Facebook />,
 	Twitter: <Twitter />,
-	Telegram: <Telegram />,
 	Medium: <Medium />,
-	"contact@bubble.co": <Envelop />,
+	Youtube: <Youtube />,
 };
 
-export const Navigation: FC<ComponentType> = ({ className }) => {
+export const Socials: FC<ComponentType> = ({ className, withButton }) => {
 	return (
 		<div className={className}>
 			<ul className={styles.list}>
-				{/*{Object.keys(SOCIAL).map((key) => {*/}
-				{/*	const subItem = SOCIAL[key];*/}
-				{/*	return (*/}
-				{/*		<li key={key} className={styles.item}>*/}
-				{/*			<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="large">*/}
-				{/*				{key}*/}
-				{/*			</NavLink>*/}
-				{/*		</li>*/}
-				{/*	);*/}
-				{/*})}*/}
-				<a
-					target={"_blank"}
-					href={
-						"https://docs.google.com/forms/d/e/1FAIpQLSecgM-klm3nFPed0fyc6FEimlD8ulW7pHN3zr_n6Is6CifIzg/viewform?usp=sf_link"
-					}
-					className={styles.button}
-				>
-					Join Waitlist
-				</a>
+				{Object.keys(SOCIAL).map((key) => {
+					const subItem = SOCIAL[key];
+					return (
+						<li key={key} className={styles.item}>
+							<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="small">
+								{key}
+							</NavLink>
+						</li>
+					);
+				})}
+				{withButton && <button className={styles.videoButton}>Watch Video</button>}
+			</ul>
+		</div>
+	);
+};
+
+export const Navigations: FC<ComponentType> = ({ className }) => {
+	return (
+		<div className={className}>
+			<ul className={styles.list}>
+				{Object.keys(NAVS).map((key) => {
+					const subItem = NAVS[key];
+					return (
+						<li key={key} className={styles.item}>
+							<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="small">
+								{key}
+							</NavLink>
+						</li>
+					);
+				})}
 			</ul>
 		</div>
 	);

@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "Helvetica Neue";
+	src: local("Helvetica Neue Regular"), local("HelveticaNeue-Regular");
+	src: url("Helvetica/helveticaneue.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "IBMPlexSansDevanagari-Medium";
+	src: url("Helvetica/IBMPlexSansDevanagari-Medium.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "IBMPlexSansDevanagari-Light";
+	src: url("Helvetica/IBMPlexSansDevanagari-Light.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "IBMPlexSansDevanagari-Thin";
+	src: url("Helvetica/IBMPlexSansDevanagari-Thin.woff") format("woff");
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "HappyMonkey-Regular";
+	src: url("Helvetica/HappyMonkey-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Nunito-Italic";
+	src: url("Nunito-Italic-VariableFont_wght.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Nunito";
+	src: url("Nunito-VariableFont_wght.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Quicksand";
+	src: url("Quicksand-VariableFont_wght.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

@@ -4,7 +4,7 @@ import styles from "./MobileNavigation.module.scss";
 import { MaybeWithClassName } from "../../../../helper/react/types";
 import { NavLink } from "../../../../ui/button";
 import { SOCIAL } from "../../../../const/const";
-import { Envelop, Medium, Telegram, Twitter } from "../../../../ui/icons/Icons";
+import { Discord, Envelop, Medium, Telegram, Twitter, Youtube } from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
 
@@ -23,6 +23,8 @@ const ICONS = {
 	Twitter: <Twitter />,
 	Telegram: <Telegram />,
 	Medium: <Medium />,
+	Youtube: <Youtube />,
+	Discord: <Discord />,
 	"contact@bubble.co": <Envelop />,
 };
 

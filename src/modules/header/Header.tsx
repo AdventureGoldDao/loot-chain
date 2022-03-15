@@ -5,11 +5,8 @@ import styles from "./Header.module.scss";
 import { MaybeWithClassName } from "../../helper/react/types";
 import { NavLink } from "../../ui/button";
 import { Logo } from "../../ui/icons/Icons";
-import { Navigation } from "./ui/navigation";
-import { FocusOn } from "react-focus-on";
 import { useScatteredContinuousState } from "../../hooks/use-continuous-state";
-import { MobileNavigation } from "./ui/mobile-navigation";
-import { Toggle, Close } from "../../ui/icons/Icons";
+import { Navigations, Socials } from "./ui/navigation/Navigation";
 
 type HeaderType = {};
 
@@ -41,7 +38,9 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				<NavLink className={styles.logo} href="/" icon={<Logo />} variant="text">
 					Home
 				</NavLink>
-				<Navigation className={styles.navigation} />
+				<Navigations className={styles.navigation} />
+
+				<Socials withButton />
 				{/*<button className={styles.toggle} onClick={toggleMobileNavigationDisplay} ref={toggleRef}>*/}
 				{/*	{mobileNavigation.present ? <Close /> : <Toggle />}*/}
 				{/*	<span>{mobileNavigation.present ? "Close" : "Open"}</span>*/}
