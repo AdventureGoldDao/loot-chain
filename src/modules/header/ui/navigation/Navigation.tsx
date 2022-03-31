@@ -47,7 +47,7 @@ export const Socials: FC<ComponentType> = ({ className, withButton }) => {
 						</li>
 					);
 				})}
-				{withButton && <button className={styles.videoButton}>Watch Video</button>}
+				{withButton && <button className={styles.videoButton}>Staking</button>}
 			</ul>
 		</div>
 	);

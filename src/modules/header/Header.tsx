@@ -35,10 +35,16 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 			style={{ "--underline": mobileNavigation.present ? "block" : "none" } as CSSProperties}
 		>
 			<div className={styles.wrapper}>
-				<NavLink className={styles.logo} href="/" icon={<Logo />} variant="text">
+				<NavLink
+					style={{ width: "" }}
+					className={styles.logo}
+					href="/"
+					icon={<Logo />}
+					variant="text"
+				>
 					Home
 				</NavLink>
-				<Navigations className={styles.navigation} />
+				{/*<Navigations className={styles.navigation} />*/}
 
 				<Socials withButton />
 				{/*<button className={styles.toggle} onClick={toggleMobileNavigationDisplay} ref={toggleRef}>*/}

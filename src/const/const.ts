@@ -14,10 +14,7 @@ export const CONTACT = "";
 
 export const SOCIAL = {
 	Discord: DISCORD_PATH,
-	Facebook: FACEBOOK_PATH,
 	Twitter: TWITTER_PATH,
-	Medium: MEDIUM_PATH,
-	Youtube: YOUTUBE_PATH,
 };
 
 export const NAVS = {

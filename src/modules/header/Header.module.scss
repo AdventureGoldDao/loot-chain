@@ -32,7 +32,7 @@
 .logo {
   width: 6.5rem;
   color: rgba(var(--white), 1);
-
+  margin-right: auto;
   @include mixin.until(media.$sm) {
     width: 20rem;
   }

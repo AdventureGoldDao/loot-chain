@@ -10,20 +10,20 @@
   justify-content: start;
   align-items: center;
   grid-column-gap: 2.25rem;
-
+  width: fit-content;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .videoButton {
-  width: 10.6rem;
-  background: #FFB800;
-  box-shadow: -15px 20px 50px rgba(255, 184, 0, 0.3);
-  color: #6001D3;
+  background: transparent;
+  border: 3px solid #000000;
+  color: #A5FFBE;
   outline: none;
   cursor: pointer;
-  border: none;
+  width: 6rem;
+  height: 3rem;
 }
 
 .item {
@@ -50,7 +50,7 @@
 
 .link svg {
   width: 1rem;
-  color: #ffffff;
+  color: #6E757C;;
   &:hover {
     color: rgba(var(--white), 0.6);
   }

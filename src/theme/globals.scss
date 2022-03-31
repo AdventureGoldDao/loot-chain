@@ -5,12 +5,13 @@ html {
   font-size: 16px;
   overflow-x: hidden;
   background-color: #E5E5E5;
-  color: #081420;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color:  #1E252B;;
 }
 
 * {
@@ -41,6 +42,32 @@ body {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.7rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  word-spacing: 0.4rem;
+}
+
+button {
+  background-color: transparent;
+  height: 2.6rem;
+  border-radius: 1rem;
+  color: #A5FFBE;
+  cursor: pointer;
 }
 
 .visuallyhidden {

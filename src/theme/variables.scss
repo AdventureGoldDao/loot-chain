@@ -1,6 +1,6 @@
 html {
 
-  color: #70798B;
+  color: #B7B7B7;;
   //weight
   --regular: 400;
 
@@ -24,14 +24,14 @@ html {
   --spacing-unit: 0.5rem;
   --max-width: 1440px;
 
-  --gutters: 4.6rem;
+  --gutters: 9rem;
 
   --grid: 100%;
 
   --primary-color: rgba(96, 1, 211, 1);
   //header
 
-  --header-height: 7.5rem;
+  --header-height: 9.5rem;
 
   @media (max-width: 768px) {
     --header-height: 16rem;
@@ -65,17 +65,4 @@ html {
   //}
 }
 
-h3 {
-  font-size: 3.2rem;
-  color: #081420;
-  font-family: Nunito;
-}
 
-button {
-  width: 12rem;
-  height: 3rem;
-  border-radius: 3rem;
-  background-color: var(--primary-color);
-  color: #ffffff;
-  font-size: 0.9rem;
-}

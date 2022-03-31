@@ -455,9 +455,9 @@ export const Sonet = () => {
 							})}
 						</div>
 						<p>© Sonet. All Rights Reserved.</p>
-						<Socials className={styles.socials} />
 					</div>
 				</section>
+				<section className={styles}></section>
 			</section>
 		</>
 	);

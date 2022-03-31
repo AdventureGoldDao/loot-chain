@@ -4,7 +4,7 @@ import { Home } from "../src/pages/home";
 import { Sonet } from "../src/pages/sonet";
 
 const Index = pageWithLayout(
-	() => <Sonet />,
+	() => <Home />,
 	() => (
 		<Layout
 			title="Bubble DAO"
