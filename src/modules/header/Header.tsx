@@ -4,9 +4,11 @@ import { FC, useCallback, useState, useEffect, useRef, CSSProperties } from "rea
 import styles from "./Header.module.scss";
 import { MaybeWithClassName } from "../../helper/react/types";
 import { NavLink } from "../../ui/button";
-import { Logo } from "../../ui/icons/Icons";
+import { Close, Logo, Toggle } from "../../ui/icons/Icons";
 import { useScatteredContinuousState } from "../../hooks/use-continuous-state";
 import { Navigations, Socials } from "./ui/navigation/Navigation";
+import { FocusOn } from "react-focus-on";
+import { MobileNavigation } from "./ui/mobile-navigation";
 
 type HeaderType = {};
 
@@ -45,31 +47,31 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					Home
 				</NavLink>
 				{/*<Navigations className={styles.navigation} />*/}
+				<Socials className={styles.socials} withButton />
 
-				<Socials withButton />
-				{/*<button className={styles.toggle} onClick={toggleMobileNavigationDisplay} ref={toggleRef}>*/}
-				{/*	{mobileNavigation.present ? <Close /> : <Toggle />}*/}
-				{/*	<span>{mobileNavigation.present ? "Close" : "Open"}</span>*/}
-				{/*</button>*/}
+				<button className={styles.toggle} onClick={toggleMobileNavigationDisplay} ref={toggleRef}>
+					{mobileNavigation.present ? <Close /> : <Toggle />}
+					<span>{mobileNavigation.present ? "Close" : "Open"}</span>
+				</button>
 			</div>
-			{/*{mobileNavigation.defined && (*/}
-			{/*	<FocusOn*/}
-			{/*		autoFocus*/}
-			{/*		enabled={mobileNavigation.present}*/}
-			{/*		onEscapeKey={closeMobileNavigationDisplay}*/}
-			{/*		onClickOutside={closeMobileNavigationDisplay}*/}
-			{/*		shards={[toggleRef]}*/}
-			{/*	>*/}
-			{/*		<MobileNavigation*/}
-			{/*			className={classNames(*/}
-			{/*				styles.dropdown,*/}
-			{/*				mobileNavigation.defined && styles.visible,*/}
-			{/*				mobileNavigation.present && styles.animation*/}
-			{/*			)}*/}
-			{/*			sideEffect={<mobileNavigation.DefinePresent timeout={16} />}*/}
-			{/*		/>*/}
-			{/*	</FocusOn>*/}
-			{/*)}*/}
+			{mobileNavigation.defined && (
+				<FocusOn
+					autoFocus
+					enabled={mobileNavigation.present}
+					onEscapeKey={closeMobileNavigationDisplay}
+					onClickOutside={closeMobileNavigationDisplay}
+					shards={[toggleRef]}
+				>
+					<MobileNavigation
+						className={classNames(
+							styles.dropdown,
+							mobileNavigation.defined && styles.visible,
+							mobileNavigation.present && styles.animation
+						)}
+						sideEffect={<mobileNavigation.DefinePresent timeout={16} />}
+					/>
+				</FocusOn>
+			)}
 		</header>
 	);
 };

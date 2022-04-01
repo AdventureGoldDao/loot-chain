@@ -59,6 +59,12 @@
   }
 }
 
+.socials {
+  @include mixin.until(media.$sm) {
+    display: none;
+  }
+}
+
 .toggle {
   position: relative;
 

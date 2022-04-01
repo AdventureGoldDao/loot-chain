@@ -211,10 +211,12 @@
   line-height: 2.8rem;
   text-decoration: none;
   height: 2.8rem;
+
   &:hover {
     background: #292929;
     color: #ffffff;
   }
+
   @include mixin.until(media.$sm) {
     font-size: 3rem;
     width: 22rem;
@@ -327,16 +329,28 @@
   width: fit-content;
   position: relative;
   padding-bottom: 12rem;
+
   .texts {
     margin-left: 9rem;
+    @include mixin.until(media.$sm) {
+      margin-left: 6rem;
+    }
 
     h1 {
       margin-top: 8.8rem;
+      @include mixin.until(media.$sm) {
+        margin-top: 20rem;
+      }
     }
 
     p {
       font-size: 1.3rem;
       margin-top: 1rem;
+      @include mixin.until(media.$sm) {
+        font-size: 3.2rem;
+        word-spacing: 1rem;
+        margin-top: 3rem;
+      }
     }
 
     button {
@@ -344,6 +358,12 @@
       width: 6rem;
       border-radius: 1rem;
       border: 1px solid rgba(165, 255, 190, 1);
+
+      @include mixin.until(media.$sm) {
+        width: 20rem;
+        border-radius: 4rem;
+        margin-top: 8rem;
+      }
     }
   }
 
@@ -353,58 +373,115 @@
     position: absolute;
     top: 2.5rem;
     left: 42.2rem;
+
+    @include mixin.until(media.$sm) {
+      top: 48rem;
+      left: 30rem;
+    }
   }
 
 }
 
 .about {
   display: flex;
-    img {
-      width: 12rem;
-      margin-top: 11.5rem;
-      margin-left: 15.5rem;
+  position: relative;
+
+  img {
+    width: 12rem;
+    margin-top: 11.5rem;
+    margin-left: 15.5rem;
+    @include mixin.until(media.$sm) {
+      width: 24rem;
+      top: 32rem;
+      left: 28rem;
+      position: absolute;
+    }
+  }
+
+  .texts {
+    margin-top: 8.6rem;
+    padding-left: 6.8rem;
+    @include mixin.until(media.$sm) {
+      margin-top: 48rem;
     }
 
-    .texts {
-      margin-top: 8.6rem;
-      padding-left: 6.8rem;
+    h3 {
+      color: #A5FFBE;
+      margin-top: 1.6rem;
 
-      h3 {
-        color: #A5FFBE;
-        margin-top: 1.6rem;
-      }
-
-      p {
-        max-width: 29rem;
+      @include mixin.until(media.$sm) {
+        max-width: 32rem;
+        margin-top: 8rem;
       }
     }
+
+    p {
+      max-width: 29rem;
+
+      @include mixin.until(media.$sm) {
+        margin-top: 3rem;
+        max-width: 68rem;
+      }
+    }
+  }
 }
 
 .project {
   display: flex;
+  position: relative;
 
   img {
     width: 12rem;
     margin-left: 7.6rem;
     margin-top: 5rem;
+    @include mixin.until(media.$sm) {
+      width: 32rem;
+      height: auto;
+      position: absolute;
+      top: 12rem;
+      margin-left: 6rem;
+    }
   }
 
   .texts {
     margin-top: 4.2rem;
     margin-left: 13.4rem;
+    @include mixin.until(media.$sm) {
+
+    }
 
     h3 {
       color: #A5FFBE;
       margin-top: 1.6rem;
+      @include mixin.until(media.$sm) {
+        margin-top: 18rem;
+        margin-left: 28rem;
+        max-width: 22.6rem;
+      }
     }
 
     p {
       max-width: 31rem;
+      @include mixin.until(media.$sm) {
+        position: absolute;
+        max-width: 59rem;
+        left: 8rem;
+        top: 52rem;
+      }
     }
 
     button {
       margin-top: 2rem;
       width: 8rem;
+      border: 1px solid rgba(165, 255, 190, 1);
+      @include mixin.until(media.$sm) {
+        position: absolute;
+        margin-left: 28rem;
+        margin-top: 4rem;
+        width: fit-content;
+        border-radius: 7rem;
+        padding: 0 3rem;
+      }
     }
   }
 }
@@ -418,17 +495,40 @@
   margin-top: 11.5rem;
   margin-left: auto;
   margin-right: auto;
+
+  @include mixin.until(media.$sm) {
+    width: 68rem;
+    flex-direction: column;
+    margin-top: 70rem;
+    border-radius: 4rem;
+    background-size: auto 100%;
+  }
+
   .left {
+    position: relative;
+
     img {
       width: 12rem;
       margin-top: 16.5rem;
       margin-left: 7.8rem;
+      @include mixin.until(media.$sm) {
+        width: 24rem;
+        position: absolute;
+        margin-top: 14rem;
+        margin-left: 38rem;
+      }
     }
 
     h2 {
       margin-top: 2rem;
       margin-left: 7.6rem;
-      max-width: 12rem;
+      max-width: 14rem;
+      color: #ffffff;
+      @include mixin.until(media.$sm) {
+        max-width: 20rem;
+        margin-top: 20rem;
+        margin-left: 4rem;
+      }
     }
   }
 
@@ -436,26 +536,51 @@
     margin-left: 12.5rem;
     padding-top: 9.5rem;
     padding-bottom: 3.2rem;
+
+    @include mixin.until(media.$sm) {
+      margin-left: 8rem;
+    }
+
     .item {
       display: flex;
       justify-content: left;
       position: relative;
       padding-bottom: 3.5rem;
       margin-bottom: 2rem;
+      @include mixin.until(media.$sm) {
+        margin-bottom: 16rem;
+        display: flex;
+      }
+
       svg {
         width: 2.8rem;
         height: fit-content;
+        @include mixin.until(media.$sm) {
+          width: 8rem;
+          margin-top: 1rem;
+          height: 8rem;
+        }
       }
 
       .texts {
         margin-left: 1rem;
+        @include mixin.until(media.$sm) {
+          margin-left: 6rem;
+        }
+
         h3 {
           color: #A5FFBE;
+          @include mixin.until(media.$sm) {
+            max-width: 20rem;
+          }
         }
 
         p {
           margin-top: 1.2rem;
           max-width: 20rem;
+          @include mixin.until(media.$sm) {
+            max-width: 42rem;
+          }
         }
       }
 
@@ -467,6 +592,12 @@
         width: 20rem;
         bottom: 0;
         margin-left: 0.3rem;
+
+        @include mixin.until(media.$sm) {
+          width: 60rem;
+          height: 0.6rem;
+          bottom: -7rem;
+        }
       }
     }
   }
@@ -476,13 +607,32 @@
   h2 {
     text-align: center;
     margin-top: 11rem;
+
+    @include mixin.until(media.$sm) {
+      margin-top: 28rem;
+      max-width: 42rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
+
   .imgs {
     display: flex;
+    @include mixin.until(media.$sm) {
+      flex-direction: column;
+      margin: 2rem auto;
+      width: fit-content;
+      align-items: center;
+    }
 
     img {
       width: 45rem;
       margin-top: 3.8rem;
+      @include mixin.until(media.$sm) {
+        width: 68rem;
+        margin-top: 8rem;
+      }
     }
 
     .airdrop {
@@ -491,6 +641,10 @@
       margin-top: 7.6rem;
       margin-left: 8.7rem;
       margin-right: 4.3rem;
+
+      @include mixin.until(media.$sm) {
+        width: 24rem;
+      }
     }
   }
 }
@@ -500,20 +654,35 @@
   flex-wrap: wrap;
   max-width: 48rem;
   margin: 4rem auto;
-  .item1{
+  @include mixin.until(media.$sm) {
+    max-width: 68rem;
+    margin-top: 12rem;
+  }
+
+  .item1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     margin-bottom: 1.2rem;
+    @include mixin.until(media.$sm) {
+      margin-bottom: 6rem;
+    }
+
     img {
       width: 4.2rem;
       height: fit-content;
       margin: 1.2rem;
+      @include mixin.until(media.$sm) {
+        width: 6rem;
+      }
     }
 
-    p{
-
+    p {
+      @include mixin.until(media.$sm) {
+        font-size: 0.1rem;
+        transform: scale(0.75);
+      }
     }
   }
 }
@@ -526,6 +695,11 @@
   background-size: 100%;
   padding-top: 16rem;
 
+  @include mixin.until(media.$sm) {
+    background-size: auto 100%;
+    padding-top: 60rem;
+  }
+
   h2 {
     color: #1E252B;
   }
@@ -534,30 +708,62 @@
     display: flex;
     width: fit-content;
     margin: 4rem auto;
+    @include mixin.until(media.$sm) {
+      margin: 12rem auto;
+      flex-direction: column;
+    }
+
     .item2 {
       display: flex;
       position: relative;
       width: 14.5rem;
+
+      @include mixin.until(media.$sm) {
+        width: unset;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 12rem;
+      }
+
+
       .down {
         width: 6rem;
         height: fit-content;
         position: absolute;
         right: 0;
         top: 0.5rem;
+        @include mixin.until(media.$sm) {
+          width: 12rem;
+          position: relative;
+          transform: rotate(90deg);
+          margin-top: 8rem;
+        }
       }
+
       .up {
         width: 6rem;
         height: fit-content;
         position: absolute;
         right: 0;
         top: 2rem;
+        @include mixin.until(media.$sm) {
+          width: 12rem;
+          position: relative;
+          transform: rotate(90deg);
+          margin-top: 8rem;
+        }
       }
+
       .texts {
         color: #1E252B;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 10rem;
+        @include mixin.until(media.$sm) {
+          width: 60rem;
+        }
+
         h3 {
           color: #A5FFBE;
           background: #1E252B;
@@ -565,10 +771,19 @@
           height: 3.8rem;
           border-radius: 100%;
           line-height: 3.8rem;
+
+          @include mixin.until(media.$sm) {
+            width: 8rem;
+            height: 8rem;
+            line-height: 8rem;
+          }
         }
 
         strong {
           margin-top: 2rem;
+          @include mixin.until(media.$sm) {
+            font-size: 2rem;
+          }
         }
 
         p {
@@ -589,7 +804,15 @@
   padding-bottom: 4rem;
   display: flex;
   justify-content: center;
+  @include mixin.until(media.$sm) {
+    padding-bottom: 12rem;
+  }
   svg {
+    @include mixin.until(media.$sm) {
+      width: 4rem;
+      color: #1E252B;
+      height: fit-content;
+    }
     &:hover {
       color: rgba(var(--black), 0.6);
     }

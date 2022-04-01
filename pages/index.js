@@ -5,12 +5,7 @@ import { Sonet } from "../src/pages/sonet";
 
 const Index = pageWithLayout(
 	() => <Home />,
-	() => (
-		<Layout
-			title="Bubble DAO"
-			description="A poppin’ community of singles meeting through crypto."
-		/>
-	)
+	() => <Layout title="AGLD" description="The Incentivization token for the Lootverse" />
 );
 
 export default Index;

@@ -288,7 +288,9 @@ export const Home: FC<HomeType> = () => {
 								return (
 									<div className={styles.item2}>
 										<div className={styles.texts}>
-											<h3>{index + 1}</h3>
+											<h3 style={{ background: active ? "#1E252B" : "rgba(102, 102, 102, 0.44)" }}>
+												{index + 1}
+											</h3>
 											<strong>{title}</strong>
 											<p>{content}</p>
 										</div>
