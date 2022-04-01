@@ -1,7 +1,6 @@
 import { pageWithLayout } from "../src/utils/page/pageInLayout";
 import { Layout } from "../src/layout";
 import { Home } from "../src/pages/home";
-import { Sonet } from "../src/pages/sonet";
 
 const Index = pageWithLayout(
 	() => <Home />,
