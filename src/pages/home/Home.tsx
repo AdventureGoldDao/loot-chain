@@ -49,7 +49,7 @@ const list = [
 			</svg>
 		),
 		content:
-			"AGLD holders vote on governance item withi the AGLD ecosystem. Including protocol parameters (issuance & utility of AGLD, etc), external collaboration (projects within & outside the Lootverse), and more!",
+			"AGLD holders vote on governance item within the AGLD ecosystem. Including protocol parameters (issuance & utility of AGLD, etc), external collaboration (projects within & outside the Lootverse), and more!",
 	},
 	{
 		title: "In-game Currency",
@@ -185,7 +185,7 @@ const list2 = [
 		active: true,
 	},
 	{
-		title: "Apr Enable bonding 2022",
+		title: "Apr 2022",
 		content: "",
 		active: false,
 	},

@@ -388,6 +388,7 @@
 
   img {
     width: 12rem;
+    height: fit-content;
     margin-top: 11.5rem;
     margin-left: 15.5rem;
     @include mixin.until(media.$sm) {
@@ -673,6 +674,10 @@
       width: 4.2rem;
       height: fit-content;
       margin: 1.2rem;
+
+      &:hover {
+        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
+      }
       @include mixin.until(media.$sm) {
         width: 6rem;
       }

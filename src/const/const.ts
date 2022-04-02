@@ -1,20 +1,22 @@
 export const MEDIUM_PATH = "";
 export const GITHUB_PATH = "";
 export const TELEGRAM_PATH = "";
-export const TWITTER_PATH = "";
+export const TWITTER_PATH = "https://twitter.com/GoldAdventure";
 export const HOME_PATH = "";
 export const TOKENOMIC_PATH = "";
 export const PRODUCT_PATH = "";
 export const FAQS_PATH = "";
 export const FACEBOOK_PATH = "";
 export const YOUTUBE_PATH = "";
-export const DISCORD_PATH = "";
+export const DISCORD_PATH = "discord.gg/nG9RCYWSrr";
+export const MIRROR_PATH = "https://mirror.xyz/agld.eth";
 
 export const CONTACT = "";
 
 export const SOCIAL = {
 	Discord: DISCORD_PATH,
 	Twitter: TWITTER_PATH,
+	Mirror: MIRROR_PATH,
 };
 
 export const NAVS = {

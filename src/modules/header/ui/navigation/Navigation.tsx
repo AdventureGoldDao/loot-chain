@@ -6,6 +6,7 @@ import {
 	Envelop,
 	Facebook,
 	Medium,
+	Mirror,
 	Telegram,
 	Twitter,
 	Youtube,
@@ -31,6 +32,7 @@ const ICONS = {
 	Twitter: <Twitter />,
 	Medium: <Medium />,
 	Youtube: <Youtube />,
+	Mirror: <Mirror />,
 };
 
 export const Socials: FC<ComponentType> = ({ className, withButton }) => {
