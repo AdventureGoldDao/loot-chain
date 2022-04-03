@@ -26,7 +26,6 @@
   "files": [
     "node_modules/next-images/index.d.ts",
     "node_modules/next-videos/index.d.ts",
-    "custom.d.ts"
   ],
   "exclude": [
     "node_modules"
