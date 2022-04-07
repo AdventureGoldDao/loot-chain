@@ -360,6 +360,7 @@
       border: 1px solid rgba(165, 255, 190, 1);
 
       @include mixin.until(media.$sm) {
+        font-size: 3rem;
         width: 20rem;
         border-radius: 4rem;
         margin-top: 8rem;
@@ -375,6 +376,7 @@
     left: 42.2rem;
 
     @include mixin.until(media.$sm) {
+      width: 41rem;
       top: 48rem;
       left: 30rem;
     }
@@ -386,16 +388,22 @@
   display: flex;
   position: relative;
 
+  @include mixin.until(media.$sm) {
+    margin-top: 48rem;
+  }
+
   img {
     width: 12rem;
     height: fit-content;
     margin-top: 11.5rem;
     margin-left: 15.5rem;
+    object-fit: contain;
     @include mixin.until(media.$sm) {
       width: 24rem;
-      top: 32rem;
       left: 28rem;
       position: absolute;
+      height: auto;
+      margin-left: 16rem;
     }
   }
 
@@ -403,7 +411,7 @@
     margin-top: 8.6rem;
     padding-left: 6.8rem;
     @include mixin.until(media.$sm) {
-      margin-top: 48rem;
+      margin-top: 14rem;
     }
 
     h3 {
@@ -482,6 +490,7 @@
         width: fit-content;
         border-radius: 7rem;
         padding: 0 3rem;
+        font-size: 3rem;
       }
     }
   }
@@ -679,13 +688,13 @@
         filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
       }
       @include mixin.until(media.$sm) {
-        width: 6rem;
+        width: 6.5rem;
       }
     }
 
     p {
       @include mixin.until(media.$sm) {
-        font-size: 0.1rem;
+        font-size: 2rem;
         transform: scale(0.75);
       }
     }
@@ -776,6 +785,7 @@
           height: 3.8rem;
           border-radius: 100%;
           line-height: 3.8rem;
+          font-family: Inconsolata-VariableFont_wdth;
 
           @include mixin.until(media.$sm) {
             width: 8rem;
@@ -785,6 +795,7 @@
         }
 
         strong {
+          font-family: Inconsolata-VariableFont_wdth;
           margin-top: 2rem;
           @include mixin.until(media.$sm) {
             font-size: 2rem;
