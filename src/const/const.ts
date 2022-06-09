@@ -8,7 +8,7 @@ export const PRODUCT_PATH = "";
 export const FAQS_PATH = "";
 export const FACEBOOK_PATH = "";
 export const YOUTUBE_PATH = "";
-export const DISCORD_PATH = "discord.gg/nG9RCYWSrr";
+export const DISCORD_PATH = "https://discord.gg/phSq2EuusS";
 export const MIRROR_PATH = "https://mirror.xyz/agld.eth";
 
 export const CONTACT = "";

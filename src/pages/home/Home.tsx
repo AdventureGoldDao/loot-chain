@@ -25,8 +25,6 @@ import market12 from "./assets/market12.svg";
 import market13 from "./assets/market13.svg";
 import market14 from "./assets/market14.svg";
 
-import { Twitter } from "../../ui/icons/Icons";
-import { NavLink } from "../../ui/button";
 import { Socials } from "../../modules/header/ui/navigation/Navigation";
 
 type HomeType = {};
@@ -209,7 +207,7 @@ export const Home: FC<HomeType> = () => {
 								The Incentivization token for the
 								<br /> Lootverse
 							</p>
-							<button>Staking</button>
+							<button onClick={()=>{window.open('https://staking.adventruegold.org', "_blank")}}>Staking</button>
 						</div>
 						<img src={img} />
 					</section>
