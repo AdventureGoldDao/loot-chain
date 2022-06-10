@@ -207,7 +207,7 @@ export const Home: FC<HomeType> = () => {
 								The Incentivization token for the
 								<br /> Lootverse
 							</p>
-							<button onClick={()=>{window.open('https://staking.adventruegold.org', "_blank")}}>Staking</button>
+							<button onClick={()=>{window.open('https://staking.adventuregold.org/#/', "_blank")}}>Staking</button>
 						</div>
 						<img src={img} />
 					</section>

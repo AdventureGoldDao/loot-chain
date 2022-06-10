@@ -116,7 +116,7 @@ export const Facebook = (props: SVGAttributes<SVGElement>) => {
 
 export const Mirror = (props: SVGAttributes<SVGElement>) => {
 	return (
-		<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg width="12" height="16" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M15.5917 6.57848C16.5104 14.1165 15.5917 21.5 15.5917 21.5H0.444329C0.444329 21.5 -0.555417 15.2308 0.444329 6.57848C1.44407 -2.07383 14.6731 -0.95952 15.5917 6.57848Z"
 				fill="currentColor"
