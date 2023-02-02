@@ -150,20 +150,10 @@ const list1 = [
 		url: "",
 	},
 	{
-		title: "FTX",
-		icon: market12,
-		url: "",
-	},
-	{
 		title: "AEX",
 		icon: market13,
 		url: "",
-	},
-	{
-		title: "Hoo",
-		icon: market14,
-		url: "",
-	},
+	}
 ];
 
 const list2 = [
@@ -183,15 +173,10 @@ const list2 = [
 		active: true,
 	},
 	{
-		title: "Apr 2022",
-		content: "",
-		active: false,
-	},
-	{
 		title: "Expand Lootverse Collaboration",
 		content: "",
 		active: false,
-	},
+	}
 ];
 
 export const Home: FC<HomeType> = () => {
@@ -266,7 +251,10 @@ export const Home: FC<HomeType> = () => {
 						<h2>AGLD Inflation Schedule</h2>
 						<div className={styles.imgs}>
 							<img src={img5} className={styles.airdrop} />
+							<div style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
 							<img src={img6} />
+								<p className={styles.tip}>*Total supply will remain at 80m until the staking emission contract is implemented</p>
+							</div>
 						</div>
 						<div className={styles.list1}>
 							{list1.map(({ title, icon }) => {

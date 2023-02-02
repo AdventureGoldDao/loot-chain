@@ -46,6 +46,14 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				>
 					Home
 				</NavLink>
+				<NavLink
+					style={{ width: "" }}
+					className={styles.logo}
+					href="https://www.certik.com/projects/adventure-gold"
+					variant="text"
+				>
+					Audit
+				</NavLink>
 				{/*<Navigations className={styles.navigation} />*/}
 				<Socials className={styles.socials} withButton />
 

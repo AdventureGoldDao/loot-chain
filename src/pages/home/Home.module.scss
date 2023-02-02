@@ -680,7 +680,7 @@
     }
 
     img {
-      width: 4.2rem;
+      width: 5.2rem;
       height: fit-content;
       margin: 1.2rem;
 
@@ -832,6 +832,15 @@
     &:hover {
       color: rgba(var(--black), 0.6);
     }
+  }
+}
+
+.tip {
+  text-align: center;
+  margin-top: 0px;
+  word-spacing: 0.1rem;
+  @include mixin.until(media.$sm) {
+    max-width: 80%;
   }
 }
 
