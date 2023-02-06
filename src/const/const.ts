@@ -1,6 +1,6 @@
 export const MEDIUM_PATH = "";
 export const GITHUB_PATH = "";
-export const TELEGRAM_PATH = "";
+export const TELEGRAM_PATH = "https://t.me/+wztEsODk2mhkY2Nl";
 export const TWITTER_PATH = "https://twitter.com/GoldAdventure";
 export const HOME_PATH = "";
 export const TOKENOMIC_PATH = "";
@@ -16,6 +16,7 @@ export const CONTACT = "";
 export const SOCIAL = {
 	Discord: DISCORD_PATH,
 	Twitter: TWITTER_PATH,
+	Telegram: TELEGRAM_PATH,
 	Mirror: MIRROR_PATH,
 };
 

@@ -28,6 +28,7 @@ type ComponentType = NavigationType & MaybeWithClassName;
 
 const ICONS = {
 	Discord: <Discord />,
+	Telegram: <Telegram />,
 	Facebook: <Facebook />,
 	Twitter: <Twitter />,
 	Medium: <Medium />,

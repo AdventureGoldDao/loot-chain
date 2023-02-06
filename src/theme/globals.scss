@@ -11,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   background-color:  #1E252B;;
+  font-family: Inconsolata-VariableFont_wdth!important;
+
 }
 
 * {
@@ -30,7 +32,6 @@ body {
   --color-focus: #6D64F7;
   --base-duration: 600ms;
   --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
-  font-family: Quicksand;
 
 }
 
@@ -43,7 +44,6 @@ body {
 }
 
 h1 {
-  font-family: SourceSerifPro-Black;
   color: #ffffff;
   font-size: 3.55rem;
 
@@ -53,7 +53,6 @@ h1 {
 }
 
 h2 {
-  font-family: SourceSerifPro-Black;
   color: #ffffff;
   font-size: 2.65rem;
 
@@ -63,7 +62,6 @@ h2 {
 }
 
 h3 {
-  font-family: SourceSerifPro-Light;
   color: #ffffff;
   font-size: 1.35rem;
 
@@ -73,7 +71,6 @@ h3 {
 }
 
 p {
-  font-family: Inconsolata-VariableFont_wdth;
   font-size: 0.88rem;
   margin-top: 0.5rem;
   word-spacing: 0.3rem;
@@ -84,7 +81,6 @@ p {
 }
 
 button {
-  font-family: Inconsolata-VariableFont_wdth;
   background-color: transparent;
   height: 2.6rem;
   border-radius: 1rem;
@@ -132,7 +128,6 @@ button {
   border-radius: 0.125rem;
   color: white;
   cursor: pointer;
-  font-family: inherit;
   font-size: inherit;
   padding: 1rem 2.5rem 1.125rem;
 

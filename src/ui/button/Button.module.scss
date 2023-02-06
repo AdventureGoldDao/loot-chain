@@ -2,12 +2,10 @@
 @use "../../helper/style/media";
 
 .button {
-  font-family: Inconsolata-VariableFont_wdth!important;
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  font-family: var(--font-family-button);
   line-height: var(--line-136);
   text-decoration: var(--button-decoration);
 
