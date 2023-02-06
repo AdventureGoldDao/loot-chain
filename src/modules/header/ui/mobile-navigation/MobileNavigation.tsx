@@ -4,7 +4,7 @@ import styles from "./MobileNavigation.module.scss";
 import { MaybeWithClassName } from "../../../../helper/react/types";
 import { NavLink } from "../../../../ui/button";
 import { SOCIAL } from "../../../../const/const";
-import { Discord, Envelop, Medium, Telegram, Twitter, Youtube } from "../../../../ui/icons/Icons";
+import {Discord, Envelop, Medium, Mirror, Telegram, Twitter, Youtube} from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
 
@@ -25,6 +25,7 @@ const ICONS = {
 	Medium: <Medium />,
 	Youtube: <Youtube />,
 	Discord: <Discord />,
+	Mirror: <Mirror scale={0.6} />,
 	"contact@bubble.co": <Envelop />,
 };
 
@@ -38,13 +39,30 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 			className={classNames(className, styles.component)}
 			style={{ "--window-height": `${windowHeight}px` } as CSSProperties}
 		>
+			<ul className={styles.item}>
+				<li className={styles.item}>
+					<NavLink style={{fontSize: 18, marginBottom: 10}} className={classNames(styles.link)} href={''}>
+						Home
+					</NavLink>
+				</li>
+				<li>
+					<NavLink style={{fontSize: 18, marginBottom: 10}} className={classNames(styles.link)} href={''}>
+						Audit
+					</NavLink>
+				</li>
+				<li>
+					<NavLink style={{fontSize: 18, marginBottom: 10}} className={classNames(styles.link)} href={''}>
+						Staking
+					</NavLink>
+				</li>
+			</ul>
 			<ul className={styles.list}>
 				{keys.map((key, index) => {
 					const lastItem = index === keys.length - 1;
 					return (
 						<li key={key} className={styles.item}>
 							<NavLink
-								className={classNames(styles.link, lastItem && styles.decoration)}
+								className={classNames(styles.link)}
 								href={SOCIAL[key]}
 								iconBefore={ICONS[key]}
 								variant="text"

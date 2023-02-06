@@ -688,7 +688,7 @@
         filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
       }
       @include mixin.until(media.$sm) {
-        width: 6.5rem;
+        width: 8.5rem;
       }
     }
 
@@ -711,7 +711,7 @@
 
   @include mixin.until(media.$sm) {
     background-size: auto 100%;
-    padding-top: 60rem;
+    padding-top: 30rem;
   }
 
   h2 {

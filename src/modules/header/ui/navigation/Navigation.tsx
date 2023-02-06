@@ -32,7 +32,7 @@ const ICONS = {
 	Twitter: <Twitter />,
 	Medium: <Medium />,
 	Youtube: <Youtube />,
-	Mirror: <Mirror scale={0.8} />,
+	Mirror: <Mirror />,
 };
 
 export const Socials: FC<ComponentType> = ({ className, withButton }) => {

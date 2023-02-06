@@ -19,14 +19,20 @@
   padding: 0;
 
   list-style: none;
+
+  li {
+    list-style: none;
+  }
 }
 
 .item {
   position: relative;
+  list-style: none;
 }
 
 .link {
   --font-family-button: "Rokkitt", sans-serif;
+  color: white;
 }
 
 .decoration {

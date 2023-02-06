@@ -32,9 +32,30 @@
 .logo {
   width: 6.5rem;
   color: rgba(var(--white), 1);
-  margin-right: auto;
   @include mixin.until(media.$sm) {
     width: 20rem;
+  }
+}
+
+.link {
+  color: rgba(var(--white), 1);
+  margin-right: 3rem;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mixin.until(media.$sm) {
+    display: none;
+  }
+}
+
+.navlink {
+  color: rgba(var(--white), 1);
+  margin-right: 3rem;
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mixin.until(media.$sm) {
+    display: none!important;
   }
 }
 
@@ -70,6 +91,7 @@
 
   padding: 0;
   margin: 0;
+  margin-left: auto;
 
   color: rgba(var(--white), 1);
 

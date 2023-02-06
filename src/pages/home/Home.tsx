@@ -10,20 +10,14 @@ import img6 from "./assets/img_6.png";
 import img8 from "./assets/img_8.png";
 import img9 from "./assets/img_9.png";
 
-import market1 from "./assets/market1.svg";
+import bybit from "./assets/bybit.svg";
 import market2 from "./assets/market2.svg";
-import market3 from "./assets/market3.svg";
+import upbit from "./assets/upbit.svg";
 import market4 from "./assets/market4.svg";
 import market5 from "./assets/market5.svg";
-import market6 from "./assets/market6.svg";
 import market7 from "./assets/market7.svg";
 import market8 from "./assets/market8.svg";
-import market9 from "./assets/market9.svg";
-import market10 from "./assets/market10.svg";
 import market11 from "./assets/market11.svg";
-import market12 from "./assets/market12.svg";
-import market13 from "./assets/market13.svg";
-import market14 from "./assets/market14.svg";
 
 import { Socials } from "../../modules/header/ui/navigation/Navigation";
 
@@ -95,18 +89,8 @@ const list = [
 
 const list1 = [
 	{
-		title: "Uniswap",
-		icon: market1,
-		url: "",
-	},
-	{
 		title: "Binance",
 		icon: market2,
-		url: "",
-	},
-	{
-		title: "LBANK",
-		icon: market3,
 		url: "",
 	},
 	{
@@ -120,38 +104,18 @@ const list1 = [
 		url: "",
 	},
 	{
-		title: "Gate.io",
-		icon: market6,
+		title: "Bybit",
+		icon: bybit,
 		url: "",
 	},
 	{
-		title: "BKEX",
-		icon: market7,
-		url: "",
-	},
-	{
-		title: "BiBox",
-		icon: market8,
-		url: "",
-	},
-	{
-		title: "Phemex",
-		icon: market9,
-		url: "",
-	},
-	{
-		title: "Crytpo.com ",
-		icon: market10,
+		title: "Upbit",
+		icon: upbit,
 		url: "",
 	},
 	{
 		title: "Huobi",
 		icon: market11,
-		url: "",
-	},
-	{
-		title: "AEX",
-		icon: market13,
 		url: "",
 	}
 ];

@@ -47,15 +47,31 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					Home
 				</NavLink>
 				<NavLink
+					style={{ marginLeft: "auto" }}
+					className={styles.navlink}
+					href="/"
+					variant="text"
+				>
+					Home
+				</NavLink>
+				<NavLink
 					style={{ width: "" }}
-					className={styles.logo}
+					className={styles.navlink}
 					href="https://www.certik.com/projects/adventure-gold"
 					variant="text"
 				>
 					Audit
 				</NavLink>
+				<NavLink
+					style={{ marginRight: "auto" }}
+					className={styles.navlink}
+					href="https://staking.adventuregold.org"
+					variant="text"
+				>
+					Staking
+				</NavLink>
 				{/*<Navigations className={styles.navigation} />*/}
-				<Socials className={styles.socials} withButton />
+				<Socials className={styles.socials} />
 
 				<button className={styles.toggle} onClick={toggleMobileNavigationDisplay} ref={toggleRef}>
 					{mobileNavigation.present ? <Close /> : <Toggle />}
