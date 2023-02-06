@@ -2,6 +2,7 @@
 @use "../../helper/style/media";
 
 .button {
+  font-family: Inconsolata-VariableFont_wdth!important;
   display: flex;
   flex-direction: row;
   align-items: center;

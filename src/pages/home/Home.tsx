@@ -15,8 +15,6 @@ import market2 from "./assets/market2.svg";
 import upbit from "./assets/upbit.svg";
 import market4 from "./assets/market4.svg";
 import market5 from "./assets/market5.svg";
-import market7 from "./assets/market7.svg";
-import market8 from "./assets/market8.svg";
 import market11 from "./assets/market11.svg";
 
 import { Socials } from "../../modules/header/ui/navigation/Navigation";
@@ -220,6 +218,7 @@ export const Home: FC<HomeType> = () => {
 								<p className={styles.tip}>*Total supply will remain at 80m until the staking emission contract is implemented</p>
 							</div>
 						</div>
+						<h3 className={styles.asset}>Where you can access AGLD</h3>
 						<div className={styles.list1}>
 							{list1.map(({ title, icon }) => {
 								return (

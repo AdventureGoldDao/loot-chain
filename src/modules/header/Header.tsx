@@ -6,7 +6,7 @@ import { MaybeWithClassName } from "../../helper/react/types";
 import { NavLink } from "../../ui/button";
 import { Close, Logo, Toggle } from "../../ui/icons/Icons";
 import { useScatteredContinuousState } from "../../hooks/use-continuous-state";
-import { Navigations, Socials } from "./ui/navigation/Navigation";
+import { Socials } from "./ui/navigation/Navigation";
 import { FocusOn } from "react-focus-on";
 import { MobileNavigation } from "./ui/mobile-navigation";
 
@@ -55,7 +55,6 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					Home
 				</NavLink>
 				<NavLink
-					style={{ width: "" }}
 					className={styles.navlink}
 					href="https://www.certik.com/projects/adventure-gold"
 					variant="text"
@@ -63,12 +62,19 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					Audit
 				</NavLink>
 				<NavLink
-					style={{ marginRight: "auto" }}
 					className={styles.navlink}
 					href="https://staking.adventuregold.org"
 					variant="text"
 				>
 					Staking
+				</NavLink>
+				<NavLink
+					style={{ marginRight: "auto" }}
+					className={styles.navlink}
+					href="https://www.lootproject.com/"
+					variant="text"
+				>
+					Loot
 				</NavLink>
 				{/*<Navigations className={styles.navigation} />*/}
 				<Socials className={styles.socials} />
