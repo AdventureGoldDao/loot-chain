@@ -50,7 +50,16 @@ export const Socials: FC<ComponentType> = ({ className, withButton }) => {
 						</li>
 					);
 				})}
-				{withButton && <button onClick={()=>{window.open('https://staking.adventuregold.org', "_blank")}} className={styles.videoButton}>Staking</button>}
+				{withButton && (
+					<button
+						onClick={() => {
+							window.open("https://staking.adventuregold.org", "_blank");
+						}}
+						className={styles.videoButton}
+					>
+						Staking
+					</button>
+				)}
 			</ul>
 		</div>
 	);

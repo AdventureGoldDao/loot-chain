@@ -46,12 +46,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				>
 					Home
 				</NavLink>
-				<NavLink
-					style={{ marginLeft: "auto" }}
-					className={styles.navlink}
-					href="/"
-					variant="text"
-				>
+				<NavLink style={{ marginLeft: "auto" }} className={styles.navlink} href="/" variant="text">
 					Home
 				</NavLink>
 				<NavLink
@@ -61,11 +56,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				>
 					Audit
 				</NavLink>
-				<NavLink
-					className={styles.navlink}
-					href="https://staking.adventuregold.org"
-					variant="text"
-				>
+				<NavLink className={styles.navlink} href="https://staking.adventuregold.org" variant="text">
 					Staking
 				</NavLink>
 				<NavLink
@@ -75,6 +66,12 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					variant="text"
 				>
 					Loot
+				</NavLink>
+				<NavLink className={styles.navlink} href="https://staking.adventuregold.org" variant="text">
+					Whitepaper
+				</NavLink>
+				<NavLink className={styles.navlink} href="https://staking.adventuregold.org" variant="text">
+					Governance
 				</NavLink>
 				{/*<Navigations className={styles.navigation} />*/}
 				<Socials className={styles.socials} />

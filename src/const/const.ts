@@ -16,8 +16,8 @@ export const CONTACT = "";
 export const SOCIAL = {
 	Discord: DISCORD_PATH,
 	Twitter: TWITTER_PATH,
-	Telegram: TELEGRAM_PATH,
-	Mirror: MIRROR_PATH,
+	// Telegram: TELEGRAM_PATH,
+	// Mirror: MIRROR_PATH,
 };
 
 export const NAVS = {
