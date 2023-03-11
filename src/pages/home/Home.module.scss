@@ -325,6 +325,8 @@
 
   .texts {
     font-size: 4rem;
+    width: 35rem;
+    text-align: left;
     @include mixin.until(media.$sm) {
       font-size: 3.2rem;
       max-width: 31.5rem;
@@ -333,9 +335,10 @@
 
     h1 {
       margin-top: 8.8rem;
-      font-size: 6rem;
+      font-size: 4rem;
       @include mixin.until(media.$sm) {
         margin-top: 3.814rem;
+        font-size: 3.2rem;
       }
     }
 
@@ -343,9 +346,9 @@
       font-size: 1.5rem;
       margin-top: 1rem;
       @include mixin.until(media.$sm) {
-        font-size: 1.6rem;
+        font-size: 1rem;
         word-spacing: 1rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
       }
     }
 
@@ -353,7 +356,6 @@
       margin-top: 2rem;
       width: 9rem;
       border-radius: 1rem;
-      // border: 1px solid rgba(165, 255, 190, 1);
 
       @include mixin.until(media.$sm) {
         font-size: 3rem;
@@ -369,7 +371,7 @@
     margin-right: 0;
     @include mixin.until(media.$sm) {
       width: 19.862rem;
-      margin: 0 auto;
+      margin-left: 3rem;
     }
   }
 
@@ -402,7 +404,6 @@
   }
 
   .texts {
-    // margin-top: 8.6rem;
     padding: 3.9375rem 2.1875rem;
     @include mixin.until(media.$sm) {
       padding: 4.7rem 3.65rem;
@@ -412,6 +413,7 @@
       color: #fff;
       margin-top: 1.6rem;
       font-size: 3.5rem;
+      text-align: center;
       @include mixin.until(media.$sm) {
         max-width: 87.625rem;
         text-align: center;
@@ -427,11 +429,11 @@
     p {
       max-width: 43.8125rem;
       font-size: 1.25rem;
+      text-align: center;
       @include mixin.until(media.$sm) {
         font-size: 1.6rem;
-        margin: 3rem auto 0;
+        margin: 2.4rem auto 0;
         max-width: 87.625rem;
-        text-align: center;
       }
     }
   }
@@ -463,7 +465,12 @@
       color: #fff;
       margin-top: 1.6rem;
       font-size: 3.5rem;
-
+      @include mixin.until(media.$sm) {
+        font-size: 3.2rem;
+        width: 27rem;
+        text-align: center;
+        margin: 0 auto 1.6rem;
+      }
       span {
         color: #A5FFBE
       }
@@ -474,6 +481,7 @@
       max-width: 43.8125rem;
       text-align: center;
       color: #A5FFBE;
+      margin-top: 1rem;
       @include mixin.until(media.$sm) {
         width: 29.7rem;
         font-size: 1.6rem;
@@ -489,9 +497,10 @@
       width: 31.5rem;
     }
     img {
-      max-width: 40rem;
+      width: 40rem;
+      height: 23.5rem;
       @include mixin.until(media.$sm) {
-      
+        width: 31.5rem;  
       }
     }
 
@@ -506,12 +515,14 @@
         @include mixin.until(media.$sm) {
           text-align: left;
           font-size: 1.4rem;
+          max-width: 100%;
         }
       }
 
       p:first-of-type {
         color: #FDFFAC;
         @include mixin.until(media.$sm) {
+          max-width: 23.152rem;
           text-align: left;
           font-size: 1.6rem;
         }
@@ -570,7 +581,7 @@
       flex-direction: column;
     }
     div {
-      height: fit-content;
+      height: 12.75rem;
       max-width: 19.375rem;
       background: #2C353D;
       box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
@@ -580,15 +591,20 @@
         max-width: 31.5rem;
         padding: 2.5rem;
       }
+
+      img {
+        width: 2.5rem;
+      }
       h5 {
         font-size: 1.5rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         color: #A5FFBE;
       }
 
       p {
         color: #b7b7b7;
         max-width: 15.625rem;
+        font-size: 1rem;
         @include mixin.until(media.$sm) {
           font-size: 1.6rem;
           width: 31.5rem;
@@ -601,6 +617,7 @@
       @include mixin.until(media.$sm) {
         margin-right: 0;
         width: 31.5rem;
+        height: fit-content;
       }
       p {
         @include mixin.until(media.$sm) {
@@ -611,12 +628,14 @@
     }
 
     div:nth-child(2) {
-      max-width: 23.875rem;
+      width: 23.875rem;
+      height: 17.25rem;
       z-index: 2;
       @include mixin.until(media.$sm) {
         margin-right: 0;
         z-index: 0;
-        max-width: 31.5rem;
+        width: 31.5rem;
+        height: fit-content;
       }
       p {
         @include mixin.until(media.$sm) {
@@ -632,6 +651,7 @@
         margin-top: -2.0rem;
         width: 31.5rem;
         z-index: 1;
+        height: fit-content;
       }
       p {
         @include mixin.until(media.$sm) {
@@ -671,21 +691,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        width: 12rem;
+      }
     }
     .app_item_box {
       display: flex;
       justify-content: center;
       flex-direction: row;
+      margin-top: 1.5rem;
       @include mixin.until(media.$sm) {
         max-width: 31.5rem;
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        margin: auto;
+        margin: 6rem auto 0;
       }
       div {
-        max-width: 13.4375rem;
-        max-height: 12.75rem;
+        width: 13.4375rem;
+        height: 12.75rem;
         background: #2C353D;
         box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
         border-radius: 8px;
@@ -693,23 +717,31 @@
         margin-right: -2.375rem;
         @include mixin.until(media.$sm) {
           margin: auto;
-          max-width: 21.5rem;
           width: 21.5rem;
-          max-height: 14.8rem;
+          height: 14.8rem;
+          text-align: left;
         }
         p {
           font-size: 1.5rem;
           color: #A5FFBE;
           font-weight: 600;
+          @include mixin.until(media.$sm) {
+            margin-top: 1rem;
+          }
         }
+      }
+
+      div:nth-of-type(n+1) {
+        @include mixin.until(media.$sm) {
+            margin-top: -3rem;
+          }
       }
 
       div:last-child {
         margin-right: 0;
-        margin-left: 2.375rem;
+        margin-left: 0;
         @include mixin.until(media.$sm) {
-          margin: auto;
-          
+          margin: -3rem auto 0;
         }
       }
     }
@@ -764,25 +796,36 @@
       flex-direction: row;
       gap: 10;
       @include mixin.until(media.$sm) {
-        flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
       }
       div {
-        max-width: 9.0625rem;
-        max-height: 8.625rem;
+        width: 9.0625rem;
+        height: 8.625rem;
         background: #2C353D;
         border: 1px solid #FDFFAC;
         box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
         border-radius: 8px;
         padding: 1rem;
-        margin: 0 10px;
+        margin: 0 0.5rem;
         @include mixin.until(media.$sm) {
-          max-width: 14.5rem;
-          max-height: 13.4rem;
+          width: 14.5rem;
+          height: 13.4rem;
+          margin: 0.4rem;
+        }
+        svg {
+          width: 3.5rem;
+          height: 3.5rem;
+          @include mixin.until(media.$sm) {
+            width: 5.6rem;
+          }
         }
         p {
           font-size: 1rem;
+          @include mixin.until(media.$sm) {
+            margin-top: 1.6rem;
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -803,6 +846,9 @@
   background-image: url("./assets/img_6.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  @include mixin.until(media.$sm) {
+    padding-bottom: 0;
+  }
 
   h3 {
     color: #fff;
@@ -822,15 +868,16 @@
       flex-direction: column-reverse;
     }
     p {
-      max-width: 34.5rem;
-      max-height: fit-content;
+      width: 34.5rem;
+      height: fit-content;
       background: #2C353D;
       box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
       border-radius: 8px;
       font-size: 1.25rem;
       padding: 2.5rem 3.625rem;
+      text-align: left;
       @include mixin.until(media.$sm) {
-        max-width: 31.9rem;
+        width: 31.9rem;
     }
     }
   }
@@ -1027,7 +1074,6 @@
 .list1 {
   display: flex;
   flex-wrap: wrap;
-  // max-width: 48rem;
   justify-content: center;
   max-width: 80rem;
   background: #A5FFBE;
@@ -1035,7 +1081,6 @@
   height: fit-content;
   padding: 1.5rem 4.5rem;
   @include mixin.until(media.$sm) {
-    // max-width: 68rem;
     margin-top: 4rem;
   }
 
@@ -1088,8 +1133,18 @@
   }
 
   .left_box {
+    margin-right: 3.9rem;
+    @include mixin.until(media.$sm) {
+      margin-right: 0;
+      margin-bottom: 4.4rem;
+    }
     h3 {
       font-size: 3.5rem;
+    }
+    img {
+      width: 13.163125rem;
+      height: 14rem;
+      margin-top: 2.5rem;
     }
   }
 
@@ -1155,7 +1210,7 @@
   margin: 5.1875rem auto;
   @include mixin.until(media.$sm) {
     margin: 4rem auto 0;
-
+    width: 23.1rem;
   }
 }
 
