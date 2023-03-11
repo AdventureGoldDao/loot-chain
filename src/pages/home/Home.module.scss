@@ -430,6 +430,7 @@
       max-width: 43.8125rem;
       font-size: 1.25rem;
       text-align: center;
+      margin-top: 1.25rem;
       @include mixin.until(media.$sm) {
         font-size: 1.6rem;
         margin: 2.4rem auto 0;
@@ -493,6 +494,7 @@
   .description {
     display: flex;
     flex-direction: row;
+    margin-top: 2rem;
     @include mixin.until(media.$sm) {
       width: 31.5rem;
     }
@@ -501,17 +503,21 @@
       height: 23.5rem;
       @include mixin.until(media.$sm) {
         width: 31.5rem;  
+        height: fit-content;
       }
     }
 
     .des_content {
+      margin-left: 1.25rem;
       @include mixin.until(media.$sm) {
-          text-align: left;
-        }
+        text-align: left;
+        margin-left: 0;
+      }
       p {
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: #b7b7b7;
         max-width: 21.5rem;
+        margin-top: 1.5rem;
         @include mixin.until(media.$sm) {
           text-align: left;
           font-size: 1.4rem;
@@ -521,6 +527,7 @@
 
       p:first-of-type {
         color: #FDFFAC;
+        font-size: 1.25rem;
         @include mixin.until(media.$sm) {
           max-width: 23.152rem;
           text-align: left;
@@ -582,14 +589,14 @@
     }
     div {
       height: 12.75rem;
-      max-width: 19.375rem;
+      width: 19.375rem;
       background: #2C353D;
       box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
       border-radius: 8px;
       padding: 1.5rem;
       @include mixin.until(media.$sm) {
-        max-width: 31.5rem;
-        padding: 2.5rem;
+        width: 31.5rem;
+        padding: 2.5rem 2.4rem;
       }
 
       img {
@@ -613,7 +620,7 @@
     }
 
     div:first-of-type {
-      margin-right: -3.375rem;
+      margin-right: -1.5rem;
       @include mixin.until(media.$sm) {
         margin-right: 0;
         width: 31.5rem;
@@ -629,13 +636,12 @@
 
     div:nth-child(2) {
       width: 23.875rem;
-      height: 17.25rem;
+      height: fit-content;
       z-index: 2;
       @include mixin.until(media.$sm) {
         margin-right: 0;
         z-index: 0;
         width: 31.5rem;
-        height: fit-content;
       }
       p {
         @include mixin.until(media.$sm) {
@@ -813,11 +819,12 @@
           height: 13.4rem;
           margin: 0.4rem;
         }
-        svg {
+        img {
           width: 3.5rem;
           height: 3.5rem;
           @include mixin.until(media.$sm) {
             width: 5.6rem;
+            height: 5.6rem;
           }
         }
         p {
@@ -833,28 +840,33 @@
 }
 
 .multiverse {
-  max-width: 57.75rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
   border-radius: 24px;
-  margin: 9.5rem auto 0;
+  margin: 11.5rem 0 0 0;
   text-align: center;
-  padding-bottom: 7.5rem;
-  background-image: url("./assets/img_6.png");
+  background-image: url("./assets/bg_0.png");
   background-size: 100%;
   background-repeat: no-repeat;
   @include mixin.until(media.$sm) {
     padding-bottom: 0;
+    margin: 11rem 0 0 0;
+    background-size: cover;
+
   }
 
   h3 {
     color: #fff;
-    margin-top: 1.6rem;
     font-size: 3.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+    margin-top: -4rem;
+    @include mixin.until(media.$sm) {
+      margin-bottom: 2.1rem;
+    }
     span {
       color: #A5FFBE;
     }
@@ -863,6 +875,8 @@
   .multiverse_content {
     display: flex;
     flex-direction: row;  
+    justify-content: center;
+    align-items: center;
     @include mixin.until(media.$sm) {
       max-width: 31.5rem;
       flex-direction: column-reverse;
@@ -878,7 +892,13 @@
       text-align: left;
       @include mixin.until(media.$sm) {
         width: 31.9rem;
+      }
     }
+    img {
+      width: 35%;
+      @include mixin.until(media.$sm) {
+        width: 100%;
+      }
     }
   }
 }
@@ -1082,6 +1102,8 @@
   padding: 1.5rem 4.5rem;
   @include mixin.until(media.$sm) {
     margin-top: 4rem;
+    max-width: 100%;
+    justify-content: space-around;
   }
 
   .item1 {
@@ -1104,7 +1126,8 @@
         filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
       }
       @include mixin.until(media.$sm) {
-        width: 2rem;
+        width: 3.2rem;
+        margin: 0.6rem;
       }
     }
 
@@ -1224,7 +1247,7 @@
   svg {
     width: 1rem;
     @include mixin.until(media.$sm) {
-      width: 1.6rem;
+      width: 1.2rem;
       color: #1E252B;
       height: fit-content;
     }
