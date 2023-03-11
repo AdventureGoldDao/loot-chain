@@ -9,7 +9,7 @@ import img5 from "./assets/img_5.png";
 import img6 from "./assets/img_6.png";
 import img8 from "./assets/img_8.png";
 import img9 from "./assets/img_9.png";
-// import bg0 from "./assets/bg_0.jpg";
+import sm from "./assets/sm.png";
 import avatar from "./assets/avatar.png";
 import dashboard from "./assets/dashboard.png";
 import bridge from "./assets/bridge.png";
@@ -387,7 +387,7 @@ export const Home: FC<HomeType> = () => {
 						<div className={styles.app_items}>
 							<div className={styles.imgs}>
 								<img src={img1} alt="" />
-								<img src={img5} alt="" />
+								{winHeight > 768 ? <img src={img5} alt="" /> : <img src={sm} alt="" />}
 							</div>
 							<div className={styles.app_item_box}>
 								{app_item_arr.map(({ title, icon }) => {

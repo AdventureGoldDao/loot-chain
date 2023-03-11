@@ -346,8 +346,7 @@
       font-size: 1.5rem;
       margin-top: 1rem;
       @include mixin.until(media.$sm) {
-        font-size: 1rem;
-        word-spacing: 1rem;
+        font-size: 1.6rem;
         margin-top: 2rem;
       }
     }
@@ -495,6 +494,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
+    align-items: center;
     @include mixin.until(media.$sm) {
       width: 31.5rem;
     }
@@ -557,15 +557,20 @@
 }
 
 .features {
-  max-width: 57.75rem;
+  width: 100%;
+  height: 60rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 9.5rem auto 0;
+  margin: -9.5rem auto 0;
+  background-image: url("./assets/bg_1.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   @include mixin.until(media.$sm) {
       font-size: 3.2rem;
+      margin: 12rem auto 0;
     }
 
   h3 {
@@ -610,7 +615,7 @@
 
       p {
         color: #b7b7b7;
-        max-width: 15.625rem;
+        width: 100%;
         font-size: 1rem;
         @include mixin.until(media.$sm) {
           font-size: 1.6rem;
@@ -675,7 +680,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 9.5rem auto 0;
+  margin: -9.5rem auto 0;
+  @include mixin.until(media.$sm) {
+    margin: 12rem auto 0;
+  }
 
   h3 {
     color: #fff;
@@ -877,6 +885,7 @@
     flex-direction: row;  
     justify-content: center;
     align-items: center;
+    margin-top: -2rem;
     @include mixin.until(media.$sm) {
       max-width: 31.5rem;
       flex-direction: column-reverse;
@@ -892,10 +901,12 @@
       text-align: left;
       @include mixin.until(media.$sm) {
         width: 31.9rem;
+        font-size: 1.6rem;
       }
     }
     img {
       width: 35%;
+      margin-top: -2rem;
       @include mixin.until(media.$sm) {
         width: 100%;
       }
@@ -1135,7 +1146,7 @@
       font-size: 0.875rem;
       color: #536A5A;
       @include mixin.until(media.$sm) {
-        font-size: 0.625rem;
+        font-size: 1rem;
         transform: scale(0.75);
       }
     }
@@ -1189,11 +1200,11 @@
         margin: 0 auto;
       }
       p {
-        color: #fff;
         font-size: 1.25rem;
       }
       p:nth-child(2) {
         color: #ebebeb;
+        opacity: 0.6;
         font-size: 1rem;
       }
     }
@@ -1202,6 +1213,10 @@
       box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
       @include mixin.until(media.$sm) {
         margin-left: 0;
+      }
+
+      p:first-child {
+        color: #fff;
       }
     }
 

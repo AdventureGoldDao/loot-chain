@@ -30,7 +30,6 @@ export const useWindowSize = (): WindowSize => {
 		} else {
 			rem = (a * 4) / 320;
 		}
-		console.log(a, rem);
 		r.style.fontSize = rem + "px";
 	}
 	return windowSize;

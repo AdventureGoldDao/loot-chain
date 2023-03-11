@@ -24,7 +24,7 @@ html {
   --spacing-unit: 0.5rem;
   --max-width: 1440px;
 
-  --gutters: 9rem;
+  --gutters: 6rem;
 
   --grid: 100%;
 
@@ -34,8 +34,8 @@ html {
   --header-height: 9.5rem;
 
   @media (max-width: 768px) {
-    --header-height: 16rem;
-    --gutters: 5rem;
+    --header-height: 13.116rem;
+    --gutters: 3rem;
   }
 
 
