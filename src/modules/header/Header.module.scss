@@ -57,6 +57,7 @@
   color: rgba(var(--white), 1);
   margin-right: 3rem;
   &:hover {
+    color: #A5FFBE;
     opacity: 0.8;
   }
   @include mixin.until(media.$sm) {

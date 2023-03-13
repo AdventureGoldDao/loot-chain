@@ -73,7 +73,7 @@ const list2 = [
 	},
 	{
 		title: "2023 Q2",
-		content: "Launch Adventure Gold Smart Layer testnet",
+		content: "Launch The Loot Chain testnet",
 		active: true,
 	},
 	{
@@ -83,7 +83,7 @@ const list2 = [
 	},
 	{
 		title: "2023 Q4",
-		content: "Launch Adventure Gold Smart Layer mainnet and continue to expand the Loot ecosystem",
+		content: "Launch The Loot Chain mainnet and continue to expand the Loot ecosystem",
 		active: false,
 	},
 ];
@@ -259,7 +259,7 @@ export const Home: FC<HomeType> = () => {
 		<>
 			<section className={styles.component}>
 				<div className={styles.body}>
-					<section className={styles.top + " " + styles.orb_canvas}>
+					<section className={styles.top}>
 						<div className={styles.texts}>
 							<h1>Adventure Gold</h1>
 							<p>Building the Lootverse Infrastruture</p>
@@ -289,23 +289,23 @@ export const Home: FC<HomeType> = () => {
 					<section className={styles.goldchain}>
 						<div className={styles.title}>
 							<h3>
-								Adventure Gold <span>Gold Chain</span>
+								The <span>Loot Chain</span>
 							</h3>
 							<p>
-								The Adventure Gold Chain is a low-cost and lightning-fast L2 blockchain dedicated to
-								the Lootverse that enables highly scalable applications.
+								The Loot Chain is a low-cost and lightning-fast L2 blockchain dedicated to the
+								Lootverse that enables highly scalable applications.
 							</p>
 						</div>
 						<div className={styles.description}>
 							<img src={nft} alt="" />
 							<div className={styles.des_content}>
-								<p>Architecture of the Adventure Gold Chain:</p>
+								<p>Architecture of The Loot Chain:</p>
 								<p>
-									The Adventure Gold Chain enables a cost-efficient execution environment for the
-									Loot community. The Adventure Gold Chain is built as an optimistic roll-up on
-									Ethereum, taking advantage of Ethereum&apos;s secuirty as well as interoperability
-									with other L2 solutions. Users can enter or exit the chain in a similar way as
-									Optimism or Arbitrum.
+									The Loot Chain enables a cost-efficient execution environment for the Loot
+									community. The Loot Chain is built as an optimistic roll-up on Ethereum, taking
+									advantage of Ethereum&apos;s secuirty as well as interoperability with other L2
+									solutions. Users can enter or exit the chain in a similar way as Optimism or
+									Arbitrum.
 								</p>
 								<button
 									onClick={() => {
@@ -333,8 +333,8 @@ export const Home: FC<HomeType> = () => {
 									<h5>Sovereignty</h5>
 									<p>
 										The Lootverse expands across multiple chains including Ethereum, Arbitrum,
-										Polygon and StarkNet. The Adventure Gold Chain the only one OWNED and CONTROLLED
-										by the Loot & AGLD community.
+										Polygon and StarkNet. The Loot Chain the only one OWNED and CONTROLLED by the
+										Loot & AGLD community.
 									</p>
 								</div>
 								<div>
@@ -350,8 +350,8 @@ export const Home: FC<HomeType> = () => {
 									<h5>Sovereignty</h5>
 									<p>
 										The Lootverse expands across multiple chains including Ethereum, Arbitrum,
-										Polygon and StarkNet. The Adventure Gold Chain the only one OWNED and CONTROLLED
-										by the Loot & AGLD community.
+										Polygon and StarkNet. The Loot Chain the only one OWNED and CONTROLLED by the
+										Loot & AGLD community.
 									</p>
 								</div>
 								<div>
@@ -441,11 +441,11 @@ export const Home: FC<HomeType> = () => {
 								The Loot Multiverse is a boundless, decentralized canvas for stories, games,
 								experiences, and more, available to the community for free and with no restrictions.
 								Loot was created without a specific purpose, and its potential applications are
-								endless. With the Adventure Gold Smart Layer and Infrastructure Ecosystem,
-								developers have the ability to create an infinite number of metaverses and games
-								using Loot as a building block. Players can seamlessly navigate between different
-								metaverses using the smart bridge infrastructure, opening up new horizons for
-								exploration and discovery.
+								endless. With The Loot Chain and Infrastructure Ecosystem, developers have the
+								ability to create an infinite number of metaverses and games using Loot as a
+								building block. Players can seamlessly navigate between different metaverses using
+								the smart bridge infrastructure, opening up new horizons for exploration and
+								discovery.
 							</p>
 							<img src={diamonds} alt="" />
 						</div>

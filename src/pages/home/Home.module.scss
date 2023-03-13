@@ -330,6 +330,7 @@
   background-image: url("./assets/md_bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  z-index: 2;
   @include mixin.until(media.$sm) {
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -588,6 +589,9 @@
         border-radius: 8px;
         margin-top: 1.5rem;
         font-size: 1rem;
+        font-family: 'Inconsolata';
+        font-style: normal;
+        font-weight: 600;
         @include mixin.until(media.$sm) {
           font-size: 1.6rem;
           width: 13.577rem;
