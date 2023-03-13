@@ -1,6 +1,12 @@
 @use "../../helper/style/mixin";
 @use "../../helper/style/media";
 
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+
 .component {
   width: 100%;
   height: calc(var(--window-height) - var(--header-height));
@@ -315,18 +321,31 @@
 
 .top {
   display: flex;
-  margin-top: var(--header-height);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 64rem;
+  max-width: 80rem;
+  height: 43.75rem;
+  padding: 0 6rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("./assets/md_bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   @include mixin.until(media.$sm) {
     flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    height: 56.8rem;
+    background-image: url("./assets/sm_bg.png");
+    padding: 0;
   }
 
   .texts {
     font-size: 4rem;
-    width: 35rem;
+    width: 44rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include mixin.until(media.$sm) {
       font-size: 3.2rem;
       max-width: 31.5rem;
@@ -334,7 +353,8 @@
     }
 
     h1 {
-      margin-top: 8.8rem;
+      // margin-top: 8.8rem;
+      width: 100%;
       font-size: 4rem;
       @include mixin.until(media.$sm) {
         margin-top: 3.814rem;
@@ -343,6 +363,7 @@
     }
 
     p {
+      width: 100%;
       font-size: 1.5rem;
       margin-top: 1rem;
       @include mixin.until(media.$sm) {
@@ -370,7 +391,31 @@
     margin-right: 0;
     @include mixin.until(media.$sm) {
       width: 19.862rem;
-      margin-left: 3rem;
+      margin-left: 0;
+    }
+  }
+
+  .top_left_icon {
+    width: 2.2rem;
+    top: 11rem;
+    right: 20.9375rem;
+    position: absolute;
+    animation: float 3s ease-out infinite;
+    @include mixin.until(media.$sm) {
+      top: 14rem;
+      left: 5.9375rem;
+    }
+  }
+
+  .top_right_icon {
+    width: 3rem;
+    right: 9.6rem;
+    top: 18rem;
+    position: absolute;
+    animation: float 3s ease-out infinite;
+    @include mixin.until(media.$sm) {
+      top: 18rem;
+      left: 13.6rem;
     }
   }
 
@@ -385,7 +430,7 @@
   border: 1px solid #FDFFAC;
   box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
   border-radius: 24px;
-  margin: 9.6rem auto 0;
+  margin: 1.25rem auto 0;
   @include mixin.until(media.$sm) {
     width: 31.5rem;
     flex-direction: row-reverse;
@@ -707,6 +752,7 @@
       align-items: center;
       img {
         width: 12rem;
+        margin: 0 2.25rem;
       }
     }
     .app_item_box {
@@ -885,10 +931,11 @@
     flex-direction: row;  
     justify-content: center;
     align-items: center;
-    margin-top: -2rem;
+    margin-top: 2rem;
     @include mixin.until(media.$sm) {
       max-width: 31.5rem;
       flex-direction: column-reverse;
+      margin-top: 8rem;
     }
     p {
       width: 34.5rem;
@@ -910,6 +957,29 @@
       @include mixin.until(media.$sm) {
         width: 100%;
       }
+    }
+  }
+
+  .multiverse_float_top_icon {
+    width: 16rem;
+    position: absolute;
+    top: -2rem;
+    right: 15rem;
+    animation: float 3s ease-out infinite;
+    @include mixin.until(media.$sm) {
+      right: 12rem;
+    }
+  }
+
+  .multiverse_float_bottom_icon {
+    width: 18rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 13.5rem;
+    animation: float 3s ease-out infinite;
+    @include mixin.until(media.$sm) {
+      top: 16rem;
+      left: 8rem;
     }
   }
 }
@@ -1176,8 +1246,8 @@
       font-size: 3.5rem;
     }
     img {
-      width: 13.163125rem;
-      height: 14rem;
+      width: 20.6875rem;
+      height: 17.0625rem;
       margin-top: 2.5rem;
     }
   }

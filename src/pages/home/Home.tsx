@@ -4,11 +4,7 @@ import { useWindowSize } from "../../hooks/use-window-size";
 import img from "./assets/card.png";
 import img1 from "./assets/img_1.png";
 import img2 from "./assets/img_2.png";
-import img3 from "./assets/img_3.png";
 import img5 from "./assets/img_5.png";
-import img6 from "./assets/img_6.png";
-import img8 from "./assets/img_8.png";
-import img9 from "./assets/img_9.png";
 import sm from "./assets/sm.png";
 import avatar from "./assets/avatar.png";
 import dashboard from "./assets/dashboard.png";
@@ -20,6 +16,10 @@ import featureIocn0 from "./assets/featureIcon0.png";
 import featureIocn1 from "./assets/featureIcon1.png";
 import featureIocn2 from "./assets/featureIcon2.png";
 import diamonds from "./assets/diamonds.png";
+import top_left_icon from "./assets/top_left_icon.png";
+import top_right_icon from "./assets/top_right_icon.png";
+import multiverse_top_icon from "./assets/multiverse_top_icon.png";
+import multiverse_bottom_icon from "./assets/multiverse_bottom_icon.png";
 
 import bybit from "./assets/bybit.svg";
 import market2 from "./assets/market2.svg";
@@ -259,24 +259,17 @@ export const Home: FC<HomeType> = () => {
 		<>
 			<section className={styles.component}>
 				<div className={styles.body}>
-					<section className={styles.top}>
+					<section className={styles.top + " " + styles.orb_canvas}>
 						<div className={styles.texts}>
 							<h1>Adventure Gold</h1>
 							<p>Building the Lootverse Infrastruture</p>
-							{/* <button
-								onClick={() => {
-									window.open("https://staking.adventuregold.org/#/", "_blank");
-								}}
-							>
-								Staking
-							</button> */}
 						</div>
 						<img src={img} alt={"img"} />
+						<img className={styles.top_left_icon} src={top_left_icon} alt={"img"} />
+						<img className={styles.top_right_icon} src={top_right_icon} alt={"img"} />
 					</section>
 					<section className={styles.about}>
-						{/* <img src={img1} alt={"img1"} /> */}
 						<div className={styles.texts}>
-							{/* <h2>About</h2> */}
 							<h3>
 								What is <span>Adventure Gold</span>
 							</h3>
@@ -456,6 +449,12 @@ export const Home: FC<HomeType> = () => {
 							</p>
 							<img src={diamonds} alt="" />
 						</div>
+						<img className={styles.multiverse_float_top_icon} src={multiverse_top_icon} alt="" />
+						<img
+							className={styles.multiverse_float_bottom_icon}
+							src={multiverse_bottom_icon}
+							alt=""
+						/>
 					</section>
 					<section className={styles.roadmap}>
 						<div className={styles.left_box}>
