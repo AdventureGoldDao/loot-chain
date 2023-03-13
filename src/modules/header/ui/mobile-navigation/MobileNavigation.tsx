@@ -52,7 +52,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={""}
+						href={"/"}
 					>
 						Home
 					</NavLink>
@@ -61,7 +61,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={""}
+						href={"https://www.certik.com/projects/adventure-gold"}
 					>
 						Audit
 					</NavLink>
@@ -70,25 +70,25 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={""}
+						href={"https://staking.adventuregold.org"}
 					>
 						Staking
 					</NavLink>
 				</li>
-				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
+				<li style={{ marginBottom: 10 }}>
+					<a
+						style={{ fontSize: 18 }}
 						className={classNames(styles.link)}
-						href={""}
+						href={"/whitepaper/agld_whitepaper.pdf"}
 					>
 						Whitepaper
-					</NavLink>
+					</a>
 				</li>
 				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={""}
+						href={"https://loot-talk.com/"}
 					>
 						Governance
 					</NavLink>

@@ -67,14 +67,14 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				>
 					Loot
 				</NavLink>
-				<NavLink
+				<a
+					style={{ textDecoration: 0 }}
 					className={styles.navlink}
 					href="/whitepaper/agld_whitepaper.pdf"
 					target="_blank"
-					variant="text"
 				>
 					Whitepaper
-				</NavLink>
+				</a>
 				<NavLink className={styles.navlink} href="https://loot-talk.com/" variant="text">
 					Governance
 				</NavLink>
