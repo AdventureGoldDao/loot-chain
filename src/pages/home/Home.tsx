@@ -413,8 +413,8 @@ export const Home: FC<HomeType> = () => {
 							<h5>Adventure Gold Infrastructure and Tools</h5>
 							<p>
 								Adventure Gold provides a range of open-sourced infrastructure modules for
-								developers to implement unique game logic mechanisms when deploying their smart
-								layer. The open ecosystem broadens the boundaries of gaming design, creating more
+								developers to implement unique game logic mechanisms when deploying their Loot
+								Chains. The open ecosystem broadens the boundaries of gaming design, creating more
 								opportunities for innovative development of Lootverse.
 							</p>
 						</div>
@@ -444,7 +444,7 @@ export const Home: FC<HomeType> = () => {
 								endless. With The Loot Chain and Infrastructure Ecosystem, developers have the
 								ability to create an infinite number of metaverses and games using Loot as a
 								building block. Players can seamlessly navigate between different metaverses using
-								the smart bridge infrastructure, opening up new horizons for exploration and
+								the ross-chain bridge infrastructure, opening up new horizons for exploration and
 								discovery.
 							</p>
 							<img src={diamonds} alt="" />

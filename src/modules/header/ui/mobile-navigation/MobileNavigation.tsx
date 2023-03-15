@@ -75,7 +75,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						Staking
 					</NavLink>
 				</li>
-				<li style={{ marginBottom: 10 }}>
+				{/* <li style={{ marginBottom: 10 }}>
 					<a
 						style={{ fontSize: 18 }}
 						className={classNames(styles.link)}
@@ -83,7 +83,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					>
 						Whitepaper
 					</a>
-				</li>
+				</li> */}
 				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
