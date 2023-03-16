@@ -286,6 +286,45 @@ export const Home: FC<HomeType> = () => {
 							</p>
 						</div>
 					</section>
+					<section className={styles.applications}>
+						{winHeight > 768 ? (
+							<h3>
+								Application of <span>AGLD Token</span>
+							</h3>
+						) : (
+							<h3>
+								The AGLD <span>Token</span>
+							</h3>
+						)}
+						<div className={styles.app_items}>
+							<div className={styles.imgs}>
+								<img src={img1} alt="" />
+								{winHeight > 768 ? <img src={img5} alt="" /> : <img src={sm} alt="" />}
+							</div>
+							<div className={styles.app_item_box}>
+								{app_item_arr.map(({ title, icon }) => {
+									return (
+										<div key={title}>
+											{icon}
+											<p>{title}</p>
+										</div>
+									);
+								})}
+							</div>
+						</div>
+					</section>
+					<section className={styles.analyse}>
+						<div className={styles.list1}>
+							{list1.map(({ title, icon }) => {
+								return (
+									<div className={styles.item1} key={title}>
+										<img src={icon} alt={"icon"} />
+										<p>{title}</p>
+									</div>
+								);
+							})}
+						</div>
+					</section>
 					<section className={styles.goldchain}>
 						<div className={styles.title}>
 							<h3>
@@ -367,47 +406,7 @@ export const Home: FC<HomeType> = () => {
 							</div>
 						)}
 					</section>
-					<section className={styles.applications}>
-						{winHeight > 768 ? (
-							<h3>
-								Application of <span>AGLD Token</span>
-							</h3>
-						) : (
-							<h3>
-								The AGLD <span>Token</span>
-							</h3>
-						)}
-						<div className={styles.app_items}>
-							<div className={styles.imgs}>
-								<img src={img1} alt="" />
-								{winHeight > 768 ? <img src={img5} alt="" /> : <img src={sm} alt="" />}
-							</div>
-							<div className={styles.app_item_box}>
-								{app_item_arr.map(({ title, icon }) => {
-									return (
-										<div key={title}>
-											{icon}
-											<p>{title}</p>
-										</div>
-									);
-								})}
-							</div>
-						</div>
-					</section>
-					<section className={styles.analyse}>
-						{/* <h3 className={styles.asset}>Where you can access AGLD</h3> */}
-						<div className={styles.list1}>
-							{list1.map(({ title, icon }) => {
-								return (
-									<div className={styles.item1} key={title}>
-										<img src={icon} alt={"icon"} />
-										<p>{title}</p>
-									</div>
-								);
-							})}
-						</div>
-					</section>
-					<section className={styles.infrastructure}>
+					{/* <section className={styles.infrastructure}>
 						<div className={styles.title}>
 							<h3>Infrastructure</h3>
 							<h5>Adventure Gold Infrastructure and Tools</h5>
@@ -431,7 +430,7 @@ export const Home: FC<HomeType> = () => {
 								})}
 							</div>
 						</div>
-					</section>
+					</section> */}
 					<section className={styles.multiverse}>
 						<h3>
 							The Loot <span>Multiverse</span>
@@ -444,7 +443,7 @@ export const Home: FC<HomeType> = () => {
 								endless. With The Loot Chain and Infrastructure Ecosystem, developers have the
 								ability to create an infinite number of metaverses and games using Loot as a
 								building block. Players can seamlessly navigate between different metaverses using
-								the ross-chain bridge infrastructure, opening up new horizons for exploration and
+								the cross-chain bridge infrastructure, opening up new horizons for exploration and
 								discovery.
 							</p>
 							<img src={diamonds} alt="" />

@@ -729,7 +729,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: -9.5rem auto 0;
+  margin: 9.5rem auto 0;
   @include mixin.until(media.$sm) {
     margin: 12rem auto 0;
   }
@@ -905,7 +905,7 @@
   align-items: center;
   position: relative;
   border-radius: 24px;
-  margin: 11.5rem 0 0 0;
+  margin: 0;
   text-align: center;
   background-image: url("./assets/bg_0.png");
   background-size: 100%;
