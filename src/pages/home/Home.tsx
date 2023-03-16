@@ -346,13 +346,13 @@ export const Home: FC<HomeType> = () => {
 									solutions. Users can enter or exit the chain in a similar way as Optimism or
 									Arbitrum.
 								</p>
-								<button
+								{/* <button
 									onClick={() => {
 										window.open("https://staking.adventuregold.org/#/", "_blank");
 									}}
 								>
 									Learn More
-								</button>
+								</button> */}
 							</div>
 						</div>
 					</section>
