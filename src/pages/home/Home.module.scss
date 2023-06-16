@@ -346,6 +346,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     @include mixin.until(media.$sm) {
       font-size: 3.2rem;
@@ -374,15 +375,20 @@
     }
 
     button {
-      margin-top: 2rem;
-      width: 9rem;
-      border-radius: 1rem;
-
+      margin: 2rem auto;
+      width: 12.1875rem;
+      height: 2.5rem;
+      color: #213425;
+      font-weight: 700;
+      border-radius: 6px;
+      border: 0;
+      margin-left: 0;
+      background: linear-gradient(90deg, #A5FFBE 0%, #55DD7B 100%) !important;
       @include mixin.until(media.$sm) {
-        font-size: 3rem;
-        width: 20rem;
-        border-radius: 4rem;
-        margin-top: 8rem;
+        font-size: 1.25rem;
+        width: 24rem;
+        height: 4rem;
+        margin: 4rem auto;
       }
     }
   }
@@ -920,7 +926,7 @@
   h3 {
     color: #fff;
     font-size: 3.5rem;
-    margin-bottom: 6rem;
+    // margin-bottom: 6rem;
     margin-top: -4rem;
     @include mixin.until(media.$sm) {
       margin-bottom: 2.1rem;
@@ -929,6 +935,24 @@
       color: #A5FFBE;
     }
   }
+
+  button {
+      margin: 1.25rem 0 6rem;
+      width: 12.1875rem;
+      height: 2.5rem;
+      color: #213425;
+      font-weight: 700;
+      border-radius: 6px;
+      border: 0;
+      margin-left: 0;
+      background: linear-gradient(90deg, #A5FFBE 0%, #55DD7B 100%) !important;
+      @include mixin.until(media.$sm) {
+        font-size: 1.25rem;
+        width: 24rem;
+        height: 4rem;
+        margin: 4rem 0;
+      }
+    }
 
   .multiverse_content {
     display: flex;
