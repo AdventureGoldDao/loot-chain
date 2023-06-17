@@ -265,7 +265,7 @@ export const Home: FC<HomeType> = () => {
 						<div className={styles.texts}>
 							<h1>Adventure Gold</h1>
 							<p>Building the Lootverse Infrastruture</p>
-							<button onClick={show}>Build on Loot Chain</button>
+							{/* <button onClick={show}>Build on Loot Chain</button> */}
 						</div>
 						<img src={img} alt={"img"} />
 						<img className={styles.top_left_icon} src={top_left_icon} alt={"img"} />
@@ -281,13 +281,18 @@ export const Home: FC<HomeType> = () => {
 								through a fair airdrop, 10,000 AGLD was free to claim per OG Loot. Previously
 								regarded by many as the governance token for Loot, AGLD will now power the Loot
 								Chain and enable an ecosystem of Fully On Chain Games and Autonomous Worlds to grow
-								on top of it. In addition, the community has come up with a brand new token
-								economics design that aims to incentivise adoption of Loot instead of governing it.
-								Mild inflation instead of a fixed supply is implemented and the rewards will be
-								distributed to Lootverse NFTs that are non-custodially staked. The core value of
-								AGLD is supported by Lootverse’s community attention. By incentivising user & assets
-								engagements in the Lootverse, AGLD grows the Lootverse in a healthy and sustainable
-								way.
+								on top of it.
+							</p>
+							<p>
+								In addition, the community has come up with a brand new token economics design that
+								aims to incentivise adoption of Loot instead of governing it. Mild inflation instead
+								of a fixed supply is implemented and the rewards will be distributed to Lootverse
+								NFTs that are non-custodially staked.
+							</p>
+							<p>
+								The core value of AGLD is supported by Lootverse’s community attention. By
+								incentivising user & assets engagements in the Lootverse, AGLD grows the Lootverse
+								in a healthy and sustainable way.
 							</p>
 						</div>
 					</section>
@@ -440,22 +445,27 @@ export const Home: FC<HomeType> = () => {
 						<h3>
 							Loot Autonomous <span>Worlds</span>
 						</h3>
-						<button onClick={show}>Build on Loot Chain</button>
+						{/* <button onClick={show}>Build on Loot Chain</button> */}
 						<div className={styles.multiverse_content}>
 							<p>
-								The Loot community has created some of the most exciting Fully On-Chain Games (FOCG)
-								and Autonomous Worlds (AW) out there, including Realms and Loot Survivor. By being
-								fully on-chain, game developers are given a wider design space and players can enjoy
-								a new era of games since all game states are stored on-chain and game logics are
-								executed on-chain. We expect the FOCG & AW landscape to grow into a galaxy of games
-								each with their own state & access point stored on-chain. With the original vision
-								to incentivize the Lootverse, the AGLD DAO decided to create a showcase of the best
-								fully on-chain games out there, starting from what we have in the Lootverse. This
-								can help the community access the cutting-edge of on-chain gaming, access in-depth
-								statistics & information, and even socialize in the game in this one-stop-shop. Stay
-								tuned for future product release details.
+								<span>
+									The Loot community has created some of the most exciting Fully On-Chain Games
+									(FOCG) and Autonomous Worlds (AW) out there, including Realms and Loot Survivor.
+								</span>
+								<span>
+									By being fully on-chain, game developers are given a wider design space and
+									players can enjoy a new era of games since all game states are stored on-chain and
+									game logics are executed on-chain. We expect the FOCG & AW landscape to grow into
+									a galaxy of games each with their own state & access point stored on-chain.
+								</span>
 							</p>
-							<img src={diamonds} alt="" />
+							<p>
+								With the original vision to incentivize the Lootverse, the AGLD DAO decided to
+								create a showcase of the best fully on-chain games out there, starting from what we
+								have in the Lootverse. This can help the community access the cutting-edge of
+								on-chain gaming, access in-depth statistics & information, and even socialize in the
+								game in this one-stop-shop. Stay tuned for future product release details.
+							</p>
 						</div>
 						<img className={styles.multiverse_float_top_icon} src={multiverse_top_icon} alt="" />
 						<img
