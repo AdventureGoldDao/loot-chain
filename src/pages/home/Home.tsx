@@ -265,7 +265,7 @@ export const Home: FC<HomeType> = () => {
 						<div className={styles.texts}>
 							<h1>Adventure Gold</h1>
 							<p>Building the Lootverse Infrastruture</p>
-							{/* <button onClick={show}>Build on Loot Chain</button> */}
+							<button onClick={show}>Build on Loot Chain</button>
 						</div>
 						<img src={img} alt={"img"} />
 						<img className={styles.top_left_icon} src={top_left_icon} alt={"img"} />
@@ -445,7 +445,7 @@ export const Home: FC<HomeType> = () => {
 						<h3>
 							Loot Autonomous <span>Worlds</span>
 						</h3>
-						{/* <button onClick={show}>Build on Loot Chain</button> */}
+						<button onClick={show}>Build on Loot Chain</button>
 						<div className={styles.multiverse_content}>
 							<p>
 								<span>

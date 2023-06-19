@@ -8,6 +8,7 @@
 }
 
 .component {
+  overflow-x: hidden;
   width: 100%;
   height: calc(var(--window-height) - var(--header-height));
 }
@@ -336,7 +337,9 @@
     align-items: flex-start;
     justify-content: center;
     height: 56.8rem;
-    background-image: url("./assets/sm_bg.png");
+    background-image: url("./assets/md_bg.png");
+    background-position: center center;
+    background-size: auto 100%;
     padding: 0;
   }
 
@@ -951,7 +954,8 @@
         font-size: 1.25rem;
         width: 24rem;
         height: 4rem;
-        margin: 4rem 0;
+        min-height: 4rem;
+        margin: 0 0 2rem;
       }
     }
 
@@ -965,7 +969,7 @@
     @include mixin.until(media.$sm) {
       max-width: 31.5rem;
       flex-direction: column;
-      margin-top: 8rem;
+      margin-top: 6rem;
     }
     p {
       width: 34.5rem;
