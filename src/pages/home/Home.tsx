@@ -267,9 +267,9 @@ export const Home: FC<HomeType> = () => {
 							<p>Building the Lootverse Infrastruture</p>
 							<button onClick={show}>Build on Loot Chain</button>
 						</div>
-						<img src={img} alt={"img"} />
+						{/* <img src={img} alt={"img"} />
 						<img className={styles.top_left_icon} src={top_left_icon} alt={"img"} />
-						<img className={styles.top_right_icon} src={top_right_icon} alt={"img"} />
+						<img className={styles.top_right_icon} src={top_right_icon} alt={"img"} /> */}
 					</section>
 					<section className={styles.about}>
 						<div className={styles.texts}>
