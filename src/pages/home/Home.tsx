@@ -15,9 +15,9 @@ import nft from "./assets/nftImg.png";
 import featureIocn0 from "./assets/featureIcon0.png";
 import featureIocn1 from "./assets/featureIcon1.png";
 import featureIocn2 from "./assets/featureIcon2.png";
-import diamonds from "./assets/diamonds.png";
-import top_left_icon from "./assets/top_left_icon.png";
-import top_right_icon from "./assets/top_right_icon.png";
+// import diamonds from "./assets/diamonds.png";
+// import top_left_icon from "./assets/top_left_icon.png";
+// import top_right_icon from "./assets/top_right_icon.png";
 import multiverse_top_icon from "./assets/multiverse_top_icon.png";
 import multiverse_bottom_icon from "./assets/multiverse_bottom_icon.png";
 

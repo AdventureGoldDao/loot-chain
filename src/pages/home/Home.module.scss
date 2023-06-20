@@ -1384,4 +1384,21 @@
   }
 }
 
+.explore {
+  height: 100vh;
+  background-image: url('../../../pages/explore/explore-bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .imgWrapper {
+    width: 44.61rem;
+    height: 25.67rem;
+    background-image: url('../../../pages/explore/upcoming.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
 

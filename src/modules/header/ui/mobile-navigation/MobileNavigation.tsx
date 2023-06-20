@@ -61,11 +61,28 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={"https://www.certik.com/projects/adventure-gold"}
+						href={"/explore"}
 					>
-						Audit
+						Explore
 					</NavLink>
 				</li>
+				<li>
+					<NavLink
+						style={{ fontSize: 18, marginBottom: 10 }}
+						className={classNames(styles.link)}
+						href={"#"}
+					>
+						Loot Chain
+					</NavLink>
+				</li>
+				<ul className={styles.childUl}>
+					<li>
+						<NavLink href="https://explorer.lootchain.com">Loot scan</NavLink>
+					</li>
+					<li>
+						<NavLink href="https://mainnet.lootchain.com/">Bridge</NavLink>
+					</li>
+				</ul>
 				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
@@ -93,6 +110,23 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						Governance
 					</NavLink>
 				</li>
+				<li>
+					<NavLink
+						style={{ fontSize: 18, marginBottom: 10 }}
+						className={classNames(styles.link)}
+						href={"#"}
+					>
+						About
+					</NavLink>
+				</li>
+				<ul className={styles.childUl}>
+					<li>
+						<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
+					</li>
+					<li>
+						<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
+					</li>
+				</ul>
 			</ul>
 			<ul className={styles.list}>
 				{keys.map((key, index) => {
