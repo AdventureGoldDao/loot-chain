@@ -252,7 +252,9 @@ const OS_reverse_arr = [
 	},
 ];
 
-const show = () => {};
+const show = () => {
+	window.open("https://forms.gle/kfcKChgdTzBdxKTh9", "_blank");
+};
 
 export const Home: FC<HomeType> = () => {
 	const winHeight = useWindowSize()[0];
