@@ -129,8 +129,8 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 				</ul>
 			</ul>
 			<ul className={styles.list}>
-				{keys.map((key, index) => {
-					const lastItem = index === keys.length - 1;
+				{keys.map((key) => {
+					// const lastItem = index === keys.length - 1;
 					return (
 						<li key={key} className={styles.item}>
 							<NavLink

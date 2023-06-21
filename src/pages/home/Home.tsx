@@ -258,7 +258,7 @@ const show = () => {
 
 export const Home: FC<HomeType> = () => {
 	const winHeight = useWindowSize()[0];
-	const verseArr = winHeight > 768 ? opensource_arr : OS_reverse_arr;
+	winHeight > 768 ? opensource_arr : OS_reverse_arr;
 	return (
 		<>
 			<section className={styles.component}>

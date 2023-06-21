@@ -101,16 +101,26 @@
 
 .selector {
   position: absolute;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 10px;
-  top: 20px;
+  border: 1px solid #718C7C;
+  border-radius: 10px;
+  width: 150px;
+  top: 2rem;
   list-style-type: none;
+  background-color: #4B5954;
   & a:hover {
-    color: #a5ffbe;
+    color: #fff;
+    background-color: #0000004D;
+  }
+  & a:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  & a:last-child {
+    border-radius: 0 0 10px 10px;
   }
   & a {
-    color: #213425;
+    font-weight: 500;
+    padding: 14px 28px;
+    color: #718C7C;
     font-size: 14px;
     line-height: 20px;
   }
