@@ -101,7 +101,7 @@
 
 .selector {
   position: absolute;
-  border: 1px solid #718C7C;
+  border: 1px solid #4b5954;
   border-radius: 10px;
   width: 150px;
   top: 2rem;
@@ -109,7 +109,7 @@
   background-color: #4B5954;
   & a:hover {
     color: #fff;
-    background-color: #242926;
+    background-color: #191D1B;
   }
   & a:first-child {
     border-radius: 10px 10px 0 0;
@@ -120,8 +120,8 @@
   & a {
     font-weight: 500;
     padding: 14px 28px;
-    color: #718C7C;
-    background-color: #0000004D;
+    color: #76AB8B;
+    background-color: #242926;
     font-size: 14px;
     line-height: 20px;
   }
