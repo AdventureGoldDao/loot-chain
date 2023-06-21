@@ -12,12 +12,12 @@
   # a base has not been set. This sample publishes the directory
   # located at the absolute path "root/project/build-output"
 
-  publish = "_next/"
+  publish = ".next/"
 
 # Deploy Preview context: all deploys generated from
 # a pull/merge request will inherit these settings.
 [context.deploy-preview]
-  publish = "_next/"
+  publish = ".next/"
 
 # The following redirect is intended for use with most SPAs
 # that handle routing internally.
