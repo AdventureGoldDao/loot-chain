@@ -93,8 +93,15 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				</NavLink> */}
 				<div
 					className={styles.selectBox}
-					onClick={() => setIshover(!isHover)}
+					onClick={() => {
+						setIshovered(false);
+						setIshover(!isHover);
+					}}
 					ref={rootRef}
+					onMouseEnter={() => {
+						setIshovered(false);
+						setIshover(true);
+					}}
 					aria-hidden="true"
 				>
 					<div className={styles.selectTitle}>
@@ -141,7 +148,14 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				<div
 					style={{ marginRight: "auto" }}
 					className={styles.selectBox}
-					onClick={() => setIshovered(!isHovered)}
+					onClick={() => {
+						setIshover(false);
+						setIshovered(!isHovered);
+					}}
+					onMouseEnter={() => {
+						setIshover(false);
+						setIshovered(true);
+					}}
 					ref={roootRef}
 					aria-hidden="true"
 				>
