@@ -126,6 +126,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<li>
 						<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
 					</li>
+					<li>
+						<NavLink href="https://www.lootproject.com/">Loot</NavLink>
+					</li>
 				</ul>
 			</ul>
 			<ul className={styles.list}>

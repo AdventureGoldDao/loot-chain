@@ -167,6 +167,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						<ul className={styles.selector}>
 							<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
 							<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
+							<NavLink href="https://www.lootproject.com/">Loot</NavLink>
 						</ul>
 					)}
 				</div>

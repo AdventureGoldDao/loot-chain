@@ -491,6 +491,7 @@
         font-size: 1.6rem;
         margin: 2.4rem auto 0;
         max-width: 87.625rem;
+        word-spacing: 0.2rem;
       }
     }
   }
@@ -579,6 +580,7 @@
           text-align: left;
           font-size: 1.4rem;
           max-width: 100%;
+          word-spacing: 0.2rem;
         }
       }
 
@@ -680,6 +682,7 @@
         @include mixin.until(media.$sm) {
           font-size: 1.6rem;
           width: 31.5rem;
+          word-spacing: 0.2rem;
         }
       }
     }
@@ -924,7 +927,7 @@
   background-repeat: no-repeat;
   @include mixin.until(media.$sm) {
     padding-bottom: 0;
-    margin: 11rem 0 31rem 0;
+    margin: 16rem 0 31rem 0;
     background-size: cover;
   }
 
@@ -986,6 +989,7 @@
       @include mixin.until(media.$sm) {
         width: 31.9rem;
         font-size: 1.6rem;
+        word-spacing: 0.2rem;
       }
 
       span:nth-child(2) {
@@ -1014,7 +1018,7 @@
     left: 2rem;
     animation: float 3s ease-out infinite;
     @include mixin.until(media.$sm) {
-      bottom: -40rem;
+      bottom: -42rem;
       left: -3rem;
     }
   }
@@ -1270,7 +1274,7 @@
   justify-content: center;
   @include mixin.until(media.$sm) {
     flex-direction: column;
-    margin-top: 12rem;
+    margin-top: 37rem;
   }
 
   .left_box {

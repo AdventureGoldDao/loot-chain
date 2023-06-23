@@ -354,7 +354,7 @@ export const Home: FC<HomeType> = () => {
 								<p>
 									The Loot Chain enables a cost-efficient execution environment for the Loot
 									community. The Loot Chain is built as an optimistic roll-up on Ethereum, taking
-									advantage of Ethereum&apos;s secuirty as well as interoperability with other L2
+									advantage of Ethereum&apos;s security as well as interoperability with other L2
 									solutions. Users can enter or exit the chain in a similar way as Optimism or
 									Arbitrum.
 								</p>
