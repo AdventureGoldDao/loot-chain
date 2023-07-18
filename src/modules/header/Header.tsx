@@ -15,6 +15,7 @@ type HeaderType = {};
 export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 	const [isHover, setIshover] = useState(false);
 	const [isHovered, setIshovered] = useState(false);
+	const [isExploreHover, setIsExploreHover] = useState(false);
 	const [mobileNavigationShown, setMobileNavigationVisibility] = useState(false);
 	const mobileNavigation = useScatteredContinuousState(mobileNavigationShown, {
 		timeout: 350,
@@ -34,6 +35,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 	const toggleRef = useRef<HTMLButtonElement>(null);
 	const rootRef = useRef<HTMLDivElement>(null);
 	const roootRef = useRef<HTMLDivElement>(null);
+	const rotRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -41,9 +43,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				setIshover(false);
 			}
 		};
-
 		document.addEventListener("click", handleClickOutside);
-
 		return () => {
 			document.removeEventListener("click", handleClickOutside);
 		};
@@ -55,9 +55,19 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				setIshovered(false);
 			}
 		};
-
 		document.addEventListener("click", handleClickOutside);
+		return () => {
+			document.removeEventListener("click", handleClickOutside);
+		};
+	}, []);
 
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (rotRef.current && !rotRef.current.contains(event.target as Node)) {
+				setIsExploreHover(false);
+			}
+		};
+		document.addEventListener("click", handleClickOutside);
 		return () => {
 			document.removeEventListener("click", handleClickOutside);
 		};
@@ -81,25 +91,43 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				<NavLink style={{ marginLeft: "auto" }} className={styles.navlink} href="/" variant="text">
 					Home
 				</NavLink>
-				<NavLink className={styles.navlink} href="/explore" aria-hidden="true">
-					Explore
-				</NavLink>
-				{/* <NavLink
-					className={styles.navlink}
-					href="https://www.certik.com/projects/adventure-gold"
-					variant="text"
-				>
-					Audit
-				</NavLink> */}
 				<div
 					className={styles.selectBox}
 					onClick={() => {
 						setIshovered(false);
+						setIshover(false);
+						setIsExploreHover(!isExploreHover);
+					}}
+					ref={rotRef}
+					onMouseEnter={() => {
+						setIshovered(false);
+						setIshover(false);
+						setIsExploreHover(true);
+					}}
+					aria-hidden="true"
+				>
+					<div className={styles.selectTitle}>
+						<p>Explore</p>
+						<img src={greenIcon} alt="icon" />
+					</div>
+					{isExploreHover && (
+						<ul className={styles.selector}>
+							<NavLink href="/explore">Explore</NavLink>
+							<NavLink href="https://games-nft-w.netlify.app/games">Loot console</NavLink>
+						</ul>
+					)}
+				</div>
+				<div
+					className={styles.selectBox}
+					onClick={() => {
+						setIshovered(false);
+						setIsExploreHover(false);
 						setIshover(!isHover);
 					}}
 					ref={rootRef}
 					onMouseEnter={() => {
 						setIshovered(false);
+						setIsExploreHover(false);
 						setIshover(true);
 					}}
 					aria-hidden="true"
@@ -120,41 +148,43 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					Staking
 				</NavLink>
 				{/* <NavLink
-					// style={{ marginRight: "auto" }}
-					className={styles.navlink}
-					href="https://www.lootproject.com/"
-					variant="text"
-				>
-					Loot
-				</NavLink> */}
+     // style={{ marginRight: "auto" }}
+     className={styles.navlink}
+     href="https://www.lootproject.com/"
+     variant="text"
+    >
+     Loot
+    </NavLink> */}
 				{/* <a
-					style={{ textDecoration: 0 }}
-					className={styles.navlink}
-					href="/whitepaper/agld_whitepaper.pdf"
-					target="_blank"
-				>
-					Whitepaper
-				</a> */}
+     style={{ textDecoration: 0 }}
+     className={styles.navlink}
+     href="/whitepaper/agld_whitepaper.pdf"
+     target="_blank"
+    >
+     Whitepaper
+    </a> */}
 				<NavLink className={styles.navlink} href="https://loot-talk.com/" variant="text">
 					Governance
 				</NavLink>
 				{/* <NavLink
-					style={{ marginRight: "auto" }}
-					className={styles.navlink}
-					href="/about"
-					variant="text"
-				>
-					About
-				</NavLink> */}
+     style={{ marginRight: "auto" }}
+     className={styles.navlink}
+     href="/about"
+     variant="text"
+    >
+     About
+    </NavLink> */}
 				<div
 					style={{ marginRight: "auto" }}
 					className={styles.selectBox}
 					onClick={() => {
 						setIshover(false);
+						setIsExploreHover(false);
 						setIshovered(!isHovered);
 					}}
 					onMouseEnter={() => {
 						setIshover(false);
+						setIsExploreHover(false);
 						setIshovered(true);
 					}}
 					ref={roootRef}
