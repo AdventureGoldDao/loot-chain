@@ -21,29 +21,29 @@ const dexList = [
 	{
 		icon: dexIcon0,
 		text: "UniSwap",
-		link: "",
+		link: "https://app.uniswap.org/#/tokens/ethereum/0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
 	},
 ];
 const cexList = [
 	{
 		icon: cexIcon0,
 		text: "Binance",
-		link: "",
+		link: "https://www.binance.com/en/trade/AGLD_USDT?theme=dark&type=spot",
 	},
 	{
 		icon: cexIcon1,
 		text: "Coinbase",
-		link: "",
+		link: "https://exchange.coinbase.com/trade/AGLD-USD",
 	},
 	{
 		icon: cexIcon2,
 		text: "OKX",
-		link: "",
+		link: "https://www.okx.com/cn/trade-spot/agld-usdt",
 	},
 	{
 		icon: cexIcon3,
 		text: "Upbit",
-		link: "",
+		link: "https://upbit.com/exchange?code=CRIX.UPBIT.BTC-AGLD",
 	},
 ];
 
