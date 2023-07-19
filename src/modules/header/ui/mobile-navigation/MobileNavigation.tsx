@@ -78,6 +78,15 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
+						href={"https://games-nft-w.netlify.app/"}
+					>
+						Free Mint
+					</NavLink>
+				</li>
+				<li>
+					<NavLink
+						style={{ fontSize: 18, marginBottom: 10 }}
+						className={classNames(styles.link)}
 						href={"#"}
 					>
 						Loot Chain
@@ -98,39 +107,30 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={"https://staking.adventuregold.org"}
-					>
-						Staking
-					</NavLink>
-				</li>
-				{/* <li style={{ marginBottom: 10 }}>
-     <a
-      style={{ fontSize: 18 }}
-      className={classNames(styles.link)}
-      href={"/whitepaper/agld_whitepaper.pdf"}
-     >
-      Whitepaper
-     </a>
-    </li> */}
-				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
-						href={"https://loot-talk.com/"}
-					>
-						Governance
-					</NavLink>
-				</li>
-				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
 						href={"#"}
 					>
-						About
+						More
 					</NavLink>
 				</li>
 				<ul className={styles.childUl}>
+					<li>
+						<NavLink
+							style={{ fontSize: 18, marginBottom: 10 }}
+							className={classNames(styles.link)}
+							href={"https://staking.adventuregold.org"}
+						>
+							Staking
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							style={{ fontSize: 18, marginBottom: 10 }}
+							className={classNames(styles.link)}
+							href={"https://loot-talk.com/"}
+						>
+							Governance
+						</NavLink>
+					</li>
 					<li>
 						<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
 					</li>
