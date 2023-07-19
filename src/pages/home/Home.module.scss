@@ -378,22 +378,40 @@
       }
     }
 
-    button {
-      margin: 2rem auto;
-      width: 12.1875rem;
-      height: 2.5rem;
-      color: #213425;
-      font-weight: 700;
-      border-radius: 6px;
-      font-family: 'Inconsolata-VariableFont_wdth';
-      border: 0;
-      margin-left: 0;
-      background: linear-gradient(90deg, #A5FFBE 0%, #55DD7B 100%) !important;
+    .btnGroup {
+      width: 100%;
+
+      button {
+        margin: 2rem auto;
+        width: 14.875rem;
+        height: 3rem;
+        color: #213425;
+        font-weight: 700;
+        border-radius: 6px;
+        font-family: 'Inconsolata-VariableFont_wdth';
+        border: 0;
+        margin-left: 0;
+        background-position: center center;
+        background-size: 100% 100%;
+        @include mixin.until(media.$sm) {
+          font-size: 1.25rem;
+          width: 24rem;
+          height: 4.838rem;
+        }
+      }
+    }
+
+    .lButton {
+      background-image: url('./assets/l-btn.png');
       @include mixin.until(media.$sm) {
-        font-size: 1.25rem;
-        width: 24rem;
-        height: 4rem;
-        margin: 4rem auto;
+        margin: 2rem auto;
+      }
+    }
+
+    .rButton {
+      background-image: url('./assets/r-btn.png');
+      @include mixin.until(media.$sm) {
+        margin: 0 auto !important;
       }
     }
   }

@@ -8,16 +8,16 @@ export const PRODUCT_PATH = "";
 export const FAQS_PATH = "";
 export const FACEBOOK_PATH = "";
 export const YOUTUBE_PATH = "";
-export const DISCORD_PATH = "https://discord.gg/phSq2EuusS";
+export const DISCORD_PATH = "https://discord.com/invite/WMXwkcGnNk";
 export const MIRROR_PATH = "https://mirror.xyz/agld.eth";
 
 export const CONTACT = "";
 
 export const SOCIAL = {
+	Mirror: MIRROR_PATH,
 	Discord: DISCORD_PATH,
 	Twitter: TWITTER_PATH,
 	// Telegram: TELEGRAM_PATH,
-	// Mirror: MIRROR_PATH,
 };
 
 export const NAVS = {
