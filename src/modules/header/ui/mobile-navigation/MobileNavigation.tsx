@@ -71,7 +71,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						<NavLink href="/explore">Explore</NavLink>
 					</li>
 					<li>
-						<NavLink href="https://games-nft-w.netlify.app/games">Loot Console</NavLink>
+						<NavLink href="https://games-loot.netlify.app/games">Loot Console</NavLink>
 					</li>
 				</ul>
 				{/* <li>
