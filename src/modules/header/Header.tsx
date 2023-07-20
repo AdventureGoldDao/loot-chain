@@ -38,7 +38,7 @@ const cexList = [
 	{
 		icon: cexIcon2,
 		text: "OKX",
-		link: "https://www.okx.com/cn/trade-spot/agld-usdt",
+		link: "https://www.okx.com/trade-spot/agld-usdt",
 	},
 	{
 		icon: cexIcon3,
