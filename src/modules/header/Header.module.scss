@@ -112,7 +112,7 @@
   width: 120px;
   height: 27px;
   display: flex;
-  padding: 6px 16px 6px 24px;
+  padding: 6px 16px 6px 32px;
   border-radius: 20px;
   flex-direction: row;
   align-items: center;
@@ -124,6 +124,7 @@
     font-family: Inconsolata-Bold;
     color: #213425;
     font-weight: 700;
+    word-spacing: inherit;
     @include mixin.from(media.$lg) {
       font-size: 13px;
     }
@@ -148,25 +149,28 @@
   border: 1px solid #FDFFAC;
   border-radius: 10px;
   padding: 10px;
+  @media screen and (min-width: 1500px) {
+    width: 150px;
+  }
   ul {
     color: #7A9283;
     font-size: 14px;
     a {
       padding: 10px 0;
-      color: #7A9283;
+      color: #fff;
       font-weight: 500;
       font-size: 14px;
       svg {
         margin-left: auto;
+        path {
+          fill: #fff;
+        }
       }
     }
   }
   & a:hover {
     color: #fff;
     background-color: #191D1B;
-  }
-  & a:hover svg path{
-    fill: #fff;
   }
   & a:first-child {
     border-radius: 10px 10px 0 0;

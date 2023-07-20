@@ -404,15 +404,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1.1rem 0 1.8rem;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        @include mixin.from(media.$lg) {
-          padding: 0 1.5rem 0 2.2rem;
-        }
         @media screen and (min-width: 1200px) and (max-width: 1500px) {
-            padding: 0 1rem 0 2rem;
-          }
+          padding: 0 1rem 0 2rem;
+        }
         @include mixin.until(media.$sm) {
           padding: 0 2rem 0 3.2rem;
         }
@@ -466,6 +462,10 @@
 
     .lButton {
       background-image: url('./assets/l-btn.png');
+      padding: 0 1.5rem 0 2rem;
+      @media screen and (min-width: 2000px) {
+        padding: 0 1.2rem 0 2rem;
+      }
       @include mixin.until(media.$sm) {
         margin: 2rem auto;
       }
@@ -473,6 +473,13 @@
 
     .rButton {
       background-image: url('./assets/r-btn.png');
+      padding: 0 1.1rem 0 1.8rem;
+      @media screen and (min-width: 1500px) and (max-width: 2000px) {
+          padding: 0 1.2rem 0 1.8rem;
+        }
+      @media screen and (min-width: 1500px) {
+          padding: 0 1.5rem 0 1.8rem;
+        }
       @include mixin.until(media.$sm) {
         margin: 0 !important;
       }
