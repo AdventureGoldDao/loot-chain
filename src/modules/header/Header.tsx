@@ -168,9 +168,9 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						</ul>
 					)}
 				</div>
-				<NavLink className={styles.navlink} href="https://games-nft-w.netlify.app/" variant="text">
+				{/* <NavLink className={styles.navlink} href="https://games-nft-w.netlify.app/" variant="text">
 					Free Mint
-				</NavLink>
+				</NavLink> */}
 				<div
 					className={styles.selectBox}
 					onClick={() => {
