@@ -380,6 +380,7 @@
       width: 100%;
       font-size: 1.5rem;
       margin-top: 1rem;
+      color: #fff;
       @include mixin.until(media.$sm) {
         font-size: 1.6rem;
         margin-top: 2rem;
@@ -406,6 +407,12 @@
         padding: 0 1.1rem 0 1.8rem;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @include mixin.from(media.$lg) {
+          padding: 0 1.5rem 0 2.2rem;
+        }
+        @media screen and (min-width: 1200px) and (max-width: 1500px) {
+            padding: 0 1rem 0 2rem;
+          }
         @include mixin.until(media.$sm) {
           padding: 0 2rem 0 3.2rem;
         }
@@ -414,9 +421,15 @@
           color: #213425;
           font-weight: 900;
           font-size: 1.25rem;
-          font-family: Inconsolata SemiExpanded;
+          font-family: Inconsolata-Bold;
           @include mixin.from(media.$lg) {
-            font-size: 20px;
+            font-size: 30px;
+          }
+          @media screen and (min-width: 2000px) {
+            font-size: 1.2rem;
+          }
+          @media screen and (min-width: 1200px) and (max-width: 1500px) {
+            font-size: 22px;
           }
           @include mixin.until(media.$sm) {
             font-size: 18px;
@@ -427,10 +440,16 @@
           margin-top: -4px;
           font-weight: 700;
           font-size: 1rem;
+          font-family: Inconsolata-Bold;
           @include mixin.from(media.$lg) {
+            font-size: 20px;
+          }
+          @media screen and (min-width: 2000px) {
+            font-size: 1rem;
+          }
+          @media screen and (min-width: 1200px) and (max-width: 1500px) {
             font-size: 16px;
           }
-          font-family: Inconsolata-Bold;
           @include mixin.until(media.$sm) {
             font-size: 14px;
           }

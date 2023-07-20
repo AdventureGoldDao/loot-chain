@@ -120,10 +120,13 @@
   & p {
     margin-top: 0;
     margin-right: 8px;
-    font-size: 14px;
-    font-family: Inconsolata-VariableFont_wdth;
+    font-size: 0.875rem;
+    font-family: Inconsolata-Bold;
     color: #213425;
     font-weight: 700;
+    @include mixin.from(media.$lg) {
+      font-size: 13px;
+    }
   }
   & img {
     width: 8px;
@@ -138,7 +141,7 @@
 }
 
 .exchanges {
-  width: 150px;
+  width: 9.375rem;
   position: absolute;
   top: 2rem;
   background-color: #1B1F1C;
@@ -147,10 +150,12 @@
   padding: 10px;
   ul {
     color: #7A9283;
+    font-size: 14px;
     a {
       padding: 10px 0;
       color: #7A9283;
       font-weight: 500;
+      font-size: 14px;
       svg {
         margin-left: auto;
       }
