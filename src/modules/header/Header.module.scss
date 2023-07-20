@@ -64,6 +64,9 @@
   @include mixin.until(media.$sm) {
     display: none!important;
   }
+  @include mixin.from(media.$lg) {
+    font-size: 18px;
+  }
 }
 
 .selectBox {
@@ -96,6 +99,9 @@
   }
   @include mixin.until(media.$sm) {
     display: none!important;
+  }
+  @include mixin.from(media.$lg) {
+    font-size: 18px;
   }
 }
 
@@ -133,7 +139,7 @@
   position: absolute;
   top: 2rem;
   background-color: #1B1F1C;
-  border: 1px solid #4b5954;
+  border: 1px solid #FDFFAC;
   border-radius: 10px;
   padding: 10px;
   ul {
@@ -167,7 +173,7 @@
 
 .selector {
   position: absolute;
-  border: 1px solid #4b5954;
+  border: 1px solid #FDFFAC;
   border-radius: 10px;
   width: 150px;
   top: 2rem;

@@ -31,11 +31,15 @@ html {
   --primary-color: rgba(96, 1, 211, 1);
   //header
 
-  --header-height: 9.5rem;
+  --header-height: 6rem;
 
   @media (max-width: 768px) {
     --header-height: 13.116rem;
     --gutters: 3rem;
+  }
+
+  @media (max-width: 1200px) {
+    --header-height: 6rem;
   }
 
 

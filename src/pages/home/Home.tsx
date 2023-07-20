@@ -268,11 +268,17 @@ export const Home: FC<HomeType> = () => {
 							<h1>Adventure Gold</h1>
 							<p>Building the Lootverse Infrastruture</p>
 							<div className={styles.btnGroup}>
-								<button className={styles.lButton} onClick={show}></button>
+								<button className={styles.lButton} onClick={show}>
+									<span>BUILD</span>
+									<span>on Loot Chain</span>
+								</button>
 								<button
 									className={styles.rButton}
 									onClick={() => window.open("https://games-nft-w.netlify.app/games", "_blank")}
-								></button>
+								>
+									<span>PLAY</span>
+									<span>on Loot Console</span>
+								</button>
 							</div>
 						</div>
 						{/* <img src={img} alt={"img"} />

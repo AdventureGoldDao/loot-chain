@@ -30,6 +30,9 @@
     margin-left: -6rem;
     word-spacing: 1.5rem;
   }
+  @include mixin.from(media.$lg) {
+    font-size: 32px;
+  }
 }
 
 .footer_text {
@@ -38,7 +41,9 @@
   font-size: 1.4rem;
   line-height: 2rem;
   margin-top: 3rem;
-
+  @include mixin.from(media.$lg) {
+    font-size: 22px;
+  }
   @include mixin.until(media.$sm) {
     margin-top: 8rem;
     font-size: 3.5rem;
@@ -137,13 +142,16 @@
 
 .body2_title {
   font-size: 2rem;
-
+  @include mixin.from(media.$lg) {
+    font-size: 32px;
+  }
   @include mixin.until(media.$sm) {
     font-size: 5rem;
     margin-top: 9rem;
     margin-left: 33.8rem;
     word-spacing: 1rem;
   }
+
 }
 
 .body2_text {
@@ -380,19 +388,41 @@
 
     .btnGroup {
       width: 100%;
-
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
       button {
-        margin: 2rem auto;
+        margin: 2rem 0;
         width: 14.875rem;
         height: 3rem;
         color: #213425;
         font-weight: 700;
         border-radius: 6px;
-        font-family: 'Inconsolata-VariableFont_wdth';
+        font-family: Inconsolata-VariableFont_wdth;
         border: 0;
         margin-left: 0;
-        background-position: center center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0 30px;
+        background-repeat: no-repeat;
         background-size: 100% 100%;
+        span:first-child {
+          color: #213425;
+          font-weight: 900;
+          size: 1.25rem;
+          @include mixin.from(media.$lg) {
+            font-size: 20px;
+          }
+        }
+        span:last-child {
+          color: #213425;
+          font-weight: 700;
+          size: 1rem;
+          @include mixin.from(media.$lg) {
+            font-size: 16px;
+          }
+        }
         @include mixin.until(media.$sm) {
           font-size: 1.25rem;
           width: 24rem;
