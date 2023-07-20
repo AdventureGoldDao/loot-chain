@@ -398,37 +398,51 @@
         color: #213425;
         font-weight: 700;
         border-radius: 6px;
-        font-family: Inconsolata-VariableFont_wdth;
         border: 0;
         margin-left: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px 0 30px;
+        padding: 0 1.1rem 0 1.8rem;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        @include mixin.until(media.$sm) {
+          padding: 0 2rem 0 3.2rem;
+        }
         span:first-child {
+          margin-top: -4px;
           color: #213425;
           font-weight: 900;
-          size: 1.25rem;
+          font-size: 1.25rem;
+          font-family: Inconsolata SemiExpanded;
           @include mixin.from(media.$lg) {
             font-size: 20px;
+          }
+          @include mixin.until(media.$sm) {
+            font-size: 18px;
           }
         }
         span:last-child {
           color: #213425;
+          margin-top: -4px;
           font-weight: 700;
-          size: 1rem;
+          font-size: 1rem;
           @include mixin.from(media.$lg) {
             font-size: 16px;
           }
+          font-family: Inconsolata-Bold;
+          @include mixin.until(media.$sm) {
+            font-size: 14px;
+          }
         }
         @include mixin.until(media.$sm) {
-          font-size: 1.25rem;
           width: 24rem;
           height: 4.838rem;
         }
       }
+      @include mixin.until(media.$sm) {
+          flex-direction: column;
+        }
     }
 
     .lButton {
@@ -441,7 +455,7 @@
     .rButton {
       background-image: url('./assets/r-btn.png');
       @include mixin.until(media.$sm) {
-        margin: 0 auto !important;
+        margin: 0 !important;
       }
     }
   }
