@@ -165,6 +165,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						<ul className={styles.selector}>
 							<NavLink href="/explore">Explore</NavLink>
 							<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
+							<NavLink href="/ecosystem">Ecosystem</NavLink>
 						</ul>
 					)}
 				</div>
