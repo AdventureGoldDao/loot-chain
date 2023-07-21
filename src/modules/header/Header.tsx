@@ -164,11 +164,11 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					{isExploreHover && (
 						<ul className={styles.selector}>
 							<NavLink href="/explore">Explore</NavLink>
-							<NavLink href="https://games-loot.netlify.app/games">Loot Console</NavLink>
+							<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
 						</ul>
 					)}
 				</div>
-				{/* <NavLink className={styles.navlink} href="https://games-nft-w.netlify.app/" variant="text">
+				{/* <NavLink className={styles.navlink} href="https://games.lootchain.com/" variant="text">
 					Free Mint
 				</NavLink> */}
 				<div

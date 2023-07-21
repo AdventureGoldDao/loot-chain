@@ -274,7 +274,7 @@ export const Home: FC<HomeType> = () => {
 								</button>
 								<button
 									className={styles.rButton}
-									onClick={() => window.open("https://games-nft-w.netlify.app/games", "_blank")}
+									onClick={() => window.open("https://games.lootchain.com/games", "_blank")}
 								>
 									<span>PLAY</span>
 									<span>on Loot Console</span>
