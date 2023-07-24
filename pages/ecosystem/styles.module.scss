@@ -31,7 +31,7 @@
   }
   .main {
     display: flex;
-    margin-top: 20px;
+    margin-top: 30px;
 
     @include mixin.until(media.$sm) {
       flex-direction: column;
@@ -58,7 +58,8 @@
       justify-content: space-between;
       width: 100%;
       margin: 10px 0;
-      padding: 0 20px;
+      padding: 0 10px;
+      overflow-x: auto;
     }
   }
   .nav_item {
@@ -83,6 +84,7 @@
   .item_name {
     font-size: 18px;
     color: #fff;
+    white-space: nowrap;
   }
   .item_num {
     color: #7A9283;

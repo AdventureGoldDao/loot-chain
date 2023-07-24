@@ -15,30 +15,16 @@ const gamesList = [
 		image: game1,
 		link: "https://jokerace.xyz/",
 	},
+];
+const nftList = [
 	{
 		name: "Jokerace",
 		des: `Contests for communities to make,executer and reward decisions.`,
 		image: game2,
 		link: "http://discord.gg/sdeuuD27pD",
 	},
-	{
-		name: "ARPA",
-		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
-		image: game3,
-		link: "https://www.arpanetwork.io/",
-	},
-	{
-		name: "ARPA",
-		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
-		image: game3,
-		link: "https://www.arpanetwork.io/",
-	},
-	{
-		name: "ARPA",
-		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
-		image: game3,
-		link: "https://www.arpanetwork.io/",
-	},
+];
+const daoList = [
 	{
 		name: "ARPA",
 		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
@@ -72,9 +58,7 @@ export function Card({ item }) {
 
 export function Ecosystem() {
 	const goToGoogleForm = () => {
-		window.open(
-			"https://docs.google.com/spreadsheets/d/1uoArzIFb84MlX4lpV-xyVsBpbDvhaaegiGal-hfRd9o/edit?usp=sharing"
-		);
+		window.open("https://forms.gle/Ue9avjswj8GJ1ZUi9");
 	};
 	return (
 		<section className={styles.component}>
@@ -86,15 +70,15 @@ export function Ecosystem() {
 							<div className={styles.nav_box}>
 								<a href="#games" className={styles.nav_item}>
 									<span className={styles.item_name}>Games</span>
-									<span className={styles.item_num}>3</span>
+									<span className={styles.item_num}>{gamesList.length}</span>
 								</a>
 								<a href="#nft" className={styles.nav_item}>
-									<span className={styles.item_name}>NFT</span>
-									<span className={styles.item_num}>3</span>
+									<span className={styles.item_name}>Tools & Resources</span>
+									<span className={styles.item_num}>{nftList.length}</span>
 								</a>
 								<a href="#daos" className={styles.nav_item}>
-									<span className={styles.item_name}>DAOs</span>
-									<span className={styles.item_num}>3</span>
+									<span className={styles.item_name}>Infrastructure</span>
+									<span className={styles.item_num}>{daoList.length}</span>
 								</a>
 							</div>
 							<div className={styles.form_box} onClick={goToGoogleForm}>
@@ -119,22 +103,26 @@ export function Ecosystem() {
 									))}
 								</div>
 							</div>
-							<div id="nft" className={styles.category}>
-								<div className={styles.category_title}>NFT</div>
-								<div className={styles.category_list}>
-									{gamesList.map((item) => (
-										<Card item={item}></Card>
-									))}
+							{nftList.length > 0 && (
+								<div id="nft" className={styles.category}>
+									<div className={styles.category_title}>Tools & Resources</div>
+									<div className={styles.category_list}>
+										{nftList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
 								</div>
-							</div>
-							<div id="daos" className={styles.category}>
-								<div className={styles.category_title}>DAOs</div>
-								<div className={styles.category_list}>
-									{gamesList.map((item) => (
-										<Card item={item}></Card>
-									))}
+							)}
+							{daoList.length > 0 && (
+								<div id="daos" className={styles.category}>
+									<div className={styles.category_title}>Infrastructure</div>
+									<div className={styles.category_list}>
+										{daoList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
 								</div>
-							</div>
+							)}
 						</div>
 					</div>
 				</div>
