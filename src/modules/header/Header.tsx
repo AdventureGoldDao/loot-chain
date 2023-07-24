@@ -169,7 +169,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						</ul>
 					)}
 				</div>
-				<NavLink className={styles.navlink} href="https://games.lootchain.com/" variant="text">
+				<NavLink className={styles.navlink} href="https://games-nft-w.netlify.app/" variant="text">
 					Free Mint
 				</NavLink>
 				<div
