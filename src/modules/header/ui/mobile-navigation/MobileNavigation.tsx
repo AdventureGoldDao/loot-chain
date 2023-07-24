@@ -77,7 +77,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						<NavLink href="/ecosystem">Ecosystem</NavLink>
 					</li>
 				</ul>
-				{/* <li>
+				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
@@ -85,7 +85,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					>
 						Free Mint
 					</NavLink>
-				</li> */}
+				</li>
 				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
