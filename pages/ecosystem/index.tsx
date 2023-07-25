@@ -6,6 +6,7 @@ import iconArrow from "./images/icon_arrow.svg";
 import game1 from "./images/game1.png";
 import game2 from "./images/game2.png";
 import game3 from "./images/game3.png";
+import game4 from "./images/game4.jpg";
 
 import styles from "./styles.module.scss";
 const nftList = [
@@ -30,6 +31,14 @@ const daoList = [
 		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
 		image: game3,
 		link: "https://www.arpanetwork.io/",
+	},
+];
+const dexList = [
+	{
+		name: "Mighty Swap",
+		des: `Swap or provide liquidity on the Mighty Swap.`,
+		image: game4,
+		link: "https://stately-rabanadas-a5fcc8.netlify.app/#/swap",
 	},
 ];
 
@@ -80,6 +89,10 @@ export function Ecosystem() {
 									<span className={styles.item_name}>Infrastructure</span>
 									<span className={styles.item_num}>{daoList.length}</span>
 								</a>
+								<a href="#dex" className={styles.nav_item}>
+									<span className={styles.item_name}>DEX</span>
+									<span className={styles.item_num}>{dexList.length}</span>
+								</a>
 							</div>
 							<div className={styles.form_box} onClick={goToGoogleForm}>
 								<img className={styles.icon_love} src={iconLove} alt="icon"></img>
@@ -118,6 +131,16 @@ export function Ecosystem() {
 									<div className={styles.category_title}>Infrastructure</div>
 									<div className={styles.category_list}>
 										{daoList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
+								</div>
+							)}
+							{dexList.length > 0 && (
+								<div id="dex" className={styles.category}>
+									<div className={styles.category_title}>DEX</div>
+									<div className={styles.category_list}>
+										{dexList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
