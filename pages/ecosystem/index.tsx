@@ -8,18 +8,18 @@ import game2 from "./images/game2.png";
 import game3 from "./images/game3.png";
 
 import styles from "./styles.module.scss";
-const gamesList = [
+const nftList = [
 	{
 		name: "ggQuest",
-		des: `We're building the ultimate onchainprogression system for web3 gamers.`,
+		des: `We're building the ultimate onchain progression system for web3 gamers.`,
 		image: game1,
 		link: "http://discord.gg/sdeuuD27pD",
 	},
 ];
-const nftList = [
+const gamesList = [
 	{
 		name: "Jokerace",
-		des: `Contests for communities to make,executer and reward decisions.`,
+		des: `contests for communities to make,execute, and reward decisions.`,
 		image: game2,
 		link: "https://jokerace.xyz/",
 	},
