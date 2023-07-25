@@ -13,7 +13,7 @@ const gamesList = [
 		name: "ggQuest",
 		des: `We're building the ultimate onchainprogression system for web3 gamers.`,
 		image: game1,
-		link: "https://jokerace.xyz/",
+		link: "http://discord.gg/sdeuuD27pD",
 	},
 ];
 const nftList = [
@@ -21,7 +21,7 @@ const nftList = [
 		name: "Jokerace",
 		des: `Contests for communities to make,executer and reward decisions.`,
 		image: game2,
-		link: "http://discord.gg/sdeuuD27pD",
+		link: "https://jokerace.xyz/",
 	},
 ];
 const daoList = [
