@@ -7,14 +7,32 @@ import game1 from "./images/game1.png";
 import game2 from "./images/game2.png";
 import game3 from "./images/game3.png";
 import game4 from "./images/game4.jpg";
+import game5 from "./images/game5.jpg";
+import game6 from "./images/game6.jpg";
+import game7 from "./images/game7.jpg";
+import game8 from "./images/game8.jpg";
+import game9 from "./images/game9.jpg";
+import game10 from "./images/game10.jpg";
 
 import styles from "./styles.module.scss";
-const nftList = [
+const toolsList = [
 	{
 		name: "ggQuest",
 		des: `We're building the ultimate onchain progression system for web3 gamers.`,
 		image: game1,
 		link: "http://discord.gg/sdeuuD27pD",
+	},
+	{
+		name: "ARPA Randcast",
+		des: `Randcast is an on-chain verifiable random number generator with a suite of APIs for different use cases, including NFT allocation, game attribute generation, and combat outcomes. Randcast is built to empower a fair and creative metaverse.`,
+		image: game9,
+		link: "https://www.arpanetwork.io/en-US/randcast",
+	},
+	{
+		name: "Dark Forest ARES",
+		des: `Dark Forest Community Rounds with Novel Game Mechanics Powered by DF Archon.`,
+		image: game10,
+		link: "https://dfares.vercel.app/",
 	},
 ];
 const gamesList = [
@@ -25,12 +43,30 @@ const gamesList = [
 		link: "https://jokerace.xyz/",
 	},
 ];
-const daoList = [
+const infrastructureList = [
 	{
 		name: "ARPA",
 		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
 		image: game3,
 		link: "https://www.arpanetwork.io/",
+	},
+	{
+		name: "Caldera",
+		des: `Caldera makes it easy to launch performant, customizable blockchain rollups. No code required.`,
+		image: game5,
+		link: "https://caldera.xyz/",
+	},
+	{
+		name: "STP",
+		des: `STP optimizes Web3 for builders, communities and projects.`,
+		image: game8,
+		link: "https://www.stp.network/",
+	},
+	{
+		name: "Ancient8",
+		des: `GameFi Infrastructure Developer.`,
+		image: game6,
+		link: "https://ancient8.gg/",
 	},
 ];
 const dexList = [
@@ -39,6 +75,14 @@ const dexList = [
 		des: `Swap or provide liquidity on the Mighty Swap.`,
 		image: game4,
 		link: "https://stately-rabanadas-a5fcc8.netlify.app/#/swap",
+	},
+];
+const defiList = [
+	{
+		name: "RAI Finance",
+		des: `RAI Finance is a decentralized finance application that provides digital asset users with social trading system, aggregated swap on heterogeneous blockchains.`,
+		image: game7,
+		link: "https://rai.finance/",
 	},
 ];
 
@@ -81,17 +125,21 @@ export function Ecosystem() {
 									<span className={styles.item_name}>Games</span>
 									<span className={styles.item_num}>{gamesList.length}</span>
 								</a>
-								<a href="#nft" className={styles.nav_item}>
+								<a href="#tools" className={styles.nav_item}>
 									<span className={styles.item_name}>Tools & Resources</span>
-									<span className={styles.item_num}>{nftList.length}</span>
+									<span className={styles.item_num}>{toolsList.length}</span>
 								</a>
-								<a href="#daos" className={styles.nav_item}>
+								<a href="#infrastructure" className={styles.nav_item}>
 									<span className={styles.item_name}>Infrastructure</span>
-									<span className={styles.item_num}>{daoList.length}</span>
+									<span className={styles.item_num}>{infrastructureList.length}</span>
 								</a>
 								<a href="#dex" className={styles.nav_item}>
 									<span className={styles.item_name}>DEX</span>
 									<span className={styles.item_num}>{dexList.length}</span>
+								</a>
+								<a href="#defi" className={styles.nav_item}>
+									<span className={styles.item_name}>DeFi</span>
+									<span className={styles.item_num}>{defiList.length}</span>
 								</a>
 							</div>
 							<div className={styles.form_box} onClick={goToGoogleForm}>
@@ -116,21 +164,21 @@ export function Ecosystem() {
 									))}
 								</div>
 							</div>
-							{nftList.length > 0 && (
-								<div id="nft" className={styles.category}>
+							{toolsList.length > 0 && (
+								<div id="tools" className={styles.category}>
 									<div className={styles.category_title}>Tools & Resources</div>
 									<div className={styles.category_list}>
-										{nftList.map((item) => (
+										{toolsList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
 								</div>
 							)}
-							{daoList.length > 0 && (
-								<div id="daos" className={styles.category}>
+							{infrastructureList.length > 0 && (
+								<div id="infrastructure" className={styles.category}>
 									<div className={styles.category_title}>Infrastructure</div>
 									<div className={styles.category_list}>
-										{daoList.map((item) => (
+										{infrastructureList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
@@ -141,6 +189,16 @@ export function Ecosystem() {
 									<div className={styles.category_title}>DEX</div>
 									<div className={styles.category_list}>
 										{dexList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
+								</div>
+							)}
+							{defiList.length > 0 && (
+								<div id="defi" className={styles.category}>
+									<div className={styles.category_title}>DeFi</div>
+									<div className={styles.category_list}>
+										{defiList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
