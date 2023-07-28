@@ -81,9 +81,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
 						className={classNames(styles.link)}
-						href={"https://games-nft-w.netlify.app/"}
+						href={"https://freemint.lootchain.com"}
 					>
-						Free Mint
+						Loot Pad
 					</NavLink>
 				</li>
 				<li>

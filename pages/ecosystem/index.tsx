@@ -69,15 +69,13 @@ const infrastructureList = [
 		link: "https://ancient8.gg/",
 	},
 ];
-const dexList = [
+const defiList = [
 	{
 		name: "Mighty Swap",
 		des: `Swap or provide liquidity on the Mighty Swap.`,
 		image: game4,
 		link: "https://stately-rabanadas-a5fcc8.netlify.app/#/swap",
 	},
-];
-const defiList = [
 	{
 		name: "RAI Finance",
 		des: `RAI Finance is a decentralized finance application that provides digital asset users with social trading system, aggregated swap on heterogeneous blockchains.`,
@@ -133,10 +131,6 @@ export function Ecosystem() {
 									<span className={styles.item_name}>Infrastructure</span>
 									<span className={styles.item_num}>{infrastructureList.length}</span>
 								</a>
-								<a href="#dex" className={styles.nav_item}>
-									<span className={styles.item_name}>DEX</span>
-									<span className={styles.item_num}>{dexList.length}</span>
-								</a>
 								<a href="#defi" className={styles.nav_item}>
 									<span className={styles.item_name}>DeFi</span>
 									<span className={styles.item_num}>{defiList.length}</span>
@@ -179,16 +173,6 @@ export function Ecosystem() {
 									<div className={styles.category_title}>Infrastructure</div>
 									<div className={styles.category_list}>
 										{infrastructureList.map((item) => (
-											<Card item={item}></Card>
-										))}
-									</div>
-								</div>
-							)}
-							{dexList.length > 0 && (
-								<div id="dex" className={styles.category}>
-									<div className={styles.category_title}>DEX</div>
-									<div className={styles.category_list}>
-										{dexList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
