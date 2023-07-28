@@ -170,7 +170,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					)}
 				</div>
 				<NavLink className={styles.navlink} href="https://freemint.lootchain.com" variant="text">
-					Loot Pad
+					Loot NFT Pad
 				</NavLink>
 				<div
 					className={styles.selectBox}

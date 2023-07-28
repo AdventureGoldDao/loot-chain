@@ -83,7 +83,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						className={classNames(styles.link)}
 						href={"https://freemint.lootchain.com"}
 					>
-						Loot Pad
+						Loot NFT Pad
 					</NavLink>
 				</li>
 				<li>
