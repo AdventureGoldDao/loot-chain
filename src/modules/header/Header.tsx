@@ -163,9 +163,9 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 					</div>
 					{isExploreHover && (
 						<ul className={styles.selector}>
-							<NavLink href="/explore">Explore</NavLink>
+							<NavLink href="/ecosystem">Explore</NavLink>
 							<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
-							<NavLink href="/ecosystem">Ecosystem</NavLink>
+							{/* <NavLink href="/ecosystem">Ecosystem</NavLink> */}
 						</ul>
 					)}
 				</div>
