@@ -68,7 +68,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 				</li>
 				<ul className={styles.childUl}>
 					<li>
-						<NavLink href="/ecosystem">Explore</NavLink>
+						<NavLink href="/ecosystem">Ecosystem</NavLink>
 					</li>
 					<li>
 						<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
