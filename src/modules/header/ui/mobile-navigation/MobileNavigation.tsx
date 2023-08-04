@@ -105,6 +105,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					<li>
 						<NavLink href="https://mainnet.lootchain.com/bridge">Bridge</NavLink>
 					</li>
+					<li>
+						<NavLink href="https://swap.lootchain.com">DEX</NavLink>
+					</li>
 				</ul>
 				<li>
 					<NavLink
