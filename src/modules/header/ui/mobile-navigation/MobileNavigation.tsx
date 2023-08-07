@@ -100,13 +100,13 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						<NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink>
 					</li>
 					<li>
-						<NavLink href="https://explorer.lootchain.com">Lootscan</NavLink>
+						<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 					</li>
 					<li>
 						<NavLink href="https://mainnet.lootchain.com/bridge">Bridge</NavLink>
 					</li>
 					<li>
-						<NavLink href="https://swap.lootchain.com">DEX</NavLink>
+						<NavLink href="https://swap.lootchain.com">Mighty Swap</NavLink>
 					</li>
 				</ul>
 				<li>
