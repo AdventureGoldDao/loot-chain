@@ -13,6 +13,9 @@ import game7 from "./images/game7.jpg";
 import game8 from "./images/game8.jpg";
 import game9 from "./images/game9.jpg";
 import game10 from "./images/game10.jpg";
+import game11 from "./images/a1.jpg";
+import game12 from "./images/a2.jpg";
+import game13 from "./images/a3.png";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -28,19 +31,32 @@ const toolsList = [
 		image: game9,
 		link: "https://www.arpanetwork.io/en-US/randcast",
 	},
-	{
-		name: "Dark Forest ARES",
-		des: `Dark Forest Community Rounds with Novel Game Mechanics Powered by DF Archon.`,
-		image: game10,
-		link: "https://dfares.vercel.app/",
-	},
-];
-const gamesList = [
+
 	{
 		name: "Jokerace",
 		des: `contests for communities to make,execute, and reward decisions.`,
 		image: game2,
 		link: "https://jokerace.xyz/",
+	},
+];
+const gamesList = [
+	{
+		name: "Mighty Magic HEROES",
+		des: `Welcome to the exciting world of "Mighty Magic"! In this captivating project, users have the opportunity to unleash their creativity and strategic prowess by participating in the minting and acquisition of unique Non-Fungible Tokens (NFTs) representing mighty heroes. These heroes are destined for epic battles, where their abilities, strengths, and weaknesses come into play. As a participant, you have the chance to mint your own personalized heroes as NFTs through the intuitive "Mighty Magic" platform. Each hero holds distinct attributes and powers, making them truly one-of-a-kind. Prepare to dive into a realm brimming with mystical creatures and legendary warriors. Once you have assembled your team of heroes, it's time to engage in exhilarating battles. Pit your NFT heroes against other participants' creations and witness intense clashes. Victory brings forth rewards in the form of gold, symbolizing your hero's triumph and dominance in the battlefield. However, it is crucial to bear in mind that defeat is also a possibility. If your hero falls in battle, they will be considered defeated, and the spoils of victory will be granted to the opposing side. Embark on this thrilling journey with "Mighty Magic" as you explore the realm of NFTs and engage in epic battles where only the mightiest heroes prevail. Sharpen your strategy, unleash the magic within, and let your heroes claim victory and glory!`,
+		image: game11,
+		link: "https://games.lootchain.com/games/magic",
+	},
+	{
+		name: "Land, Labor and Capitol (LLC)",
+		des: `Tycoon style game where players can enjoy the gameplay with many different levels of involvement, from simply buying in-game stock in player-owned companies, to holding land in areas they think will appreciate in value, to actively managing a portfolio of firms and optimizing their operations based on their predictions of the macroeconomy.`,
+		image: game12,
+		link: "https://games.lootchain.com/games/land",
+	},
+	{
+		name: "Archloot",
+		des: `ArchLoot is a UGC P2E game that attempts to change the whole gamefi dynamics with its exceptional gameplay and unique infrastructure behind NFT assets. Basically a player assemble his/her own avatar with different parts (NFTs with a diversity of rarity, stats, looks and skills), then start the adventure. Game modes include PvE farm, group dungeons, 1 on 1 PvP, 3 on 3, clan wars, etc. The protocol behind the nft asset, EIP 4985 and BEP 129, which derives from loot, allows in game prop/parts level up, skill change, and interoperability of a single NFT.`,
+		image: game13,
+		link: "https://games.lootchain.com/games/archloot",
 	},
 ];
 const infrastructureList = [
@@ -62,12 +78,6 @@ const infrastructureList = [
 		image: game8,
 		link: "https://www.stp.network/",
 	},
-	{
-		name: "Ancient8",
-		des: `GameFi Infrastructure Developer.`,
-		image: game6,
-		link: "https://ancient8.gg/",
-	},
 ];
 const defiList = [
 	{
@@ -81,6 +91,20 @@ const defiList = [
 		des: `RAI Finance is a decentralized finance application that provides digital asset users with social trading system, aggregated swap on heterogeneous blockchains.`,
 		image: game7,
 		link: "https://rai.finance/",
+	},
+];
+const guildsList = [
+	{
+		name: "Dark Forest ARES",
+		des: `Dark Forest Community Rounds with Novel Game Mechanics Powered by DF Archon.`,
+		image: game10,
+		link: "https://dfares.vercel.app/",
+	},
+	{
+		name: "Ancient8",
+		des: `GameFi Infrastructure Developer.`,
+		image: game6,
+		link: "https://ancient8.gg/",
 	},
 ];
 
@@ -135,6 +159,10 @@ export function Ecosystem() {
 									<span className={styles.item_name}>DeFi</span>
 									<span className={styles.item_num}>{defiList.length}</span>
 								</a>
+								<a href="#guilds" className={styles.nav_item}>
+									<span className={styles.item_name}>Guilds/Communities</span>
+									<span className={styles.item_num}>{guildsList.length}</span>
+								</a>
 							</div>
 							<div className={styles.form_box} onClick={goToGoogleForm}>
 								<img className={styles.icon_love} src={iconLove} alt="icon"></img>
@@ -183,6 +211,16 @@ export function Ecosystem() {
 									<div className={styles.category_title}>DeFi</div>
 									<div className={styles.category_list}>
 										{defiList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
+								</div>
+							)}
+							{guildsList.length > 0 && (
+								<div id="guilds" className={styles.category}>
+									<div className={styles.category_title}>Guilds/Communities</div>
+									<div className={styles.category_list}>
+										{guildsList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>

@@ -15,6 +15,8 @@ import cexIcon1 from "../../pages/home/assets/cex-icon1.png";
 import cexIcon2 from "../../pages/home/assets/cex-icon2.png";
 import cexIcon3 from "../../pages/home/assets/cex-icon3.png";
 import dexIcon0 from "../../pages/home/assets/dex-icon0.png";
+import iconOutside from "../../pages/home/assets/outsideLink.svg";
+import iconDownload from "../../pages/home/assets/download.svg";
 type HeaderType = {};
 
 const dexList = [
@@ -257,6 +259,11 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 							<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
 							<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
 							<NavLink href="https://www.lootproject.com/">Loot</NavLink>
+							<NavLink href="/logo/Loot-Chain-logo.zip">
+								<div style={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
+									Press Kit <img src={iconDownload} alt="" />
+								</div>{" "}
+							</NavLink>
 						</ul>
 					)}
 				</div>
