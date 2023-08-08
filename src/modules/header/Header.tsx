@@ -259,7 +259,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 							<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
 							<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
 							<NavLink href="https://www.lootproject.com/">Loot</NavLink>
-							<NavLink href="/logo/Loot-Chain-logo.zip">
+							<NavLink href="/logo/AGLD-Loot-presskit.zip">
 								<div style={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
 									Press Kit <img src={iconDownload} alt="" />
 								</div>{" "}
