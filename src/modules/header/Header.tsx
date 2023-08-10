@@ -15,6 +15,7 @@ import cexIcon1 from "../../pages/home/assets/cex-icon1.png";
 import cexIcon2 from "../../pages/home/assets/cex-icon2.png";
 import cexIcon3 from "../../pages/home/assets/cex-icon3.png";
 import dexIcon0 from "../../pages/home/assets/dex-icon0.png";
+import dexIcon1 from "../../pages/home/assets/dex-icon1.png";
 import iconOutside from "../../pages/home/assets/outsideLink.svg";
 import iconDownload from "../../pages/home/assets/download.svg";
 type HeaderType = {};
@@ -24,6 +25,11 @@ const dexList = [
 		icon: dexIcon0,
 		text: "UniSwap",
 		link: "https://app.uniswap.org/#/tokens/ethereum/0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
+	},
+	{
+		icon: dexIcon1,
+		text: "Mighty Swap",
+		link: "https://swap.lootchain.com/#/swap",
 	},
 ];
 const cexList = [
