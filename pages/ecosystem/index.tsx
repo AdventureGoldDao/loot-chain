@@ -16,6 +16,12 @@ import game10 from "./images/game10.jpg";
 import game11 from "./images/a1.jpg";
 import game12 from "./images/a2.jpg";
 import game13 from "./images/a3.png";
+import game14 from "./images/game14.jpg";
+import game15 from "./images/game15.jpg";
+import game16 from "./images/game16.png";
+import game17 from "./images/game17.jpg";
+import game18 from "./images/game18.jpg";
+import game19 from "./images/game19.jpg";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -58,6 +64,24 @@ const gamesList = [
 		image: game13,
 		link: "https://archloot.com/",
 	},
+	{
+		name: "LootCraft",
+		des: `LootCraft is a fully on-chain 3D voxel world, where every block of the virtual space exists as part of the blockchain. Every action and interaction within the world, whether it's mining resources, crafting items, or building structures, occurs as a series of transactions on the Lootchain.`,
+		image: game19,
+		link: "https://lootcraft.buidl.day/",
+	},
+	{
+		name: "Gabby World",
+		des: `Gabby World's vision is to create a fully AIGC Autonomous World where users can raise their virtual alter egos, and guide and observe how they live and thrive in a decentralized open world with free will.`,
+		image: game16,
+		link: "https://www.gabby.world/",
+	},
+	{
+		name: "Blade DAO",
+		des: `A decentralized on-chain game ecosystem built by degens, for degens.`,
+		image: game18,
+		link: "https://www.bladedao.games/",
+	},
 ];
 const infrastructureList = [
 	{
@@ -77,6 +101,18 @@ const infrastructureList = [
 		des: `STP optimizes Web3 for builders, communities and projects.`,
 		image: game8,
 		link: "https://www.stp.network/",
+	},
+	{
+		name: "Rabby Wallet",
+		des: `Rabby Wallet is an open source browser plugin for the DeFi ecosystem, providing users with a better-to-use and more secure multi-chain experience.`,
+		image: game15,
+		link: "https://rabby.io/",
+	},
+	{
+		name: "CARV",
+		des: `CARV is building ID infrastructure focused on gaming, enabling players with achievement display, semantic social, and access to gaming premiums.`,
+		image: game14,
+		link: "https://carv.io/",
 	},
 ];
 const defiList = [
@@ -105,6 +141,12 @@ const guildsList = [
 		des: `GameFi Infrastructure Developer.`,
 		image: game6,
 		link: "https://ancient8.gg/",
+	},
+	{
+		name: "Despread",
+		des: `DeSpread is a consulting firm specializing in Web3 & blockchain. We're contributing to Web3's mass adoption by supporting the growth of various startups and protocols.`,
+		image: game17,
+		link: "https://despread.io/",
 	},
 ];
 
