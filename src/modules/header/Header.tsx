@@ -207,6 +207,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 							<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 							<NavLink href="https://mainnet.lootchain.com/bridge">Bridge</NavLink>
 							<NavLink href="https://swap.lootchain.com">Mighty Swap</NavLink>
+							<NavLink href="https://loot-chain.gitbook.io/loot-chain-documentation/getting-started/overview">Documentation</NavLink>
 						</ul>
 					)}
 				</div>
