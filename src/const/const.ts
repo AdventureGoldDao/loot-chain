@@ -1,5 +1,4 @@
 export const MEDIUM_PATH = "";
-export const GITHUB_PATH = "";
 export const TELEGRAM_PATH = "https://t.me/+wztEsODk2mhkY2Nl";
 export const TWITTER_PATH = "https://twitter.com/GoldAdventure";
 export const HOME_PATH = "";
@@ -10,6 +9,7 @@ export const FACEBOOK_PATH = "";
 export const YOUTUBE_PATH = "";
 export const DISCORD_PATH = "https://discord.com/invite/WMXwkcGnNk";
 export const MIRROR_PATH = "https://mirror.xyz/agld.eth";
+export const GITHUB_PATH = "https://github.com/AdventureGoldDao/loot-chain";
 
 export const CONTACT = "";
 
@@ -17,6 +17,7 @@ export const SOCIAL = {
 	Mirror: MIRROR_PATH,
 	Discord: DISCORD_PATH,
 	Twitter: TWITTER_PATH,
+	Github: GITHUB_PATH,
 	// Telegram: TELEGRAM_PATH,
 };
 

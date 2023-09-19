@@ -12,6 +12,7 @@ import {
 	Telegram,
 	Twitter,
 	Youtube,
+	Github,
 } from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
@@ -33,6 +34,7 @@ const ICONS = {
 	Medium: <Medium />,
 	Youtube: <Youtube />,
 	Discord: <Discord />,
+	Github: <Github />,
 	Mirror: <Mirror scale={0.6} />,
 	"contact@bubble.co": <Envelop />,
 };
@@ -109,9 +111,10 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						<NavLink href="https://swap.lootchain.com">Mighty Swap</NavLink>
 					</li>
 					<li>
-						<NavLink href="https://loot-chain.gitbook.io/loot-chain-documentation/getting-started/overview">Documentation</NavLink>
+						<NavLink href="https://loot-chain.gitbook.io/loot-chain-documentation/getting-started/overview">
+							Documentation
+						</NavLink>
 					</li>
-						
 				</ul>
 				<li>
 					<NavLink

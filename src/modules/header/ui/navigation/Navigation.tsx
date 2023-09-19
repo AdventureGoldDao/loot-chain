@@ -10,6 +10,7 @@ import {
 	Telegram,
 	Twitter,
 	Youtube,
+	Github,
 } from "../../../../ui/icons/Icons";
 import { SOCIAL, NAVS } from "../../../../const/const";
 import { NavLink } from "../../../../ui/button";
@@ -34,6 +35,7 @@ const ICONS = {
 	Medium: <Medium />,
 	Youtube: <Youtube />,
 	Mirror: <Mirror />,
+	Github: <Github />,
 };
 
 export const Socials: FC<ComponentType> = ({ className, withButton }) => {
