@@ -1,9 +1,13 @@
 import type { CSSProperties, FC, ReactNode } from "react";
+import { useCallback, useState } from "react";
 import classNames from "classnames";
 import styles from "./MobileNavigation.module.scss";
 import { MaybeWithClassName } from "../../../../helper/react/types";
 import { NavLink } from "../../../../ui/button";
 import { SOCIAL } from "../../../../const/const";
+import { Close } from "../../../../ui/icons/Icons";
+import { useScatteredContinuousState } from "../../../../hooks/use-continuous-state";
+
 import {
 	Discord,
 	Envelop,
@@ -25,8 +29,11 @@ import { useWindowSize } from "../../../../hooks/use-window-size";
 type NavigationType = {
 	sideEffect?: ReactNode;
 };
+type NavigationEventType = {
+	clickClose?: () => void;
+};
 
-type ComponentType = NavigationType & MaybeWithClassName;
+type ComponentType = NavigationType & MaybeWithClassName & NavigationEventType;
 
 const ICONS = {
 	Twitter: <Twitter />,
@@ -39,32 +46,33 @@ const ICONS = {
 	"contact@bubble.co": <Envelop />,
 };
 
-export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) => {
+export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sideEffect }) => {
 	const windowHeight = useWindowSize()[1];
 
 	const keys = Object.keys(SOCIAL);
-
+	const [mobileNavigationShown, setMobileNavigationVisibility] = useState(false);
+	const mobileNavigation = useScatteredContinuousState(mobileNavigationShown, {
+		timeout: 350,
+	});
+	const closeModal = () => {
+		clickClose();
+	};
 	return (
 		<div
 			className={classNames(className, styles.component)}
 			style={{ "--window-height": `${windowHeight}px` } as CSSProperties}
 		>
+			<div className={styles.closeNav} onClick={closeModal}>
+				<Close />
+			</div>
 			<ul className={styles.item}>
 				<li className={styles.item}>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
-						href={"/"}
-					>
+					<NavLink className={classNames(styles.link)} href={"/"}>
 						Home
 					</NavLink>
 				</li>
 				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
-						href={"#"}
-					>
+					<NavLink className={classNames(styles.link)} href={"#"}>
 						Explore
 					</NavLink>
 				</li>
@@ -80,11 +88,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					</li> */}
 				</ul>
 				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
-						href={"https://freemint.lootchain.com"}
-					>
+					<NavLink className={classNames(styles.link)} href={"https://freemint.lootchain.com"}>
 						Loot NFT Pad
 					</NavLink>
 				</li>
@@ -117,30 +121,18 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					</li>
 				</ul>
 				<li>
-					<NavLink
-						style={{ fontSize: 18, marginBottom: 10 }}
-						className={classNames(styles.link)}
-						href={"#"}
-					>
+					<NavLink className={classNames(styles.link)} href={"#"}>
 						More
 					</NavLink>
 				</li>
 				<ul className={styles.childUl}>
 					<li>
-						<NavLink
-							style={{ fontSize: 18, marginBottom: 10 }}
-							className={classNames(styles.link)}
-							href={"https://staking.adventuregold.org"}
-						>
+						<NavLink className={classNames(styles.link)} href={"https://staking.adventuregold.org"}>
 							Staking
 						</NavLink>
 					</li>
 					<li>
-						<NavLink
-							style={{ fontSize: 18, marginBottom: 10 }}
-							className={classNames(styles.link)}
-							href={"https://loot-talk.com/"}
-						>
+						<NavLink className={classNames(styles.link)} href={"https://loot-talk.com/"}>
 							Governance
 						</NavLink>
 					</li>
@@ -155,7 +147,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 					</li>
 				</ul>
 			</ul>
-			<ul className={styles.list}>
+			{/* <ul className={styles.list}>
 				{keys.map((key) => {
 					// const lastItem = index === keys.length - 1;
 					return (
@@ -173,7 +165,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, sideEffect }) =
 						</li>
 					);
 				})}
-			</ul>
+			</ul> */}
 			{sideEffect}
 		</div>
 	);

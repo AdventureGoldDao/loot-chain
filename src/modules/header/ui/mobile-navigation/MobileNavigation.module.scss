@@ -1,12 +1,19 @@
 .component {
+  position: fixed;
+  top: 0;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  height: calc(var(--window-height) - var(--header-height));
-  padding: 5.75rem var(--gutters);
-
+  height: calc(var(--window-height));
+  padding: 4rem 6rem;
   box-sizing: border-box;
-
   background-color: rgba(var(--black), 1);
+  font-family: 'IMFePIrm';
+}
+
+.closeNav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 
@@ -26,10 +33,14 @@
 .item {
   position: relative;
   list-style: none;
+  font-size: 16px;
+  li {
+    margin-bottom: 14px;
+  }
 }
 
 .link {
-  color: white;
+  color: #a5ffbe;
   text-decoration: 0
 }
 
@@ -41,8 +52,8 @@
   font-size: 16px;
   color: '#fff';
   list-style-type: none;
-  margin-left: 20px;
-  margin-top: -10px;
+  margin-left: 40px;
+  // margin-top: -10px;
   & a {
     color: #fff;
     line-height: 24px;
