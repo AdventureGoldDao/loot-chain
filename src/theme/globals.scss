@@ -1,6 +1,43 @@
 @use "../helper/style/mixin";
 @use "../helper/style/media";
 
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Audiowide-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./DMSerifDisplay-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./Quicksand-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Germania One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./GermaniaOne-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ringm';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./RINGM___.TTF) format('truetype');
+}
+@font-face {
+  font-family: 'IMFePIrm';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./IMFePIrm28P.ttf) format('truetype');
+}
+
 html {
   font-size: 16px;
   overflow-x: hidden;
@@ -12,7 +49,7 @@ body {
   padding: 0;
   background-color:  #1E252B;;
   font-family: Inconsolata-VariableFont_wdth!important;
-
+  letter-spacing: 1px;
 }
 
 * {
@@ -73,7 +110,7 @@ h3 {
 p {
   font-size: 0.88rem;
   margin-top: 0.5rem;
-  word-spacing: 0.3rem;
+  word-spacing: 0.2rem;
 
   @include mixin.until(media.$sm) {
     font-size: 2.5rem;

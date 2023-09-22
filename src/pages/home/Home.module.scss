@@ -1,6 +1,7 @@
 @use "../../helper/style/mixin";
 @use "../../helper/style/media";
 
+
 @keyframes float {
   50% {
      transform: translate(0, 20px);
@@ -11,6 +12,7 @@
   overflow-x: hidden;
   width: 100%;
   height: calc(var(--window-height) - var(--header-height));
+  background-color: #14191E;
 }
 
 .body {
@@ -203,7 +205,7 @@
 }
 
 .button {
-  font-family: 'Inconsolata';
+  font-family: 'IMFePIrm';
   display: block;
   margin: auto;
   background: transparent;
@@ -331,30 +333,24 @@
 
 .top {
   display: flex;
-  max-width: 80rem;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 43.75rem;
-  padding: 0 6rem;
+  padding: 0 180px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-image: url("./assets/md_bg.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
   z-index: 2;
   @include mixin.until(media.$sm) {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: center;
-    height: 56.8rem;
-    background-image: url("./assets/md_bg.png");
-    background-position: center center;
-    background-size: auto 100%;
+    height: 60rem;
     padding: 0;
   }
 
   .texts {
     font-size: 4rem;
-    width: 44rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -368,11 +364,12 @@
 
     h1 {
       // margin-top: 8.8rem;
+      font-family: Ringm;
       width: 100%;
-      font-size: 4rem;
+      font-size: 100px;
       @include mixin.until(media.$sm) {
         margin-top: 3.814rem;
-        font-size: 3.2rem;
+        font-size: 50px;
       }
     }
 
@@ -381,9 +378,10 @@
       font-size: 1.5rem;
       margin-top: 1rem;
       color: #fff;
+      font-family: Ringm;
       @include mixin.until(media.$sm) {
-        font-size: 1.6rem;
-        margin-top: 2rem;
+        font-size: 18px;
+        margin-top: 1rem;
       }
     }
 
@@ -392,20 +390,36 @@
       display: flex;
       justify-content: flex-start;
       flex-direction: row;
+      padding-top: 40px;
       button {
         margin: 2rem 0;
-        width: 14.875rem;
-        height: 3rem;
+        width: 193px;
+        height: 77px;
         color: #213425;
         font-weight: 700;
         border-radius: 6px;
         border: 0;
         margin-left: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        text-align: left;
+        .btn_text1 {
+          color: #FFF;
+          font-family: Ringm;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 8px;
+        }
+        .btn_text2 {
+          color: #ADFEAB;
+          font-family: IMFePIrm;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
         @media screen and (min-width: 1200px) and (max-width: 1500px) {
           padding: 0 1rem 0 2rem;
         }
@@ -417,7 +431,7 @@
           color: #213425;
           font-weight: 900;
           font-size: 1.25rem;
-          font-family: Inconsolata-Bold;
+          font-family: IMFePIrm;
           @include mixin.from(media.$lg) {
             font-size: 30px;
           }
@@ -436,7 +450,7 @@
           margin-top: -4px;
           font-weight: 700;
           font-size: 1rem;
-          font-family: Inconsolata-Bold;
+          font-family: IMFePIrm;
           @include mixin.from(media.$lg) {
             font-size: 20px;
           }
@@ -451,8 +465,7 @@
           }
         }
         @include mixin.until(media.$sm) {
-          width: 24rem;
-          height: 4.838rem;
+          height: 77px;
         }
       }
       @include mixin.until(media.$sm) {
@@ -461,25 +474,22 @@
     }
 
     .lButton {
-      background-image: url('./assets/l-btn.png');
-      padding: 0 1.5rem 0 2rem;
-      @media screen and (min-width: 2000px) {
-        padding: 0 1.2rem 0 2.4rem;
-      }
+      background-image: url('./assets/top_card.svg');
+      padding: 0 0 0 1.5rem;
       @include mixin.until(media.$sm) {
         margin: 2rem auto;
       }
     }
 
     .rButton {
-      background-image: url('./assets/r-btn.png');
-      padding: 0 1.1rem 0 1.8rem;
-      @media screen and (min-width: 1500px) and (max-width: 2000px) {
-          padding: 0 1.2rem 0 1.8rem;
-        }
-      @media screen and (min-width: 1500px) {
-          padding: 0 1.5rem 0 1.8rem;
-        }
+      background-image: url('./assets/top_card.svg');
+      padding: 0 0 0 1.5rem;
+      // @media screen and (min-width: 1500px) and (max-width: 2000px) {
+      //     padding: 0 1.2rem 0 1.8rem;
+      //   }
+      // @media screen and (min-width: 1500px) {
+      //     padding: 0 1.2rem 0 1.8rem;
+      //   }
       @include mixin.until(media.$sm) {
         margin: 0 !important;
       }
@@ -521,16 +531,40 @@
 
 }
 
+.mask_bg {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background: var(--border-color);
+    --mask-bg: linear-gradient(red, red);
+    --mask-clip: content-box, padding-box;
+    mask-image: var(--mask-bg), var(--mask-bg);
+    mask-clip: var(--mask-clip);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+  }
+}
+
 .about {
+  --border-width: 1px;
+  --border-radius: 30px;
+  --border-color: linear-gradient(160deg, rgba(51, 98, 43, 1), rgba(0, 0, 0, 0), rgba(156, 57, 81, 1));
   max-width: 57.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2C353D;
-  border: 1px solid #FDFFAC;
-  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
-  border-radius: 24px;
   margin: 1.25rem auto 0;
+  border-radius: var(--border-radius);
+  background: linear-gradient(137deg, #06161C 7.53%, rgba(38, 35, 13, 0.24) 52.13%, #341109 93.16%);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+
   @include mixin.until(media.$sm) {
     width: 31.5rem;
     flex-direction: row-reverse;
@@ -555,9 +589,11 @@
 
     h3 {
       color: #fff;
-      margin-top: 1.6rem;
+      // margin-top: 1.6rem;
       font-size: 3.5rem;
       text-align: center;
+      font-family: Ringm;
+
       @include mixin.until(media.$sm) {
         max-width: 87.625rem;
         text-align: center;
@@ -572,9 +608,12 @@
 
     p {
       max-width: 43.8125rem;
-      font-size: 1.25rem;
+      font-size: 16px;
+      line-height: 1.5;
       text-align: center;
       margin-top: 1.25rem;
+      font-family: IMFePIrm;
+      color: #E2EFE5;
       @include mixin.until(media.$sm) {
         font-size: 1.6rem;
         margin: 2.4rem auto 0;
@@ -585,68 +624,60 @@
   }
 }
 
+.bg_com {
+  background: url(./assets/bg3.jpg) no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+  @include mixin.until(media.$sm) {
+    padding-bottom: 0;
+  }
+}
 .goldchain {
-  max-width: 57.75rem;
+  max-width: 1440px;
+  padding: 9.5rem 80px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
   border-radius: 24px;
-  margin: 9.5rem auto 0;
+  margin: 0 auto;
   @include mixin.until(media.$sm) {
     font-size: 3.2rem;
-    margin: 12rem auto 0;
+    margin: 0 auto;
+    padding: 40px 180px 0;
     max-width: 87.625rem;
     text-align: center;
   }
 
   .title {
     max-width: 43.75rem;
-    text-align: center;
     @include mixin.until(media.$sm) {
 
     }
     h3 {
-      color: #fff;
-      margin-top: 1.6rem;
-      font-size: 3.5rem;
+      color: #FFF;
+      font-family: Ringm;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 72px;
       @include mixin.until(media.$sm) {
-        font-size: 3.2rem;
-        width: 27rem;
-        text-align: center;
-        margin: 0 auto 1.6rem;
-      }
-      span {
-        color: #A5FFBE
-      }
-    }
-
-    p {
-      font-size: 1.25rem;
-      max-width: 43.8125rem;
-      text-align: center;
-      color: #A5FFBE;
-      margin-top: 1rem;
-      @include mixin.until(media.$sm) {
-        width: 29.7rem;
-        font-size: 1.6rem;
-        margin: 0 auto;
+        font-size: 40px;
+        margin-top: 30px;
       }
     }
   }
 
   .description {
     display: flex;
-    flex-direction: row;
     margin-top: 2rem;
-    align-items: center;
     @include mixin.until(media.$sm) {
       width: 31.5rem;
     }
     img {
-      width: 40rem;
-      height: 23.5rem;
+      max-width: 40rem;
+      backdrop-filter: blur(10px);
       @include mixin.until(media.$sm) {
         width: 31.5rem;  
         height: fit-content;
@@ -654,32 +685,29 @@
     }
 
     .des_content {
-      margin-left: 1.25rem;
+      margin-left: 56px;
       @include mixin.until(media.$sm) {
         text-align: left;
         margin-left: 0;
       }
-      p {
-        font-size: 1rem;
-        color: #b7b7b7;
-        max-width: 21.5rem;
-        margin-top: 1.5rem;
-        @include mixin.until(media.$sm) {
-          text-align: left;
-          font-size: 1.4rem;
-          max-width: 100%;
-          word-spacing: 0.2rem;
-        }
-      }
-
-      p:first-of-type {
+      .title1 {
+        margin-top: 36px;
+        margin-bottom: 13px;
         color: #FDFFAC;
-        font-size: 1.25rem;
-        @include mixin.until(media.$sm) {
-          max-width: 23.152rem;
-          text-align: left;
-          font-size: 1.6rem;
-        }
+        font-family: Ringm;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+      }
+      p {
+        margin-left: 10px;
+        color: #E2EFE5;
+        font-family: IMFePIrm;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
       }
 
       button {
@@ -690,7 +718,7 @@
         border-radius: 8px;
         margin-top: 1.5rem;
         font-size: 1rem;
-        font-family: 'Inconsolata';
+        font-family: 'IMFePIrm';
         font-style: normal;
         font-weight: 600;
         @include mixin.until(media.$sm) {
@@ -706,28 +734,112 @@
   }
 }
 
+.glowworm_box {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  & > div{
+    position: absolute;
+    left: 0;
+    background-image: radial-gradient(rgba(255, 255, 199, 0.8), rgba(203, 255, 138, 0.6), rgba(105, 193, 114, 0.8));
+    border-radius: 50%;
+  }
+  & > div:nth-child(1) {
+    width: 5px;
+    height: 5px;
+    left: 10px;
+    top: 2px;
+    animation: shadow2 2s 0.3s infinite, move 10s 2s infinite;
+  }
+  & > div:nth-child(2) {
+    width: 8px;
+    height: 8px;
+    left: 50px;
+    top: 60px;
+    animation: shadow2 2s 1s infinite, move 10s 4s infinite;
+  }
+  & > div:nth-child(3) {
+    width: 6px;
+    height: 6px;
+    left: 110px;
+    bottom: 0;
+    animation: shadow2 2s 0.4s infinite, move 10s 3.2s infinite;
+  }
+  & > div:nth-child(4) {
+    width: 10px;
+    height: 10px;
+    left: 210px;
+    top: 0;
+    animation: shadow2 2s 0.1s infinite, move 10s 3s infinite;
+  }
+  & > div:nth-child(5) {
+    width: 5px;
+    height: 5px;
+    left: 70%;
+    bottom: 20px;
+    animation: shadow2 2s 0.9s infinite, move 10s 1s infinite;
+  }
+  & > div:nth-child(6) {
+    width: 8px;
+    height: 8px;
+    left: 200px;
+    top: 80px;
+    animation: shadow2 2s 1.3s infinite, move 10s 4.3s infinite;
+  }
+  & > div:nth-child(7) {
+    width: 8px;
+    height: 8px;
+    left: 0px;
+    top: 30px;
+    animation: shadow2 2s 1.3s infinite, move 10s 1.5s infinite;
+  }
+  & > div:nth-child(8) {
+    width: 8px;
+    height: 8px;
+    left: -20%;
+    top: 80px;
+    animation: shadow2 2s 1.3s infinite, move 10s 2.5s infinite;
+  }
+  & > div:nth-child(9) {
+    width: 8px;
+    height: 8px;
+    left: 80%;
+    top: 10px;
+    animation: shadow2 2s 1.3s infinite, move 10s 3.5s infinite;
+  }
+  & > div:nth-child(10) {
+    width: 8px;
+    height: 8px;
+    left: 90%;
+    top: 130px;
+    animation: shadow2 2s 1.3s infinite, move 10s 2.2s infinite;
+  }
+}
+
 .features {
-  width: 100%;
-  height: 60rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin: -9.5rem auto 0;
-  background-image: url("./assets/bg_1.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  max-width: 1440px;
+  padding: 0 50px;
+  margin: 180px auto 70px;
+
   @include mixin.until(media.$sm) {
-      font-size: 3.2rem;
-      margin: 12rem auto 0;
-    }
+    margin: 10rem auto 0;
+    padding: 0 24px;
+  }
 
   h3 {
-    color: #fff;
-    margin-top: 1.6rem;
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
+    color: #FFF;
+    font-family: Ringm;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+    margin-bottom: 50px;
+    @include mixin.until(media.$sm) {
+      font-size: 50px;
+    }
     span {
       color: #A5FFBE;
     }
@@ -737,121 +849,282 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
     @include mixin.until(media.$sm) {
-      width: 31.5rem;
       flex-direction: column;
     }
-    div {
-      height: 12.75rem;
-      width: 19.375rem;
-      background: #2C353D;
-      box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
-      border-radius: 8px;
-      padding: 1.5rem;
+
+    .mask_bg {
+      position: relative;
+
       @include mixin.until(media.$sm) {
-        width: 31.5rem;
-        padding: 2.5rem 2.4rem;
+        margin: 0 0 20px;
+      }
+      .glowworm_box {
+        opacity: 1;
+        visibility: hidden;
+        left: 0;
+        background: url(./assets/bg_hover_a.svg) no-repeat;
+        background-size: 100%;
+        background-position: center bottom;
+        z-index: 2;
+        & > div:nth-child(1) {
+          left: 10px;
+          top: 20px;
+        }
+        & > div:nth-child(2) {
+          left: 99%;
+          top: 20px;
+        }
+        & > div:nth-child(3) {
+          left: 99%;
+          top: 96%;
+        }
+        & > div:nth-child(4) {
+          left: 100px;
+          top: 200px;
+        }
+        & > div:nth-child(5) {
+          left: 120px;
+          top: 20px;
+        }
+        & > div:nth-child(6) {
+          left: 30px;
+          top: 200px;
+        }
+      }
+      &:hover {
+        --border-color: linear-gradient(160deg, rgba(142, 242, 126, 1), rgba(0, 0, 0, 0), rgba(197, 100, 70, 1));
+        transition: transform 0.4s;
+        transform: scale(1.02) translate(-0px, -20px);
+        .glowworm_box {
+          visibility: visible;
+        }
+      }
+    }
+    > div {
+      width: 340px;
+      --border-width: 1px;
+      --border-radius: 20px;
+      --border-color: linear-gradient(160deg, rgba(51, 98, 43, 1), rgba(0, 0, 0, 0), rgba(156, 57, 81, 1));
+      border-radius: 20px;
+      background: linear-gradient(137deg, #06161C 7.53%, rgba(38, 35, 13, 0.24) 52.13%, #341109 93.16%);
+      backdrop-filter: blur(10px);
+      margin-right: 30px;
+      flex: auto;
+      padding: 32px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+      @include mixin.until(media.$sm) {
+        width: 100%;
       }
 
       img {
-        width: 2.5rem;
+        width: 45px;
       }
       h5 {
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
+        font-family: Ringm;
+        font-size: 32px;
+        margin: 16px 0 16px;
         color: #A5FFBE;
       }
 
       p {
-        color: #b7b7b7;
-        width: 100%;
-        font-size: 1rem;
-        @include mixin.until(media.$sm) {
-          font-size: 1.6rem;
-          width: 31.5rem;
-          word-spacing: 0.2rem;
-        }
+        color: #E2EFE5;
+        font-family: IMFePIrm;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
       }
     }
 
-    div:first-of-type {
-      margin-right: -1.5rem;
-      @include mixin.until(media.$sm) {
-        margin-right: 0;
-        width: 31.5rem;
-        height: fit-content;
-      }
-      p {
-        @include mixin.until(media.$sm) {
-          font-size: 1.6rem;
-          max-width: 26.6rem;
-        }
-      }
-    }
-
-    div:nth-child(2) {
-      width: 23.875rem;
-      height: fit-content;
-      z-index: 2;
-      @include mixin.until(media.$sm) {
-        margin-right: 0;
-        z-index: 0;
-        width: 31.5rem;
-      }
-      p {
-        @include mixin.until(media.$sm) {
-          max-width: 26.6rem;
-        }
-      }
-    }
-
-    div:nth-child(3) {
-      margin-left: -0.5rem;
-      @include mixin.until(media.$sm) {
-        margin-left: 0;
-        margin-top: -2.0rem;
-        width: 31.5rem;
-        z-index: 1;
-        height: fit-content;
-      }
-      p {
-        @include mixin.until(media.$sm) {
-          max-width: 26.6rem;
-        }
-      }
-    }
   }
 }
 
+.big_box {
+  background-image: url("./assets/bg1.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  @include mixin.until(media.$sm) {
+    padding-bottom: 10px;
+    background-size: 200%;
+    background-position: center top;
+  }
+}
+.applications_bg {
+  background-image: url("./assets/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 82.59%;
+  position: relative;
+  @include mixin.until(media.$sm) {
+    background-size: 200%;
+    background-position: center top;
+    padding-bottom: 100px;
+  }
+}
 .applications {
-  max-width: 57.75rem;
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin: 9.5rem auto 0;
+  top: 10%;
   @include mixin.until(media.$sm) {
-    margin: 12rem auto 0;
+    top: 60px;
+    position: relative;
+  }
+  
+
+  .applications_header {
+    display: flex;
+    font-family: Ringm;
+    align-items: center;
+    @include mixin.until(media.$sm) {
+      flex-direction: column;
+    }
+  }
+
+  .airdrop {
+    font-size: 70px;
+    margin-left: 50px;
+    color: #fff;
+    padding: 20px 60px 20px 50px;
+    border-left: 2px solid #A5FFBE;
+    z-index: 1;
+    position: relative;
+    @include mixin.until(media.$sm) {
+      font-size: 50px;
+      padding: 20px;
+      margin: 24px;
+    }
+  }
+  .airdrop_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: all 2s;
+    &::before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(42, 115, 102, 0.90) 0%, rgba(131, 255, 120, 0.15) 54.3%, rgba(131, 255, 120, 0.00) 91.15%);
+    }
+  }
+
+  .animation_glowworm .airdrop_bg {
+    width: 100%;
+  }
+
+  .animation_glowworm .glowworm_box {
+    opacity: 1;
+    transition: all 1.5s;
+  }
+
+
+  @keyframes shadow2 {
+    0% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.1);
+    }
+    10% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.2);
+    }
+    20% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.4);
+    }
+    30% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.6);
+    }
+    40% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.8);
+    }
+    50% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 1);
+    }
+    60% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.8);
+    }
+    70% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.6);
+    }
+    80% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.4);
+    }
+    90% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.2);
+    }
+    100% {
+      box-shadow: 0px 0px 5px 5px rgba(105, 193, 114, 0.1);
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-20px, 10px);
+    }
+    20% {
+      transform: translate(10px, 10px);
+    }
+    30% {
+      transform: translate(30px, -20px);
+    }
+    40% {
+      transform: translate(10px, 0px);
+    }
+    50% {
+      transform: translate(10px, -10px);
+    }
+    60% {
+      transform: translate(10px, 10px);
+    }
+    70% {
+      transform: translate(-10px, 20px);
+    }
+    80% {
+      transform: translate(25px, 35px);
+    }
+    90% {
+      transform: translate(10px, 20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
 
   h3 {
     color: #fff;
-    margin-top: 1.6rem;
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
+    font-size: 60px;
+    line-height: 80px;
     @include mixin.until(media.$sm) {
-      font-size: 3.2rem;
+      font-size: 46px;
       text-align: center;
     }
     span {
       color: #A5FFBE;
+      letter-spacing: 6px;
     }
   }
 
   .app_items {
+    margin-top: 110px;
+    width: 1060px;
 
+    @include mixin.until(media.$sm) {
+      margin-top: 20px;
+    }
     .imgs {
       display: flex;
       justify-content: center;
@@ -863,51 +1136,91 @@
     }
     .app_item_box {
       display: flex;
+      align-items: center;
       justify-content: center;
-      flex-direction: row;
-      margin-top: 1.5rem;
+      margin-top: 30px;
+      --border-width: 1px;
+      --border-radius: 20px;
+      --border-color: linear-gradient(160deg, rgba(51, 98, 43, 1), rgba(0, 0, 0, 0), rgba(51, 98, 43, 1));
+ 
       @include mixin.until(media.$sm) {
-        max-width: 31.5rem;
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        margin: 6rem auto 0;
+        margin: 0 20px 0;
       }
-      div {
-        width: 13.4375rem;
-        height: 12.75rem;
-        background: #2C353D;
-        box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
-        border-radius: 8px;
-        padding: 2.5rem 2.1875rem;
-        margin-right: -2.375rem;
+      .mask_bg {
+        width: 260px;
+        height: 260px;
+        border-radius: var(--border-radius);
+        background: linear-gradient(137deg, #06161C 7.53%, rgba(38, 35, 13, 0.24) 52.13%, #341109 93.16%);
+        backdrop-filter: blur(10px);
+        padding: 46px 10px;
+        margin-right: 30px;
+        position: relative;
+        text-align: center;
+
+        .glowworm_box {
+          opacity: 1;
+          visibility: hidden;
+          left: 0;
+          background: url(./assets/bg_hover_a.svg) no-repeat;
+          background-size: 100%;
+          background-position: center bottom;
+          z-index: 2;
+          & > div:nth-child(1) {
+            left: 10px;
+            top: 20px;
+          }
+          & > div:nth-child(2) {
+            left: 95%;
+            top: 20px;
+          }
+          & > div:nth-child(3) {
+            left: 90%;
+            top: 50%;
+          }
+          & > div:nth-child(4) {
+            left: 100px;
+            top: 95%;
+          }
+          & > div:nth-child(5) {
+            left: 120px;
+            top: 20px;
+          }
+          & > div:nth-child(6) {
+            left: 30px;
+            top: 95%;
+          }
+        }
+        &:hover {
+          --border-color: linear-gradient(160deg, rgba(142, 242, 126, 1), rgba(0, 0, 0, 0), rgba(142, 242, 126, 1));
+          transition: transform 0.4s;
+          transform: scale(1.03) translate(-10px, -20px);
+          .glowworm_box {
+            visibility: visible;
+          }
+        }
         @include mixin.until(media.$sm) {
           margin: auto;
-          width: 21.5rem;
-          height: 14.8rem;
-          text-align: left;
+          width: 33rem;
+          margin-bottom: 20px;
+        }
+        svg {
+          opacity: 0.8;
         }
         p {
-          font-size: 1.5rem;
+          margin-top: 20px;
+          font-size: 32px;
+          line-height: 1.6;
           color: #A5FFBE;
           font-weight: 600;
+          opacity: 0.8;
+          font-family: 'Ringm';
+          word-spacing: 200px;
           @include mixin.until(media.$sm) {
             margin-top: 1rem;
           }
-        }
-      }
-
-      div:nth-of-type(n+1) {
-        @include mixin.until(media.$sm) {
-            margin-top: -3rem;
-          }
-      }
-
-      div:last-child {
-        margin-right: 0;
-        margin-left: 0;
-        @include mixin.until(media.$sm) {
-          margin: -3rem auto 0;
         }
       }
     }
@@ -1001,32 +1314,28 @@
 
 .multiverse {
   width: 100%;
-  height: 57rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  margin: 70px 0 0;
   border-radius: 24px;
-  margin: 0;
-  text-align: center;
-  background-image: url("./assets/bg_0.png");
-  background-size: 100%;
+  background-image: url("./assets/bg4.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   @include mixin.until(media.$sm) {
     padding-bottom: 0;
-    margin: 16rem 0 31rem 0;
+    margin: 70px 0 0 0;
     background-size: cover;
   }
 
   h3 {
+    margin: auto;
+    text-align: center;
     color: #fff;
     font-size: 3.5rem;
     // margin-bottom: 6rem;
-    margin-top: -5rem;
+    font-family: 'Ringm';
     @include mixin.until(media.$sm) {
       margin-bottom: 2.1rem;
-      margin-top: 20rem;
+      margin-top: 0rem;
     }
     span {
       color: #A5FFBE;
@@ -1034,53 +1343,101 @@
   }
 
   button {
-      margin: 1.25rem 0 6rem;
-      width: 12.1875rem;
-      height: 2.5rem;
-      color: #213425;
-      font-weight: 700;
-      border-radius: 6px;
-      border: 0;
-      margin-left: 0;
-      font-family: 'Inconsolata-VariableFont_wdth';
-      background: linear-gradient(90deg, #A5FFBE 0%, #55DD7B 100%) !important;
-      @include mixin.until(media.$sm) {
-        font-size: 1.25rem;
-        width: 24rem;
-        height: 4rem;
-        min-height: 4rem;
-        margin: 0 0 2rem;
-      }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 3rem;
+    width: 285px;
+    height: 50px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 6px;
+    border: 0;
+    font-family: 'Ringm';
+    background-image: url('./assets/buildBtn.svg');
+    background-repeat: no-repeat;
+    @include mixin.until(media.$sm) {
+      font-size: 1.25rem;
+      min-height: 4rem;
+      margin: 0 auto;
     }
+  }
 
   .multiverse_content {
     display: flex;
     flex-direction: row;  
     justify-content: center;
-    align-items: baseline;
-    margin-top: 6rem;
+    align-items: stretch;
+    // margin-top: 6rem;
     gap: 2rem;
     @include mixin.until(media.$sm) {
       max-width: 31.5rem;
       flex-direction: column;
-      margin-top: 6rem;
+      margin: 6rem auto;
+    }
+    .content1 {
+      --border-width: 1px;
+      --border-radius: 30px;
+      --border-color: linear-gradient(160deg, rgba(51, 98, 43, 1), rgba(0, 0, 0, 0), rgba(156, 57, 81, 1));
+      max-width: 57.75rem;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      border-radius: var(--border-radius);
+      background: linear-gradient(137deg, #06161C 7.53%, rgba(38, 35, 13, 0.24) 52.13%, #341109 93.16%);
+      backdrop-filter: blur(10px);
+    }
+    .content2 {
+      --border-width: 1px;
+      --border-radius: 30px;
+      --border-color: linear-gradient(20deg, rgba(51, 98, 43, 1), rgba(0, 0, 0, 0), rgba(156, 57, 81, 1));
+      max-width: 57.75rem;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      border-radius: var(--border-radius);
+      background: linear-gradient(45deg, #06161C 7.53%, rgba(38, 35, 13, 0.24) 52.13%, #341109 93.16%);
+      backdrop-filter: blur(10px);
+    }
+    .content2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: var(--border-width);
+      border-radius: var(--border-radius);
+      background: var(--border-color);
+      --mask-bg: linear-gradient(red, red);
+      --mask-clip: content-box, padding-box;
+      mask-image: var(--mask-bg), var(--mask-bg);
+      mask-clip: var(--mask-clip);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
     }
     p {
-      width: 34.5rem;
-      height: fit-content;
+      // width: 26rem;
+      // padding: 50px 68px;
+      // height: fit-content;
       background: #2C353D;
       box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
       border-radius: 20px;
-      font-size: 1.25rem;
-      padding: 2.5rem 3.625rem;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 3rem 4rem;
       text-align: left;
+      font-family: 'IMFePIrm';
+      color: #E2EFE5;
+      overflow: hidden;
       @include mixin.until(media.$sm) {
         width: 31.9rem;
         font-size: 1.6rem;
         word-spacing: 0.2rem;
       }
 
-      span:nth-child(2) {
+      span:nth-child(2), span:nth-child(3) {
         display: inline-block;
         margin-top: 2rem;
       }
@@ -1158,7 +1515,7 @@
     }
 
     button {
-      font-family: 'Inconsolata';
+      font-family: 'IMFePIrm';
       margin-top: 2rem;
       width: 8rem;
       border: 1px solid rgba(165, 255, 190, 1);
@@ -1301,15 +1658,34 @@
   }
 }
 
+.analyse {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 80px;
+
+  @include mixin.until(media.$sm) {
+    padding: 28px 10px;
+  }
+  .analyse_green_line {
+    float: left;
+    @include mixin.until(media.$sm) {
+      width: 100%;
+    }
+  }
+  .analyse_red_line {
+    float: right;
+    @include mixin.until(media.$sm) {
+      width: 100%;
+    }
+  }
+}
+
 .list1 {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 80rem;
-  background: #A5FFBE;
-  margin: 2.5rem auto 0;
-  height: fit-content;
-  padding: 1.5rem 4.5rem;
+  margin: 50px auto;
   @include mixin.until(media.$sm) {
     margin-top: 4rem;
     max-width: 100%;
@@ -1330,11 +1706,7 @@
     img {
       width: 3rem;
       height: fit-content;
-      margin: 1.2rem;
-
-      &:hover {
-        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);;
-      }
+      margin: 0 1.2rem 1.2rem;
       @include mixin.until(media.$sm) {
         width: 3.2rem;
         margin: 0.6rem;
@@ -1343,7 +1715,7 @@
 
     p {
       font-size: 0.875rem;
-      color: #536A5A;
+      color: #fff;
       @include mixin.until(media.$sm) {
         font-size: 1rem;
         transform: scale(0.75);
@@ -1355,83 +1727,160 @@
 .roadmap {
   width: 100%;
   margin: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
   margin-top: 9.6rem;
-  justify-content: center;
+  padding-bottom: 400px;
+  color: #fff;
+  overflow: hidden;
   @include mixin.until(media.$sm) {
     flex-direction: column;
-    margin-top: 37rem;
+    margin-top: 5rem;
+    padding-bottom: 40px;
   }
-
-  .left_box {
-    margin-right: 3.9rem;
+  .title {
+    width: 1000px;
+    margin: 0 auto 300px;
+    font-size: 60px;
+    font-family: 'Ringm';
     @include mixin.until(media.$sm) {
-      margin-right: 0;
-      margin-bottom: 4.4rem;
+      width: 100%;
+      padding-left: 24px;
+      text-align: left;
+      margin-bottom: 20px;
     }
-    h3 {
-      font-size: 3.5rem;
+  }
+  .roadmapLine {
+    position: relative;
+    height: 14px;
+    width: 100%;
+    transform: rotate(335deg);
+    background-image: url("./assets/lineBg.svg");
+    @include mixin.until(media.$sm) {
+      display: flex;
+      align-items: stretch;
+      height: auto;
+      transform: rotate(0deg);
     }
     img {
-      width: 20.6875rem;
-      height: 17.0625rem;
-      margin-top: 2.5rem;
+      width: 120%;
+      margin-left: -10%;
+      @include mixin.until(media.$sm) {
+        display: none;
+      }
     }
+    .lineBg {
+      position: absolute;
+      top: -135px;
+      left: 0;
+      @include mixin.until(media.$sm) {
+        display: none;
+      }
+    }
+
+  }
+  .greenTitle {
+    color: #A5FFBE;
+    font-size: 28px;
+    font-family: 'Ringm';
+  }
+  .roadmap_txt {
+    width: 230px;
+    font-family: 'IMFePIrm';
+    font-size: 16px;
+    line-height: 24px;
+    color: #E2EFE5;
   }
 
   .roadmap_list {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    // transform: rotate(335deg);
     @include mixin.until(media.$sm) {
+      flex-direction: column;
       max-width: 31.5rem;
       margin: 0 auto;
     }
-    div {
-      max-width: 34.25rem;
-      max-height: fit-content;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-      text-align: left;
-      padding: 1rem;
-      margin-bottom: 1rem;
+    .roadmapItem {
+      position: relative;
+      flex: 1;
+      padding-top: 38px;
+      transform: rotate(25deg);
       @include mixin.until(media.$sm) {
-        max-width: 25.3rem;
-        margin: 0 auto;
+        padding-top: 36px;
+        transform: rotate(0deg);
       }
-      p {
-        font-size: 1.25rem;
-      }
-      p:nth-child(2) {
-        color: #ebebeb;
-        opacity: 0.6;
-        font-size: 1rem;
-      }
-    }
-
-    div:first-of-type {
-      box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.8);
-      @include mixin.until(media.$sm) {
-        margin-left: 0;
+      @media screen and (min-width: 1440px) {
+        padding-top: 36px;
+        
       }
 
-      p:first-child {
-        color: #fff;
+      .glowworm_box {
+        left: 0;
+        & > div:nth-child(1) {
+          left: 10px;
+          top: 20px;
+        }
+        & > div:nth-child(2) {
+          left: 20px;
+          top: -20px;
+        }
+        & > div:nth-child(3) {
+          left: 0;
+          top: 50%;
+        }
+        & > div:nth-child(4) {
+          left: 100px;
+          top: 5%;
+        }
+        & > div:nth-child(5) {
+          left: -10px;
+          top: 20px;
+        }
+        & > div:nth-child(6) {
+          left: -30px;
+          top: 15%;
+        }
+      }
+      
+      &:hover {
+        .lineHover { 
+          display: block;
+        }
+        .glowworm_box {
+          opacity: 1;
+        }
+      }
+      .lineHover {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        display: none;
+        opacity: 0.5;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        margin-bottom: 20px;
+        background-color: #588264;
+        border-radius: 50%;
+      }
+      .dot2 {
+        background-color: #717A5D;
+      }
+      .dot3 {
+        background-color: #94866F;
       }
     }
-
-    div:nth-child(2) {
-      margin-left: 2.1875rem;
-    }
-
-    div:nth-child(3) {
-      margin-left: 4.375rem;
-
-    }
-
-    div:nth-child(4) {
-      margin-left: 6.5625rem;
-
-    }
+  }
+}
+.socialsBox {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
+  @include mixin.until(media.$sm) {
+    padding-right: 0px;
+    justify-content: center;
   }
 }
 
@@ -1440,16 +1889,16 @@
   background: transparent;
 }
 
-.line {
-  max-width: 71rem;
-  height: 0.0625rem;
-  background-color: #A5FFBE;
-  margin: 5.1875rem auto;
-  @include mixin.until(media.$sm) {
-    margin: 4rem auto 0;
-    width: 23.1rem;
-  }
-}
+// .line {
+//   max-width: 71rem;
+//   height: 0.0625rem;
+//   background-color: #A5FFBE;
+//   margin: 5.1875rem auto;
+//   @include mixin.until(media.$sm) {
+//     margin: 4rem auto 0;
+//     width: 23.1rem;
+//   }
+// }
 
 .socials {
   margin-top: 2.75rem;
@@ -1494,5 +1943,18 @@
     height: 100%;
   }
 }
+
+.game_box {
+  margin: 100px auto;
+  .game_title {
+    font-family: Ringm;
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  .game_img_box {
+    
+  }
+}
+
 
 
