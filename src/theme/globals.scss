@@ -26,7 +26,7 @@
   src: url(./GermaniaOne-Regular.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Ringm';
+  font-family: 'Ringbearer';
   font-style: normal;
   font-weight: 400;
   src: url(./RINGM___.TTF) format('truetype');
@@ -36,6 +36,11 @@
   font-style: normal;
   font-weight: 400;
   src: url(./IMFePIrm28P.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'IMFePIit';
+  font-weight: 400;
+  src: url(./IMFePIit28P.ttf);
 }
 
 html {
@@ -511,5 +516,39 @@ $blue: #03b5d2;
       font-weight: 300;
       margin: 2em 0;
     }
+  }
+}
+.text_hidden_1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.swiper {
+  width: 888px;
+  height: 380px;
+  @include mixin.until(media.$sm) {
+    width: 270px;
+    height: 200px;
+  }
+}
+.swiper2 {
+  width: 888px;
+  height: 280px;
+  @include mixin.until(media.$sm) {
+    width: 270px;
+    height: 200px;
+  }
+}
+.swiper_part4Box,.swiper_part6Box {
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 6px;
+    border-radius: 3px;
+    background: #EBEBEB;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active  {
+    background: linear-gradient(90deg,#A5FFBE,#89EB5B);
   }
 }

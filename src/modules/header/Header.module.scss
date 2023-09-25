@@ -149,12 +149,13 @@
   border-radius: 20px;
   flex-direction: row;
   align-items: center;
-  background: linear-gradient(90deg, #A5FFBE 0%, #55DD7B 100%);
+  background: linear-gradient(90deg, #A5FFBE 0%, #89EB5B 100%);
   & p {
     margin-top: 0;
     margin-right: 8px;
     font-size: 0.875rem;
-    font-family: 'IMFePIrm';
+    font-family: 'IMFePIit';
+    // font-style: italic;
     color: #213425;
     font-weight: 700;
     word-spacing: inherit;
