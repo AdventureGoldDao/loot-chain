@@ -1,6 +1,11 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
+// import { useHistory } from "react-router-dom";
 import styles from "./Home.module.scss";
 import { useWindowSize } from "../../hooks/use-window-size";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import "swiper/swiper.min.css";
+
 import img from "./assets/card.png";
 import img1 from "./assets/img_1.png";
 import img2 from "./assets/img_2.png";
@@ -12,11 +17,11 @@ import bridge from "./assets/bridge.png";
 import store from "./assets/store.png";
 import game from "./assets/game.png";
 import nft from "./assets/nftImg.png";
-import featureIocn0 from "./assets/featureIcon0.svg";
 import featureIocn1 from "./assets/featureIcon1.svg";
 import featureIocn2 from "./assets/featureIcon2.svg";
 import featureIocn3 from "./assets/featureIcon3.svg";
-// import diamonds from "./assets/diamonds.png";
+import featureIocn4 from "./assets/featureIcon4.svg";
+import diamond from "./assets/diamond.svg";
 // import top_left_icon from "./assets/top_left_icon.png";
 // import top_right_icon from "./assets/top_right_icon.png";
 import multiverse_top_icon from "./assets/multiverse_top_icon.png";
@@ -40,13 +45,17 @@ import info from "./assets/info.svg";
 import roadmapLine from "./assets/line.svg";
 import roadmapLineBg from "./assets/lineBg.svg";
 import roadmapLineHover from "./assets/lineHover.svg";
-
+import part1 from "./assets/part1.png";
+import part2 from "./assets/part2.png";
+import part3 from "./assets/part3.png";
+import part4 from "./assets/part4.png";
+import part4H5 from "./assets/part4H5.png";
+import part1Bg from "./assets/part1Bg.png";
 import { Socials } from "../../modules/header/ui/navigation/Navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { ecosystemList } from "../../../pages/ecosystem";
 type HomeType = {};
-
 const list1 = [
 	{
 		title: "Binance",
@@ -267,10 +276,6 @@ const OS_reverse_arr = [
 	},
 ];
 
-const show = () => {
-	window.open("https://forms.gle/kfcKChgdTzBdxKTh9", "_blank");
-};
-
 const bannerList = [
 	{
 		url: "https://games.lootchain.com/games",
@@ -293,50 +298,133 @@ const bannerList = [
 		title: "LootCraft",
 	},
 ];
+const part1List = [
+	{
+		image: part1,
+		title: "The Forge of Imagination : Loot",
+		content: `"In the magical realm of Crypto, Dom Hofmann, co-founder of Vine and Byte, envisioned and birthed the Loot Project: a unique collection of 8,000 text-based bags brimming with adventurer gear. This initiative united artists, gamers, developers, and writers, becoming a community-driven platform where everyone collaborated to weave rich content and stories."`,
+	},
+	{
+		image: part2,
+		title: "The Rise of the Lootverse",
+		content: `“Anchored in its unique text-based NFTs, the Lootverse blossomed as a hub for boundless creativity. As its valuation climbed, a myriad of decentralized tales and ventures emerged, all underpinned by the AGLD token. It stood as a testament to collective imagination and expansive digital horizons.”`,
+	},
+	{
+		image: part3,
+		title: "Autonomous World & Beyond",
+		content: `"In the magical realm of Crypto, Dom Hofmann, co-founder of Vine and Byte, envisioned and birthed the Loot Project: a unique collection of 8,000 text-based bags brimming with adventurer gear. This initiative united artists, gamers, developers, and writers, becoming a community-driven platform where everyone collaborated to weave rich content and stories."`,
+	},
+];
+const part2List = [
+	{
+		title: "Layer 2 Rollup",
+		content: `Loot Chain is an optimistic rollup chain powered by Caldera`,
+	},
+	{
+		title: "DA Layer on Polygon",
+		content: `Loot Chain utilizes Polygon chain as the DA layer which further reduces transaction costs`,
+	},
+	{
+		title: "Tailored for Lootverse",
+		content: `Loot Chain provides specialized support for builders on Lootverse and Autonomous Worlds`,
+	},
+];
+const part5List = [
+	{
+		icon: featureIocn1,
+		content: `In Game Currency`,
+	},
+	{
+		icon: featureIocn2,
+		content: `Adventure Currency for Lootverse`,
+	},
+	{
+		icon: featureIocn3,
+		content: `Chain Token`,
+	},
+	{
+		icon: featureIocn4,
+		content: `Community Rewards`,
+	},
+];
 
 export const Home: FC<HomeType> = () => {
 	const winHeight = useWindowSize()[0];
 	winHeight > 768 ? opensource_arr : OS_reverse_arr;
-
+	const [isH5, setIsH5] = useState(false);
+	// const history = useHistory()
+	const show = () => {
+		// history.push('/ecosystem')
+		window.open("/ecosystem");
+	};
 	useEffect(() => {
-		const airdropDiv = document.getElementById("airdrop");
-		const airdropText = document.getElementById("airdrop_text");
-		const observer = new IntersectionObserver(
-			(entries) => {
-				if (entries[0].isIntersecting) {
-					airdropDiv.classList.add(styles.animation_glowworm);
-					const timer0 = setInterval(() => {
-						const num = Number(airdropText.innerHTML);
-						if (num < 100) {
-							airdropText.innerHTML = num + 1 + "";
-						} else {
-							clearInterval(timer0);
-						}
-					}, 10);
-				}
-				//  else {
-				//   airdropDiv.classList.remove(styles.animation_glowworm);
-				//   airdropText.innerHTML = '0';
-				// }
-			},
-			{ threshold: 1 }
-		);
+		[1, 2, 3, 4, 5].map((item) => {
+			console.log(`lineBox${item}`);
+			console.log(`lineH${item}`);
 
-		observer.observe(airdropDiv);
+			const airdropDiv = document.getElementById(`lineBox${item}`);
+			const lineH = document.getElementById(`lineH${item}`);
+			console.log(lineH);
+			// const airdropText = document.getElementById("airdrop_text");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					if (entries[0].isIntersecting) {
+						airdropDiv.classList.add(styles.animation_line);
+						lineH.classList.add(styles.animation_lineH);
+					} else {
+						// lineH.classList.remove(styles.animation_lineH);
+					}
+				},
+				{ threshold: 0.5 }
+			);
+			observer.observe(airdropDiv);
+		});
 
 		AOS.init();
+		// @ts-ignore
+		const swiper = new Swiper(".swiper1", {
+			slidesPerView: "auto",
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				dynamicBullets: true,
+			},
+		});
+		// @ts-ignore
+
+		const swiper2 = new Swiper(".swiper2", {
+			slidesPerView: "auto",
+			spaceBetween: 20,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+				dynamicBullets: true,
+			},
+		});
+		if (window.innerWidth < 800) {
+			setIsH5(true);
+		}
 	}, []);
 
 	return (
 		<>
 			<section className={styles.component}>
 				<div className={styles.body}>
-					<div className={styles.big_box}>
+					<div className={styles.big_box} data-aos="fade-down" data-aos-duration="1000">
 						<section className={styles.top}>
 							<div className={styles.texts}>
-								<h1>Adventure Gold</h1>
-								<p>Building the Lootverse Infrastruture</p>
-								<div className={styles.btnGroup}>
+								{/* <h1>Adventure Gold</h1> */}
+								{/* <p>Building the Lootverse Infrastruture</p> */}
+								{/* <div className={styles.btnGroup}>
 									<button className={styles.lButton} onClick={show}>
 										<div className={styles.btn_text1}>BUILD</div>
 										<div className={styles.btn_text2}>on Loot Chain</div>
@@ -348,276 +436,228 @@ export const Home: FC<HomeType> = () => {
 										<div className={styles.btn_text1}>PLAY</div>
 										<div className={styles.btn_text2}>on Loot Console</div>
 									</button>
+								</div> */}
+							</div>
+							<img className={styles.light} src={part1Bg}></img>
+						</section>
+						<section className={`${styles.part} ${styles.part1}`}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								<div
+									className={styles.partLine}
+									id="lineBox1"
+									data-aos="fade-down"
+									data-aos-duration="1500"
+								>
+									<div className={styles.line} id="lineH1"></div>
 								</div>
 							</div>
-							{/* <img src={img} alt={"img"} />
-						<img className={styles.top_left_icon} src={top_left_icon} alt={"img"} />
-						<img className={styles.top_right_icon} src={top_right_icon} alt={"img"} /> */}
-						</section>
-						<section className={`${styles.about} ${styles.mask_bg}`}>
-							<div className={styles.texts}>
-								<h3>
-									What is <span>Adventure Gold</span>
-								</h3>
-								<p data-aos="fade-up" data-aos-duration="1000">
-									Adventure Gold (AGLD) is the incentivization token for the Lootverse. Launched
-									through a fair airdrop, 10,000 AGLD was free to claim per OG Loot. Previously
-									regarded by many as the governance token for Loot, AGLD will now power the Loot
-									Chain and enable an ecosystem of Fully On Chain Games and Autonomous Worlds to
-									grow on top of it.
-								</p>
-								<p data-aos="fade-up" data-aos-duration="1000">
-									In addition, the community has come up with a brand new token economics design
-									that aims to incentivise adoption of Loot instead of governing it. Mild inflation
-									instead of a fixed supply is implemented and the rewards will be distributed to
-									Lootverse NFTs that are non-custodially staked.
-								</p>
-								<p data-aos="fade-up" data-aos-duration="1000">
-									The core value of AGLD is supported by Lootverse’s community attention. By
-									incentivising user & assets engagements in the Lootverse, AGLD grows the Lootverse
-									in a healthy and sustainable way.
-								</p>
-							</div>
-						</section>
-					</div>
-					<section className={styles.applications_bg}>
-						<div className={styles.applications}>
-							<div className={styles.applications_header}>
-								<h3>
-									Application of
-									<br />
-									<span>AGLD Token</span>
-								</h3>
-								<div id="airdrop" className={styles.airdrop}>
-									<span id="airdrop_text">0</span>% fair distribution
-									<div className={styles.airdrop_bg}></div>
-									<div className={styles.glowworm_box}>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
+							<div className={styles.partRight} data-aos="fade-right" data-aos-duration="1500">
+								<div className={styles.partTitle}>
+									JOURNEY TO THE LOOTVERSE:{" "}
+									<span className={styles.greenTxt}>ADVENTURE LIKE NEVER BEFORE</span>{" "}
+								</div>
+								{part1List.map((item) => (
+									<div className={styles.part1Box} data-aos="fade-up" data-aos-duration="1000">
+										<img className={styles.boxImg} src={item.image}></img>
+										<div className={styles.boxContent}>
+											<div className={styles.title}>{item.title}</div>
+											<div className={styles.txt}>{item.content}</div>
+										</div>
 									</div>
+								))}
+							</div>
+						</section>
+						<section className={styles.part}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								<div
+									className={styles.partLine}
+									id="lineBox2"
+									data-aos="fade-down"
+									data-aos-duration="1500"
+								>
+									<div className={styles.line} id="lineH2"></div>
 								</div>
 							</div>
-							<div data-aos="fade-up" data-aos-duration="1000" className={styles.app_items}>
-								<div className={styles.app_item_box}>
-									{app_item_arr.slice(0, 3).map(({ title, icon }) => {
-										return (
-											<div className={styles.mask_bg} key={title}>
-												{icon}
-												<p>{title}</p>
-												<div className={styles.glowworm_box}>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-												</div>
-											</div>
-										);
-									})}
+							<div className={styles.partRight} data-aos="fade-right" data-aos-duration="1500">
+								<div className={styles.partTitle}>
+									Loot Chain - <span className={styles.greenTxt}>The Engine of Lootverse</span>
 								</div>
-								<div className={styles.app_item_box}>
-									{app_item_arr.slice(3).map(({ title, icon }) => {
-										return (
-											<div className={styles.mask_bg} key={title}>
-												{icon}
-												<p>{title}</p>
-												<div className={styles.glowworm_box}>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-												</div>
-											</div>
-										);
-									})}
+								<div className={styles.partSubTitle}>
+									Designed exclusively for the Lootverse, the Loot Chain operates as a layer-2
+									chain, facilitating cost-efficient platform for the Loot enthusiasts.
+								</div>
+								{part2List.map((item) => (
+									<div className={styles.part2Box} data-aos="fade-up" data-aos-duration="1000">
+										<div className={styles.box2Content_left}>{item.title}</div>
+										<div className={styles.box2Content_right}>{item.content}</div>
+									</div>
+								))}
+							</div>
+						</section>
+						<section className={styles.part}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								<div
+									className={styles.partLine}
+									id="lineBox3"
+									data-aos="fade-down"
+									data-aos-duration="1500"
+								>
+									<div className={styles.line} id="lineH3"></div>
 								</div>
 							</div>
-						</div>
-					</section>
+							<div className={styles.partRight} data-aos="fade-right" data-aos-duration="1500">
+								<div className={styles.partTitle}>
+									Start your adventure at <br />{" "}
+									<span className={styles.greenTxt}>the Loot NFT Pad</span>
+								</div>
+								<div className={styles.partSubTitle}>
+									Craft and unveil your NFT collections on the Loot NFT Pad, connecting with the
+									passionate Loot community. 
+								</div>
+								<div className={styles.part3Box}>
+									<button onClick={() => window.open("https://freemint.lootchain.com", "_blank")}>
+										<div className={styles.btn_text}>→Check out the Loot NFT Pad</div>
+									</button>
+									<img
+										data-aos="fade-up"
+										data-aos-duration="1000"
+										className={styles.part3Box_img}
+										src={isH5 ? part4H5 : part4}
+									></img>
+								</div>
+							</div>
+						</section>
+						<section className={styles.part}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								<div
+									className={styles.partLine}
+									id="lineBox4"
+									data-aos="fade-down"
+									data-aos-duration="1500"
+								>
+									<div className={styles.line} id="lineH4"></div>
+								</div>
+							</div>
+							<div className={styles.partRight} data-aos="fade-right" data-aos-duration="1500">
+								<div className={styles.partTitle}>
+									{" "}
+									<span className={styles.greenTxt}>Loot Gaming</span> Console
+								</div>
+								<div className={styles.partSubTitle}>
+									Dive into a selection of the newest game offerings emerging from the Loot Chain
+									realm 
+								</div>
+								<div className={styles.part4Box}>
+									<button
+										onClick={() => window.open("https://games.lootchain.com/games", "_blank")}
+									>
+										<div className={styles.btn_text}>→Play on the Loot Console</div>
+									</button>
 
-					<section data-aos="fade-up" data-aos-duration="1000" className={styles.analyse}>
-						<img className={styles.analyse_green_line} src={greenLine} />
-						<div className={styles.list1}>
-							{list1.map(({ title, icon }) => {
-								return (
-									<div className={styles.item1} key={title}>
-										<img src={icon} alt={"icon"} />
-										<p>{title}</p>
+									<div className="swiper swiper1 swiper_part4Box">
+										<div className="swiper-wrapper">
+											{bannerList.map((item) => (
+												<div className={`swiper-slide ${styles.swiperBox}`}>
+													<div className={styles.swiperBox}>
+														<div className={styles.swiperBox_image}>
+															<img src={item.image}></img>
+														</div>
+														<div className={`${styles.swiperBox_title}`}>{item.title}</div>
+													</div>
+												</div>
+											))}
+										</div>
+										<div className="swiper-pagination"></div>
 									</div>
-								);
-							})}
-						</div>
-						<img className={styles.analyse_red_line} src={redLine} />
-					</section>
-					<div className={styles.bg_com}>
-						<section data-aos="fade-up" data-aos-duration="1000" className={styles.goldchain}>
-							<div className={styles.description}>
-								<img src={info} alt="" />
-								<div className={styles.des_content}>
-									<div className={styles.title}>
-										<h3>
-											The <span>Loot Chain</span>
-										</h3>
-									</div>
-									<p>
-										The Loot Chain is a low-cost and lightning-fast L2 blockchain dedicated to the
-										Lootverse that enables highly scalable applications.
-									</p>
-									<p className={styles.title1}>Architecture of the Adventure Gold Chain</p>
-									<p>
-										The Loot Chain enables a cost-efficient execution environment for the Loot
-										community. The Loot Chain is built as an optimistic roll-up on Ethereum, taking
-										advantage of Ethereum's security as well as interoperability with other L2
-										solutions. Users can enter or exit the chain in a similar way as Optimism or
-										Arbitrum.
-									</p>
-									{/* <button
-                    onClick={() => {
-                      window.open("https://staking.adventuregold.org/#/", "_blank");
-                    }}
-                  >
-                    Learn More
-                  </button> */}
 								</div>
 							</div>
 						</section>
-						<section data-aos="fade-up" data-aos-duration="1000" className={styles.features}>
-							<h3>
-								<span>Key</span> Features
-							</h3>
-							<div className={styles.features_content}>
-								<div className={styles.mask_bg}>
-									<img src={featureIocn0} alt="" />
-									<h5>Loot NFT Pad</h5>
-									<p>
-										Create and launch NFT collections on the Loot NFT Pad to reach a excited Loot
-										community.
-									</p>
-									<div className={styles.glowworm_box}>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
+						<section className={styles.part}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								<div
+									className={styles.partLine}
+									id="lineBox5"
+									data-aos="fade-down"
+									data-aos-duration="1500"
+								>
+									<div className={styles.line} id="lineH5"></div>
 								</div>
-								<div className={styles.mask_bg}>
-									<img src={featureIocn1} alt="" />
-									<h5>Loot Gaming Console</h5>
-									<p>Browse and try some of the newest games from the Loot Chain ecosystem.</p>
-									<div className={styles.glowworm_box}>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
+							</div>
+							<div
+								className={`${styles.partRight} ${styles.part5Right}`}
+								data-aos="fade-right"
+								data-aos-duration="1500"
+							>
+								<div className={styles.partTitle}>
+									AGLD <span className={styles.greenTxt}>Token</span>
 								</div>
-								<div className={styles.mask_bg}>
-									<img src={featureIocn2} alt="" />
-									<h5>Governance</h5>
-									<p>
-										Join Jokerace and Loot talk to fund and vote for your favorite community
-										projects.
-									</p>
-									<div className={styles.glowworm_box}>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
+								<div className={styles.partSubTitle}>
+									AGLD token was introduced through a fair distribution, 100% airdropped to the
+									community members. The token serves as the cornerstone of the Lootverse, shaping
+									mechanisms that align community interests and accelerate ecosystem growth 
 								</div>
-								<div className={styles.mask_bg}>
-									<img src={featureIocn3} alt="" />
-									<h5>DEX</h5>
-									<p>Use Mighty Swap to engage with the different tokens in the ecosystem.</p>
-									<div className={styles.glowworm_box}>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
+								<div className={styles.part5Box}>
+									{part5List.map((item, index) => (
+										<div
+											className={styles.part5Box_item}
+											data-aos="fade-up"
+											data-aos-duration={500 + index * 300}
+										>
+											<div className={styles.part5Box_item_content}>
+												<object className={styles.part5Box_item_icon} data={item.icon}></object>
+												<div className={styles.part5Box_txt}>{item.content}</div>
+											</div>
+										</div>
+									))}
 								</div>
 							</div>
 						</section>
 					</div>
-
-					<section className={styles.multiverse}>
-						<h3>
-							Loot <span>Autonomous</span> Worlds
-						</h3>
-						<button className={styles.buildBtn} onClick={show}>
-							Build on Loot Chain
-						</button>
-						<div className={styles.multiverse_content}>
-							<p className={`${styles.content1} ${styles.mask_bg}`}>
-								<span data-aos="fade-up" data-aos-duration="1000">
-									The Loot community has created some of the most exciting Fully On-Chain Games
-									(FOCG) and Autonomous Worlds (AW) out there, including Realms and Loot Survivor.
-								</span>
-								<span data-aos="fade-up" data-aos-duration="1000">
-									By being fully on-chain, game developers are given a wider design space and
-									players can enjoy a new era of games since all game states are stored on-chain and
-									game logics are executed on-chain. We expect the FOCG & AW landscape to grow into
-									a galaxy of games each with their own state & access point stored on-chain.
-								</span>
-								<span data-aos="fade-up" data-aos-duration="1000">
-									With the original vision to incentivize the Lootverse, the AGLD DAO decided to
-									create a showcase of the best fully on-chain games out there, starting from what
-									we have in the Lootverse. This can help the community access the cutting-edge of
-									on-chain gaming, access in-depth statistics & information, and even socialize in
-									the game in this one-stop-shop. Stay tuned for future product release details.
-								</span>
-							</p>
-						</div>
-
-						{/* <div className={styles.game_box}>
-              <h3 className={styles.game_title}>Games on Game Console</h3>
-              <div className={styles.game_img_box}>
-              </div>
-            </div> */}
-
-						<div className={styles.roadmap}>
-							<div className={styles.title}>Roadmap</div>
-							<div className={styles.roadmapLine}>
-								<img src={roadmapLine}></img>
-								<img className={styles.lineBg} src={roadmapLineBg}></img>
-								<div className={styles.roadmap_list}>
-									{list2.map((item, index) => {
-										return (
-											<div className={styles.roadmapItem} key={item.title}>
-												<img className={styles.lineHover} src={roadmapLineHover}></img>
-												<div className={`${styles.dot} ${styles["dot" + index]}`}></div>
-												<p className={styles.greenTitle}>{item.title}</p>
-												<p className={styles.roadmap_txt}>{item.content}</p>
-												<div className={styles.glowworm_box}>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
-													<div></div>
+					<section className={styles.ecosystem_module}>
+						<div className={styles.part6}>
+							<div className={styles.partLeft}>
+								<img className={styles.partIcon} src={diamond}></img>
+								{/* <div className={styles.partLine} id="line2" data-aos="fade-down" data-aos-duration="1500">
+                  <div className={styles.line} id="line"></div>
+                </div> */}
+							</div>
+							<div className={styles.part6Right} data-aos="fade-right" data-aos-duration="1500">
+								<div className={styles.part6Title}>
+									The <span className={styles.greenTxt}>Lootchain ecosystem</span>
+								</div>
+								<div className={styles.part6SubTitle}>
+									Designed exclusively for the Lootverse, the Loot Chain operates as a layer-2
+									chain, facilitating cost-efficient platform for the Loot enthusiasts.
+								</div>
+								<div className={styles.btns}>
+									<button
+										onClick={() => window.open("https://bridge.lootchain.com/bridge", "_blank")}
+									>
+										<div className={styles.btn_text}>Bridge your assets to Lootchain</div>
+									</button>
+									<button onClick={show}>
+										<div className={styles.btn_text}>Build on the Lootchain ecosystem</div>
+									</button>
+								</div>
+								<div className="swiper swiper2 swiper_part6Box">
+									<div className="swiper-wrapper">
+										{ecosystemList.map((item) => (
+											<div className={`swiper-slide ${styles.swiperBox}`}>
+												<div className={styles.swiperBox}>
+													<div className={styles.swiperBox_image}>
+														<img src={item.image}></img>
+													</div>
+													<div className={styles.swiperBox_title}>{item.name}</div>
 												</div>
 											</div>
-										);
-									})}
+										))}
+									</div>
+									<div className="swiper-pagination"></div>
 								</div>
 							</div>
 						</div>
@@ -625,11 +665,68 @@ export const Home: FC<HomeType> = () => {
 							<Socials className={styles.socials} />
 						</div>
 					</section>
-					{/* <section className={styles.line}></section> */}
-					{/* <section><Socials className={styles.socials} /></section> */}
+					{/* <section className={styles.multiverse}>
+            <h3>
+              Loot <span>Autonomous</span> Worlds
+            </h3>
+            <button className={styles.buildBtn} onClick={show}>
+              Build on Loot Chain
+            </button>
+            <div className={styles.multiverse_content}>
+              <p className={`${styles.content1} ${styles.mask_bg}`}>
+                <span data-aos="fade-up" data-aos-duration="1000">
+                  The Loot community has created some of the most exciting Fully On-Chain Games
+                  (FOCG) and Autonomous Worlds (AW) out there, including Realms and Loot Survivor.
+                </span>
+                <span data-aos="fade-up" data-aos-duration="1000">
+                  By being fully on-chain, game developers are given a wider design space and
+                  players can enjoy a new era of games since all game states are stored on-chain and
+                  game logics are executed on-chain. We expect the FOCG & AW landscape to grow into
+                  a galaxy of games each with their own state & access point stored on-chain.
+                </span>
+                <span data-aos="fade-up" data-aos-duration="1000">
+                  With the original vision to incentivize the Lootverse, the AGLD DAO decided to
+                  create a showcase of the best fully on-chain games out there, starting from what
+                  we have in the Lootverse. This can help the community access the cutting-edge of
+                  on-chain gaming, access in-depth statistics & information, and even socialize in
+                  the game in this one-stop-shop. Stay tuned for future product release details.
+                </span>
+              </p>
+            </div>
+
+            <div className={styles.roadmap}>
+              <div className={styles.title}>Roadmap</div>
+              <div className={styles.roadmapLine}>
+                <img src={roadmapLine}></img>
+                <img className={styles.lineBg} src={roadmapLineBg}></img>
+                <div className={styles.roadmap_list}>
+                  {list2.map((item, index) => {
+                    return (
+                      <div className={styles.roadmapItem} key={item.title}>
+                        <img className={styles.lineHover} src={roadmapLineHover}></img>
+                        <div className={`${styles.dot} ${styles["dot" + index]}`}></div>
+                        <p className={styles.greenTitle}>{item.title}</p>
+                        <p className={styles.roadmap_txt}>{item.content}</p>
+                        <div className={styles.glowworm_box}>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className={styles.socialsBox}>
+              <Socials className={styles.socials} />
+            </div>
+          </section> */}
 				</div>
 			</section>
-			{/*{popUp.defined && <LaunchPopUp control={popUp} close={close}/>}*/}
 		</>
 	);
 };

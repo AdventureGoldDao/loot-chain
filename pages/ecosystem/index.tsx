@@ -156,6 +156,13 @@ const guildsList = [
 		link: "https://despread.io/",
 	},
 ];
+export const ecosystemList = [
+	...toolsList,
+	...gamesList,
+	...infrastructureList,
+	...defiList,
+	...guildsList,
+];
 
 export function Card({ item }) {
 	const goToLink = (link) => {

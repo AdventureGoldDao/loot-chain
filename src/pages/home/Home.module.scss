@@ -332,14 +332,15 @@
 
 
 .top {
+  position: relative;
   display: flex;
   max-width: 1440px;
-  margin: 0 auto;
-  height: 43.75rem;
+  // margin: 0 auto 40px auto;
+  height: 60.75rem;
   padding: 0 180px;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
   z-index: 2;
   @include mixin.until(media.$sm) {
     flex-direction: column-reverse;
@@ -364,9 +365,9 @@
 
     h1 {
       // margin-top: 8.8rem;
-      font-family: Ringm;
+      font-family: Ringbearer;
       width: 100%;
-      font-size: 100px;
+      font-size: 80px;
       @include mixin.until(media.$sm) {
         margin-top: 3.814rem;
         font-size: 50px;
@@ -378,7 +379,8 @@
       font-size: 1.5rem;
       margin-top: 1rem;
       color: #fff;
-      font-family: Ringm;
+      font-family: Ringbearer;
+      text-align: center;
       @include mixin.until(media.$sm) {
         font-size: 18px;
         margin-top: 1rem;
@@ -405,7 +407,7 @@
         text-align: left;
         .btn_text1 {
           color: #FFF;
-          font-family: Ringm;
+          font-family: Ringbearer;
           font-size: 22px;
           font-style: normal;
           font-weight: 400;
@@ -530,7 +532,555 @@
   }
 
 }
+.light {
+  position: absolute;
+  bottom: -270px;
+  left: 0px;
+}
+.part1 {
+  // background: url('./assets/part1Bg.png') no-repeat;
+  z-index: 2;
+}
+.part {
+  display: flex;
+  width: 1020px;
+  margin: auto;
+  @include mixin.until(media.$sm) {
+    width: 100%;
+    padding: 0 24px;
+  }
 
+  .partLeft {
+    .partIcon {
+      width: 72px;
+      height: 72px;
+      @include mixin.until(media.$sm) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .partLine {
+      display: flex;
+      justify-content: center;
+      width: 72px;
+      @include mixin.until(media.$sm) {
+        width: 40px;
+      }
+    }
+    .animation_line {
+      transition-timing-function: cubic-bezier(0,0,0.05, 1);
+      transition-duration: 3s;
+      height: calc(100% - 76px);
+      transition-property: height;
+      @include mixin.until(media.$sm) {
+        height: calc(100% - 44px);
+      }
+    }
+    .line {
+      width: 1px;
+      height: 0%;
+      background-color: #A5FFBE;
+      transition: height 2s cubic-bezier(0, 0, 0.2, 1) 0s;
+    }
+    .animation_lineH {
+      transition: height 2s cubic-bezier(0, 0, 0.2, 1) 0s;
+      height: 100%;
+    }
+  }
+  
+  .partRight {
+    margin-left: 60px;
+    padding-bottom: 100px;
+    color: #fff;
+    @include mixin.until(media.$sm) {
+      margin-left: 16px;
+    }
+    .partTitle {
+      font-family: Ringbearer;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #fff;
+      @include mixin.until(media.$sm) {
+        font-size: 24px;
+        line-height: 1.6;
+      }
+    }
+    .greenTxt {
+      color: #A5FFBE;
+    }
+    .partSubTitle {
+      margin-top: 30px;
+      font-family: IMFePIrm;
+      font-size: 32px;
+      line-height: normal;
+      color: #EBEBEB;
+      @include mixin.until(media.$sm) {
+        font-size: 20px;
+      }
+    }
+    .part1Box {
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      @include mixin.until(media.$sm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .boxImg {
+        width: 200px;
+        height: 200px;
+        @include mixin.until(media.$sm) {
+          width: 160px;
+          height: 160px;
+        }
+      }
+      .boxContent {
+        margin-left: 20px;
+        color: #fff;
+        font-family: IMFePIrm;
+        @include mixin.until(media.$sm) {
+          margin-left: 0px;
+        }
+        .title {
+          font-size: 24px;
+          @include mixin.until(media.$sm) {
+            font-size: 18px;
+            margin: 10px 0;
+          }
+        }
+        .txt {
+          margin-top: 16px;
+          font-size: 16px;
+        }
+      }
+    }
+    .part2Box {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      height: 100px;
+      margin-top: 30px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      z-index: 1;
+      overflow: hidden;
+      @include mixin.until(media.$sm) {
+        height: auto;
+        margin-top: 20px;
+        flex-direction: column;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        background: #000;
+      }
+      .box2Content_left {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        padding-left: 32px;
+        background: linear-gradient(180deg, #4C9A62 0%, #0E4E57 100%);
+        font-family: Ringbearer;
+        font-size: 22px;
+        color: #EBEBEB;
+        @include mixin.until(media.$sm) {
+          justify-content: center;
+          padding: 20px 0;
+          font-size: 20px;
+        }
+      }
+      .box2Content_right {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        padding-left: 48px;
+        padding-right: 40px;
+        background: rgba(115, 193, 146, 0.16);
+        font-family: IMFePIrm;
+        font-size: 22px;
+        color: #EBEBEB;
+        @include mixin.until(media.$sm) {
+          padding: 16px 26px;
+          font-size: 16px;
+        }
+      }
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+      width: 437px;
+      height: 64px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 22px;
+      border-radius: 6px;
+      border: 0;
+      font-family: 'Ringbearer';
+      background-image: url('./assets/btn_bg.svg');
+      background-repeat: no-repeat;
+      @include mixin.until(media.$sm) {
+        width: 234px;
+        height: 48px;
+        font-size: 14px;
+        margin: 24px 0;
+        background-image: url('./assets/btn_bg_h5.svg');
+      }
+    }
+    .btn_text {
+      font-family: IMFePIrm;
+      font-size: 24px;
+      @include mixin.until(media.$sm) {
+        font-size: 14px;
+      }
+    }
+    .part3Box {
+      .part3Box_img {
+        width: 100%;
+      }
+    }
+    .part4Box {
+      width: 888px;
+      overflow: hidden;
+      @include mixin.until(media.$sm) {
+        width: 270px;
+      }
+    }
+    .swiperBox {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 654px;
+      @include mixin.until(media.$sm) {
+        width: 270px;
+      }
+    }
+    .swiperBox_image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 654px;
+      height: 316px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      z-index: 1;
+      overflow: hidden;
+      @include mixin.until(media.$sm) {
+        width: 270px;
+        height: 146px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        background: #000;
+      }
+      img {
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 20px;
+      }
+    }
+    .swiperBox_title {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 417px;
+      height: 48px;
+      margin: -24px auto 0;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      z-index: 3;
+      overflow: hidden;
+      @include mixin.until(media.$sm) {
+        width: 200px;
+        height: 40px;
+        padding: 0 16px 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        background: #000;
+      }
+    }
+    .part5Box {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      @include mixin.until(media.$sm) {
+        justify-content: space-between;
+      }
+      .part5Box_item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+        z-index: 3;
+        overflow: hidden;
+        @include mixin.until(media.$sm) {
+          width: 120px;
+          height: 120px;
+          margin-right: 0px;
+          margin-bottom: 16px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 20px;
+          background: #000;
+        }
+      }
+      .part5Box_item_content {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding: 32px 20px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 20px;
+        background: linear-gradient(137deg, rgba(6, 22, 28, 0.78) 7.53%, rgba(38, 35, 13, 0.47) 46.78%, #092A34 93.16%);
+        @include mixin.until(media.$sm) {
+          padding: 14px 16px;
+        }
+      }
+      .part5Box_item_icon {
+        @include mixin.until(media.$sm) {
+          width: 32px;
+        }
+      }
+      .part5Box_txt {
+        margin-top: 15px;
+        font-family: IMFePIrm;
+        font-size: 24px;
+        color: #A5FFBE;
+        text-align: center;
+        @include mixin.until(media.$sm) {
+          margin-top: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .part5Right {
+    padding-bottom: 200px;
+    @include mixin.until(media.$sm) {
+      padding-bottom: 100px;
+    }
+  }
+}
+.ecosystem_module {
+  width: 100%;
+  margin-top: -168px;
+  padding: 68px;
+  background:url('./assets/part6Bg.png') no-repeat;
+  background-size: cover;
+  @include mixin.until(media.$sm) {
+    margin-top: -36px;
+    padding: 24px;
+    background:url('./assets/part6BgH5.png') no-repeat;
+  }
+  .part6 {
+    display: flex;
+    width: 1020px;
+    margin: auto;
+    @include mixin.until(media.$sm) {
+      width: 100%;
+    }
+  }
+  .partLeft {
+    .partIcon {
+      width: 72px;
+      height: 72px;
+      @include mixin.until(media.$sm) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  .part6Right {
+    margin-left: 60px;
+    @include mixin.until(media.$sm) {
+      margin-left: 16px;
+    }
+  }
+  .part6Title {
+    font-family: Ringbearer;
+    font-size: 48px;
+    color: #213425;
+    @include mixin.until(media.$sm) {
+      font-size: 24px;
+    }
+  }
+  .greenTxt {
+    color: #A5FFBE;
+  }
+  .part6SubTitle {
+    margin-top: 32px;
+    font-family: IMFePIrm;
+    font-size: 32px;
+    color: #213425;
+    @include mixin.until(media.$sm) {
+      font-size: 20px;
+    }
+  }
+  .btns {
+    display: flex;
+    @include mixin.until(media.$sm) {
+      padding: 20px 0;
+      flex-direction: column;
+    }
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 437px;
+    height: 64px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 6px;
+    border: 0;
+    font-family: 'Ringbearer';
+    background-image: url('./assets/btn_bg.svg');
+    background-repeat: no-repeat;
+    @include mixin.until(media.$sm) {
+      width: 234px;
+      height: 48px;
+      font-size: 14px;
+      margin: 8px 0 0;
+      background-image: url('./assets/btn_bg_h5.svg');
+    }
+  }
+  .btn_text {
+    font-family: IMFePIrm;
+    font-size: 24px;
+    @include mixin.until(media.$sm) {
+      font-size: 14px;
+    }
+  }
+  .swiper_part6Box {
+    width: 888px;
+    overflow: hidden;
+    @include mixin.until(media.$sm) {
+      font-size: 14px;
+    }
+  }
+  .swiperBox {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    @include mixin.until(media.$sm) {
+      width: 270px;
+    }
+  }
+  .swiperBox_image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 216px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+    z-index: 1;
+    overflow: hidden;
+    @include mixin.until(media.$sm) {
+      width: 270px;
+      height:146px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      background: #000;
+    }
+    img {
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: 20px;
+    }
+  }
+  .swiperBox_title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    height: 48px;
+    margin: -24px auto 0;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+    z-index: 3;
+    overflow: hidden;
+    @include mixin.until(media.$sm) {
+      width: 200px;
+      height: 40px;
+      margin: -20px auto 0;
+      padding: 0 16px 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      background: #000;
+    }
+  }
+}
 .mask_bg {
   &::after {
     content: "";
@@ -592,7 +1142,7 @@
       // margin-top: 1.6rem;
       font-size: 3.5rem;
       text-align: center;
-      font-family: Ringm;
+      font-family: Ringbearer;
 
       @include mixin.until(media.$sm) {
         max-width: 87.625rem;
@@ -657,7 +1207,7 @@
     }
     h3 {
       color: #FFF;
-      font-family: Ringm;
+      font-family: Ringbearer;
       font-size: 60px;
       font-style: normal;
       font-weight: 400;
@@ -694,7 +1244,7 @@
         margin-top: 36px;
         margin-bottom: 13px;
         color: #FDFFAC;
-        font-family: Ringm;
+        font-family: Ringbearer;
         font-size: 26px;
         font-style: normal;
         font-weight: 400;
@@ -831,7 +1381,7 @@
 
   h3 {
     color: #FFF;
-    font-family: Ringm;
+    font-family: Ringbearer;
     font-size: 60px;
     font-style: normal;
     font-weight: 400;
@@ -924,7 +1474,7 @@
         width: 45px;
       }
       h5 {
-        font-family: Ringm;
+        font-family: Ringbearer;
         font-size: 32px;
         margin: 16px 0 16px;
         color: #A5FFBE;
@@ -944,7 +1494,7 @@
 }
 
 .big_box {
-  background-image: url("./assets/bg1.jpg");
+  background-image: url("./assets/bg1.png");
   background-size: 100%;
   background-repeat: no-repeat;
   padding-bottom: 100px;
@@ -982,7 +1532,7 @@
 
   .applications_header {
     display: flex;
-    font-family: Ringm;
+    font-family: Ringbearer;
     align-items: center;
     @include mixin.until(media.$sm) {
       flex-direction: column;
@@ -1216,7 +1766,7 @@
           color: #A5FFBE;
           font-weight: 600;
           opacity: 0.8;
-          font-family: 'Ringm';
+          font-family: 'Ringbearer';
           word-spacing: 200px;
           @include mixin.until(media.$sm) {
             margin-top: 1rem;
@@ -1332,7 +1882,7 @@
     color: #fff;
     font-size: 3.5rem;
     // margin-bottom: 6rem;
-    font-family: 'Ringm';
+    font-family: 'Ringbearer';
     @include mixin.until(media.$sm) {
       margin-bottom: 2.1rem;
       margin-top: 0rem;
@@ -1354,7 +1904,7 @@
     font-size: 22px;
     border-radius: 6px;
     border: 0;
-    font-family: 'Ringm';
+    font-family: 'Ringbearer';
     background-image: url('./assets/buildBtn.svg');
     background-repeat: no-repeat;
     @include mixin.until(media.$sm) {
@@ -1740,7 +2290,7 @@
     width: 1000px;
     margin: 0 auto 300px;
     font-size: 60px;
-    font-family: 'Ringm';
+    font-family: 'Ringbearer';
     @include mixin.until(media.$sm) {
       width: 100%;
       padding-left: 24px;
@@ -1780,7 +2330,7 @@
   .greenTitle {
     color: #A5FFBE;
     font-size: 28px;
-    font-family: 'Ringm';
+    font-family: 'Ringbearer';
   }
   .roadmap_txt {
     width: 230px;
@@ -1876,8 +2426,8 @@
 }
 .socialsBox {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 100px;
+  justify-content: center;
+  // padding-right: 100px;
   @include mixin.until(media.$sm) {
     padding-right: 0px;
     justify-content: center;
@@ -1902,7 +2452,7 @@
 
 .socials {
   margin-top: 2.75rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0rem;
   display: flex;
   justify-content: center;
   @include mixin.until(media.$sm) {
@@ -1947,7 +2497,7 @@
 .game_box {
   margin: 100px auto;
   .game_title {
-    font-family: Ringm;
+    font-family: Ringbearer;
     font-size: 60px;
     margin-bottom: 60px;
   }
