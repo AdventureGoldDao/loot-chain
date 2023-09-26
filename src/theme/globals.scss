@@ -534,10 +534,10 @@ $blue: #03b5d2;
 }
 .swiper2 {
   width: 888px;
-  height: 280px;
+  height: 250px;
   @include mixin.until(media.$sm) {
     width: 270px;
-    height: 200px;
+    height: 190px;
   }
 }
 .swiper_part4Box,.swiper_part6Box {

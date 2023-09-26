@@ -37,7 +37,7 @@
   font-family: 'IMFePIrm';
   font-size: 14px;
   z-index: 1;
-	background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+	background: linear-gradient(130deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
   @include mixin.until(media.$sm) {
     height: 7.8rem;
     padding: 0 0rem;
@@ -63,6 +63,7 @@
 .logo {
   width: 6.5rem;
   color: rgba(var(--white), 1);
+  z-index: 9;
   @include mixin.until(media.$sm) {
     width: 20rem;
   }

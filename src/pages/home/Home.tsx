@@ -278,22 +278,22 @@ const OS_reverse_arr = [
 
 const bannerList = [
 	{
-		url: "https://games.lootchain.com/games",
+		url: "https://games.lootchain.com/games/magic",
 		image: banner1,
 		title: "Mighty Magic HEROES",
 	},
 	{
-		url: "https://games.lootchain.com/games",
+		url: "https://games.lootchain.com/games/land",
 		image: banner2,
 		title: "Land, Labor and Capitol (LLC)",
 	},
 	{
-		url: "https://games.lootchain.com/games",
+		url: "https://games.lootchain.com/games/archloot",
 		image: banner3,
 		title: "Archloot",
 	},
 	{
-		url: "https://games.lootchain.com/games",
+		url: "https://games.lootchain.com/games/craft",
 		image: banner4,
 		title: "LootCraft",
 	},
@@ -312,7 +312,7 @@ const part1List = [
 	{
 		image: part3,
 		title: "Autonomous World & Beyond",
-		content: `"In the magical realm of Crypto, Dom Hofmann, co-founder of Vine and Byte, envisioned and birthed the Loot Project: a unique collection of 8,000 text-based bags brimming with adventurer gear. This initiative united artists, gamers, developers, and writers, becoming a community-driven platform where everyone collaborated to weave rich content and stories."`,
+		content: `“Powered by AGLD, the Loot Chain became the heart for Lootverse creators. With the help of AGLD DAO, the end goal is to create community-driven Autonomous Worlds. The future looks bright, with the Lootverse planning to expand into its own large digital lands.”`,
 	},
 ];
 const part2List = [
@@ -454,8 +454,8 @@ export const Home: FC<HomeType> = () => {
 							</div>
 							<div className={styles.partRight} data-aos="fade-right" data-aos-duration="1500">
 								<div className={styles.partTitle}>
-									JOURNEY TO THE LOOTVERSE:{" "}
-									<span className={styles.greenTxt}>ADVENTURE LIKE NEVER BEFORE</span>{" "}
+									Journey to the Lootverse:{" "}
+									<span className={styles.greenTxt}>Adventure like never before</span>{" "}
 								</div>
 								{part1List.map((item) => (
 									<div className={styles.part1Box} data-aos="fade-up" data-aos-duration="1000">
@@ -549,7 +549,7 @@ export const Home: FC<HomeType> = () => {
 								</div>
 								<div className={styles.partSubTitle}>
 									Dive into a selection of the newest game offerings emerging from the Loot Chain
-									realm 
+									realm.
 								</div>
 								<div className={styles.part4Box}>
 									<button
@@ -561,7 +561,10 @@ export const Home: FC<HomeType> = () => {
 									<div className="swiper swiper1 swiper_part4Box">
 										<div className="swiper-wrapper">
 											{bannerList.map((item) => (
-												<div className={`swiper-slide ${styles.swiperBox}`}>
+												<div
+													className={`swiper-slide ${styles.swiperBox}`}
+													onClick={() => window.open(item.url, "_blank")}
+												>
 													<div className={styles.swiperBox}>
 														<div className={styles.swiperBox_image}>
 															<img src={item.image}></img>
@@ -599,7 +602,7 @@ export const Home: FC<HomeType> = () => {
 								<div className={styles.partSubTitle}>
 									AGLD token was introduced through a fair distribution, 100% airdropped to the
 									community members. The token serves as the cornerstone of the Lootverse, shaping
-									mechanisms that align community interests and accelerate ecosystem growth 
+									mechanisms that align community interests and accelerate ecosystem growth.
 								</div>
 								<div className={styles.part5Box}>
 									{part5List.map((item, index) => (
@@ -610,7 +613,13 @@ export const Home: FC<HomeType> = () => {
 										>
 											<div className={styles.part5Box_item_content}>
 												<object className={styles.part5Box_item_icon} data={item.icon}></object>
-												<div className={styles.part5Box_txt}>{item.content}</div>
+												{index === 2 ? (
+													<div className={styles.part5Box_txt}>
+														Chain <br /> Token
+													</div>
+												) : (
+													<div className={styles.part5Box_txt}>{item.content}</div>
+												)}
 											</div>
 										</div>
 									))}
@@ -630,10 +639,7 @@ export const Home: FC<HomeType> = () => {
 								<div className={styles.part6Title}>
 									The <span className={styles.greenTxt}>Lootchain ecosystem</span>
 								</div>
-								<div className={styles.part6SubTitle}>
-									Designed exclusively for the Lootverse, the Loot Chain operates as a layer-2
-									chain, facilitating cost-efficient platform for the Loot enthusiasts.
-								</div>
+								<div className={styles.part6SubTitle}>Join the Loot ecosystem today!</div>
 								<div className={styles.btns}>
 									<button
 										onClick={() => window.open("https://bridge.lootchain.com/bridge", "_blank")}
@@ -647,7 +653,10 @@ export const Home: FC<HomeType> = () => {
 								<div className="swiper swiper2 swiper_part6Box">
 									<div className="swiper-wrapper">
 										{ecosystemList.map((item) => (
-											<div className={`swiper-slide ${styles.swiperBox}`}>
+											<div
+												className={`swiper-slide ${styles.swiperBox}`}
+												onClick={() => window.open(item.link, "_blank")}
+											>
 												<div className={styles.swiperBox}>
 													<div className={styles.swiperBox_image}>
 														<img src={item.image}></img>
