@@ -22,6 +22,7 @@ import game16 from "./images/game16.png";
 import game17 from "./images/game17.jpg";
 import game18 from "./images/game18.jpg";
 import game19 from "./images/game19.jpg";
+import game20 from "./images/game20.png";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -84,6 +85,12 @@ const gamesList = [
 	},
 ];
 const infrastructureList = [
+	{
+		name: "Layerzero",
+		des: `Layerzero is a user application (UA) configurable on-chain endpoint that runs a ULN. Layerzero relies on two parties to transfer messages between on-chain endpoints: the oracle and the relayer.`,
+		image: game20,
+		link: "https://layerzero.network/",
+	},
 	{
 		name: "ARPA",
 		des: `ARPA Network is a new system architecture of threshold signature scheme (TSS). With an innovative protocol design and multiple unique mechanisms, ARPA Network adapts the threshold BLS scheme for blockchain.`,
