@@ -127,7 +127,7 @@ const defiList = [
 		name: "Mighty Swap",
 		des: `Swap or provide liquidity on the Mighty Swap.`,
 		image: game4,
-		link: "https://stately-rabanadas-a5fcc8.netlify.app/#/swap",
+		link: "https://swap.lootchain.com/#/swap",
 	},
 	{
 		name: "RAI Finance",
