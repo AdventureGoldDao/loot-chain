@@ -534,13 +534,10 @@
 }
 .light {
   position: absolute;
-  bottom: -270px;
+  bottom: -360px;
   left: 0px;
 }
-.part1 {
-  // background: url('./assets/part1Bg.png') no-repeat;
-  z-index: 2;
-}
+
 .part {
   display: flex;
   width: 1020px;
@@ -664,7 +661,7 @@
       height: 100px;
       margin-top: 30px;
       border-radius: 20px;
-      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      background: linear-gradient(160deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
       z-index: 1;
       overflow: hidden;
       @include mixin.until(media.$sm) {
@@ -763,6 +760,7 @@
       justify-content: center;
       align-items: center;
       width: 654px;
+      cursor: pointer;
       @include mixin.until(media.$sm) {
         width: 270px;
       }
@@ -775,7 +773,7 @@
       width: 654px;
       height: 316px;
       border-radius: 20px;
-      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      background: linear-gradient(120deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
       z-index: 1;
       overflow: hidden;
       @include mixin.until(media.$sm) {
@@ -809,9 +807,10 @@
       height: 48px;
       margin: -24px auto 0;
       border-radius: 20px;
-      background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+      background: linear-gradient(160deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
       z-index: 3;
       overflow: hidden;
+      font-family: Ringbearer;
       @include mixin.until(media.$sm) {
         width: 200px;
         height: 40px;
@@ -846,7 +845,7 @@
         height: 200px;
         margin-right: 20px;
         border-radius: 20px;
-        background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+        background: linear-gradient(100deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
         z-index: 3;
         overflow: hidden;
         @include mixin.until(media.$sm) {
@@ -873,7 +872,7 @@
         flex-direction: column;
         // justify-content: center;
         align-items: center;
-        padding: 32px 20px;
+        padding: 32px 20px 0;
         width: calc(100% - 2px);
         height: calc(100% - 2px);
         border-radius: 20px;
@@ -888,7 +887,11 @@
         }
       }
       .part5Box_txt {
-        margin-top: 15px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-family: IMFePIrm;
         font-size: 24px;
         color: #A5FFBE;
@@ -905,6 +908,12 @@
     @include mixin.until(media.$sm) {
       padding-bottom: 100px;
     }
+  }
+}
+.part1 {
+  margin-top: 128px;
+  @include mixin.until(media.$sm) {
+    margin-top: 48px;
   }
 }
 .ecosystem_module {
@@ -1012,6 +1021,7 @@
     justify-content: center;
     align-items: center;
     width: 350px;
+    cursor: pointer;
     @include mixin.until(media.$sm) {
       width: 270px;
     }
@@ -1022,14 +1032,14 @@
     align-items: center;
     justify-content: center;
     width: 350px;
-    height: 216px;
+    height: 166px;
     border-radius: 20px;
-    background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+    background: linear-gradient(120deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
     z-index: 1;
     overflow: hidden;
     @include mixin.until(media.$sm) {
       width: 270px;
-      height:146px;
+      height:128px;
     }
     &::after {
       content: "";
@@ -1058,9 +1068,12 @@
     height: 48px;
     margin: -24px auto 0;
     border-radius: 20px;
-    background: linear-gradient(90deg, #1D9781, #1D978100, #E2A975);
+    background: linear-gradient(160deg, rgba(165, 255, 190, 1),rgba(29, 151, 129, 0),rgba(253, 255, 172, 1));
     z-index: 3;
     overflow: hidden;
+    font-family: Ringbearer;
+    color: #fff;
+    font-size: 14px;
     @include mixin.until(media.$sm) {
       width: 200px;
       height: 40px;
@@ -1499,8 +1512,9 @@
   background-repeat: no-repeat;
   padding-bottom: 100px;
   @include mixin.until(media.$sm) {
+    background-image: url("./assets/bg1H5.png");
     padding-bottom: 10px;
-    background-size: 200%;
+    background-size: 100%;
     background-position: center top;
   }
 }
