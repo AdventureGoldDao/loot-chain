@@ -291,7 +291,7 @@ export function Ecosystem() {
 }
 const Index = pageWithLayout(
 	() => <Ecosystem />,
-	() => <Layout title="AGLD" description="The Incentivization token for the Lootverse" />
+	() => <Layout title="AGLD" description="Building the Lootverse Infrastructure" />
 );
 
 export default Index;

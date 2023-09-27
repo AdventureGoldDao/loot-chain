@@ -21,7 +21,7 @@ export const Explore: FC<HomeType> = () => {
 
 const Index = pageWithLayout(
 	() => <Explore />,
-	() => <Layout title="AGLD" description="The Incentivization token for the Lootverse" />
+	() => <Layout title="AGLD" description="Building the Lootverse Infrastructure" />
 );
 
 export default Index;

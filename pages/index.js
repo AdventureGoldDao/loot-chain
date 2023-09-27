@@ -6,7 +6,7 @@ import { Home } from "../src/pages/home";
 const Index = pageWithLayout(
 	() => <Home />,
 	// () => <Explore />,
-	() => <Layout title="AGLD" description="The Incentivization token for the Lootverse" />
+	() => <Layout title="AGLD" description="Building the Lootverse Infrastructure" />
 );
 
 export default Index;
