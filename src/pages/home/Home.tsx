@@ -302,7 +302,7 @@ const part1List = [
 	{
 		image: part1,
 		title: "The Forge of Imagination : Loot",
-		content: `"In the magical realm of Crypto, Dom Hofmann, co-founder of Vine and Byte, envisioned and birthed the Loot Project: a unique collection of 8,000 text-based bags brimming with adventurer gear. This initiative united artists, gamers, developers, and writers, becoming a community-driven platform where everyone collaborated to weave rich content and stories."`,
+		content: `“In the magical realm of Crypto, Dom Hofmann, co-founder of Vine and Byte, envisioned and birthed the Loot Project: a unique collection of 8,000 text-based bags brimming with adventurer gear. This initiative united artists, gamers, developers, and writers, becoming a community-driven platform where everyone collaborated to weave rich content and stories."`,
 	},
 	{
 		image: part2,

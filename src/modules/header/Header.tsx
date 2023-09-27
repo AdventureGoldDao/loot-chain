@@ -301,7 +301,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						aria-hidden="true"
 					>
 						<div className={styles.goBuyAGLD}>
-							<p>BUY AGLD</p>
+							<p>GET AGLD</p>
 							<img src={blackIcon} alt="icon" />
 						</div>
 						{isDexHover && (
