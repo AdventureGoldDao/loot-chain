@@ -23,6 +23,8 @@ import game17 from "./images/game17.jpg";
 import game18 from "./images/game18.jpg";
 import game19 from "./images/game19.jpg";
 import game20 from "./images/game20.png";
+import game21 from "./images/game21.jpg";
+import game22 from "./images/game22.jpg";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -154,6 +156,18 @@ const guildsList = [
 		des: `DeSpread is a consulting firm specializing in Web3 & blockchain. We're contributing to Web3's mass adoption by supporting the growth of various startups and protocols.`,
 		image: game17,
 		link: "https://despread.io/",
+	},
+	{
+		name: "Composable Labs",
+		des: `Composable Labs where you can explore the world of Fully Onchain Games (FOCGs).`,
+		image: game21,
+		link: "https://app.composablelabs.io/",
+	},
+	{
+		name: "AW Research",
+		des: `We are an Autonomous World Research Group.`,
+		image: game22,
+		link: "https://chedao.notion.site/AW-Research-Collection-234dcfb1fc4441f9b0c14725b01fb921",
 	},
 ];
 export const ecosystemList = [

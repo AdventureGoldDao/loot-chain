@@ -38,6 +38,8 @@ import banner1 from "./assets/banner1.jpg";
 import banner2 from "./assets/banner2.jpg";
 import banner3 from "./assets/banner3.png";
 import banner4 from "./assets/banner4.png";
+import banner5 from "./assets/banner5.jpg";
+import banner6 from "./assets/banner6.jpg";
 
 import redLine from "./assets/red_line.svg";
 import greenLine from "./assets/green_line.svg";
@@ -296,6 +298,16 @@ const bannerList = [
 		url: "https://games.lootchain.com/games/craft",
 		image: banner4,
 		title: "LootCraft",
+	},
+	{
+		url: "https://games.lootchain.com/games/xLand",
+		image: banner5,
+		title: "X Land",
+	},
+	{
+		url: "https://games.lootchain.com/games/GabbyWorld",
+		image: banner6,
+		title: "Gabby World",
 	},
 ];
 const part1List = [
