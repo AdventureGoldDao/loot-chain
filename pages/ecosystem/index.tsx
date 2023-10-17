@@ -25,6 +25,8 @@ import game19 from "./images/game19.jpg";
 import game20 from "./images/game20.png";
 import game21 from "./images/game21.jpg";
 import game22 from "./images/game22.jpg";
+import game23 from "./images/game23.png";
+import game24 from "./images/game24.jpg";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -84,6 +86,18 @@ const gamesList = [
 		des: `A decentralized on-chain game ecosystem built by degens, for degens.`,
 		image: game18,
 		link: "https://www.bladedao.games/",
+	},
+	{
+		name: "Chaquer",
+		des: `Chaquer is a fully on-chain real time strategy game. Chaquer's design is inspired by the Age of Empires series. `,
+		image: game23,
+		link: "http://chaquer.xyz",
+	},
+	{
+		name: "League of Thrones",
+		des: `League of Thrones is a Modular On-Chain Strategy Game Played in DAOs.`,
+		image: game24,
+		link: "https://www.leagueofthrones.com",
 	},
 ];
 const infrastructureList = [
