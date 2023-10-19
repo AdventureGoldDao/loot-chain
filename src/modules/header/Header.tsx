@@ -16,6 +16,7 @@ import cexIcon2 from "../../pages/home/assets/cex-icon2.png";
 import cexIcon3 from "../../pages/home/assets/cex-icon3.png";
 import dexIcon0 from "../../pages/home/assets/dex-icon0.png";
 import dexIcon1 from "../../pages/home/assets/dex-icon1.png";
+import dexIcon2 from "../../pages/home/assets/dex-icon2.svg";
 import iconOutside from "../../pages/home/assets/outsideLink.svg";
 import iconDownload from "../../pages/home/assets/download.svg";
 type HeaderType = {};
@@ -27,9 +28,9 @@ const dexList = [
 		link: "https://app.uniswap.org/#/tokens/ethereum/0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
 	},
 	{
-		icon: dexIcon1,
-		text: "Mighty Swap",
-		link: "https://swap.lootchain.com/#/swap",
+		icon: dexIcon2,
+		text: "Soswap",
+		link: "https://soswap.rai.finance/#/swap",
 	},
 ];
 const cexList = [
@@ -213,7 +214,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 								<NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink>
 								<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 								<NavLink href="https://bridge.lootchain.com/bridge">Bridge</NavLink>
-								<NavLink href="https://swap.lootchain.com">Mighty Swap</NavLink>
+								<NavLink href="https://soswap.rai.finance/#/swap">Soswap</NavLink>
 								<NavLink href="https://loot-chain.gitbook.io/loot-chain-documentation/getting-started/overview">
 									Documentation
 								</NavLink>
