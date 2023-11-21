@@ -71,27 +71,24 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 						Home
 					</NavLink>
 				</li>
-				<li>
-					<NavLink className={classNames(styles.link)} href={"#"}>
-						Explore
+				<li className={styles.item}>
+					<NavLink className={classNames(styles.link)} href="https://games.lootchain.com/games">
+						Loot Console
 					</NavLink>
 				</li>
-				<ul className={styles.childUl}>
+				{/* <ul className={styles.childUl}>
 					<li>
 						<NavLink href="/ecosystem">Ecosystem</NavLink>
 					</li>
 					<li>
 						<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
 					</li>
-					{/* <li>
-						<NavLink href="/ecosystem">Ecosystem</NavLink>
-					</li> */}
-				</ul>
-				<li>
+				</ul> */}
+				{/* <li>
 					<NavLink className={classNames(styles.link)} href={"https://freemint.lootchain.com"}>
 						Loot NFT Pad
 					</NavLink>
-				</li>
+				</li> */}
 				<li>
 					<NavLink
 						style={{ fontSize: 18, marginBottom: 10 }}
@@ -102,9 +99,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 					</NavLink>
 				</li>
 				<ul className={styles.childUl}>
-					<li>
+					{/* <li>
 						<NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink>
-					</li>
+					</li> */}
 					<li>
 						<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 					</li>
@@ -144,6 +141,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 					</li>
 					<li>
 						<NavLink href="https://www.lootproject.com/">Loot</NavLink>
+					</li>
+					<li>
+						<NavLink href="/ecosystem">Ecosystem</NavLink>
 					</li>
 				</ul>
 			</ul>

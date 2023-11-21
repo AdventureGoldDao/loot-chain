@@ -147,47 +147,48 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				>
 					Home
 				</NavLink>
+				{/* <div style={{paddingLeft: '40px',paddingRight:'20px'}}> */}
+
 				<div className={styles.wrapper}>
-					<NavLink
-						style={{ marginLeft: "auto" }}
-						className={styles.navlink}
-						href="/"
-						variant="text"
-					>
+					<NavLink className={styles.navlink} href="/" variant="text">
 						Home
 					</NavLink>
-					<div
-						className={styles.selectBox}
-						onClick={() => {
-							setIshovered(false);
-							setIsDexhover(false);
-							setIshover(false);
-							setIsExploreHover(!isExploreHover);
-						}}
-						ref={rotRef}
-						onMouseEnter={() => {
-							setIshovered(false);
-							setIsDexhover(false);
-							setIshover(false);
-							setIsExploreHover(true);
-						}}
-						aria-hidden="true"
-					>
-						<div className={styles.selectTitle}>
-							<p>Explore</p>
-							<img src={greenIcon} alt="icon" />
-						</div>
-						{isExploreHover && (
-							<ul className={styles.selector}>
-								<NavLink href="/ecosystem">Ecosystem</NavLink>
-								<NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
-								{/* <NavLink href="/ecosystem">Ecosystem</NavLink> */}
-							</ul>
-						)}
-					</div>
-					<NavLink className={styles.navlink} href="https://freemint.lootchain.com" variant="text">
-						Loot NFT Pad
+					<NavLink className={styles.navlink} href="https://games.lootchain.com/games">
+						Loot Console
 					</NavLink>
+
+					{/* <div
+              className={styles.selectBox}
+              onClick={() => {
+                setIshovered(false);
+                setIsDexhover(false);
+                setIshover(false);
+                setIsExploreHover(!isExploreHover);
+              }}
+              ref={rotRef}
+              onMouseEnter={() => {
+                setIshovered(false);
+                setIsDexhover(false);
+                setIshover(false);
+                setIsExploreHover(true);
+              }}
+              aria-hidden="true"
+            >
+              <div className={styles.selectTitle}>
+                <p>Explore</p>
+
+                <img src={greenIcon} alt="icon" />
+              </div>
+              {isExploreHover && (
+                <ul className={styles.selector}>
+                  <NavLink href="/ecosystem">Ecosystem</NavLink>
+                  <NavLink href="https://games.lootchain.com/games">Loot Console</NavLink>
+                </ul>
+              )}
+            </div> */}
+					{/* <NavLink className={styles.navlink} href="https://freemint.lootchain.com" variant="text">
+              Loot NFT Pad
+            </NavLink> */}
 					<div
 						className={styles.selectBox}
 						onClick={() => {
@@ -211,7 +212,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						</div>
 						{isHover && (
 							<ul className={styles.selector}>
-								<NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink>
+								{/* <NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink> */}
 								<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 								<NavLink href="https://bridge.lootchain.com/bridge">Bridge</NavLink>
 								<NavLink href="https://soswap.rai.finance/#/swap">Soswap</NavLink>
@@ -222,32 +223,32 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						)}
 					</div>
 					{/* <NavLink
-            // style={{ marginRight: "auto" }}
-            className={styles.navlink}
-            href="https://www.lootproject.com/"
-            variant="text"
-            >
-            Loot
-            </NavLink> */}
+              // style={{ marginRight: "auto" }}
+              className={styles.navlink}
+              href="https://www.lootproject.com/"
+              variant="text"
+              >
+              Loot
+              </NavLink> */}
 					{/* <a
-            style={{ textDecoration: 0 }}
-            className={styles.navlink}
-            href="/whitepaper/agld_whitepaper.pdf"
-            target="_blank"
-            >
-            Whitepaper
-          </a> */}
+              style={{ textDecoration: 0 }}
+              className={styles.navlink}
+              href="/whitepaper/agld_whitepaper.pdf"
+              target="_blank"
+              >
+              Whitepaper
+            </a> */}
 					{/* <NavLink className={styles.navlink} href="https://loot-talk.com/" variant="text">
-            Governance
-          </NavLink> */}
+              Governance
+            </NavLink> */}
 					{/* <NavLink
-            style={{ marginRight: "auto" }}
-            className={styles.navlink}
-            href="/about"
-            variant="text"
-            >
-            About
-          </NavLink> */}
+              style={{ marginRight: "auto" }}
+              className={styles.navlink}
+              href="/about"
+              variant="text"
+              >
+              About
+            </NavLink> */}
 					<div
 						className={styles.selectBox}
 						onClick={() => {
@@ -276,6 +277,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 								<NavLink href="/whitepaper/agld_whitepaper.pdf">Whitepaper</NavLink>
 								<NavLink href="https://www.certik.com/projects/adventure-gold">Audit</NavLink>
 								<NavLink href="https://www.lootproject.com/">Loot</NavLink>
+								<NavLink href="/ecosystem">Ecosystem</NavLink>
 								<NavLink href="/logo/AGLD-Loot-presskit.zip">
 									<div style={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
 										Press Kit <img src={iconDownload} alt="" />
@@ -285,7 +287,6 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						)}
 					</div>
 					<div
-						style={{ marginLeft: "auto" }}
 						onClick={() => {
 							setIshover(false);
 							setIsExploreHover(false);
@@ -357,6 +358,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						<span>{mobileNavigation.present ? "Close" : "Open"}</span>
 					</button>
 				</div>
+				{/* </div> */}
 				<Socials className={styles.socials} />
 			</div>
 			{mobileNavigation.defined && (

@@ -115,7 +115,7 @@ h3 {
 p {
   font-size: 0.88rem;
   margin-top: 0.5rem;
-  word-spacing: 0.2rem;
+  // word-spacing: 0.2rem;
 
   @include mixin.until(media.$sm) {
     font-size: 2.5rem;

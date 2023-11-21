@@ -5,12 +5,8 @@
 
 
 .list {
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: start;
+  display: flex;
   align-items: center;
-  grid-column-gap: 2.25rem;
-  width: fit-content;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -28,10 +24,13 @@
 
 .item {
   position: relative;
+  padding-right: 20px;
 }
 
 .link {
-  position: relative;
+  // position: relative;
+  padding-right: 20px;
+
 }
 
 .link {
@@ -49,7 +48,7 @@
 }
 
 .link svg {
-  width: 1rem;
+  // width: 1rem;
   color: #6E757C;;
   &:hover {
     color: rgba(var(--white), 0.6);
