@@ -41,15 +41,15 @@ const ICONS = {
 export const Socials: FC<ComponentType> = ({ className, withButton }) => {
 	return (
 		<div className={className}>
-			<ul className={styles.list}>
+			<div className={styles.list}>
 				{Object.keys(SOCIAL).map((key) => {
 					const subItem = SOCIAL[key];
 					return (
-						<li key={key} className={styles.item}>
-							<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="small">
-								{key}
-							</NavLink>
-						</li>
+						// <li key={key} className={styles.item}>
+						<NavLink className={styles.link} href={subItem} icon={ICONS[key]} size="small">
+							{key}
+						</NavLink>
+						// </li>
 					);
 				})}
 				{withButton && (
@@ -62,7 +62,7 @@ export const Socials: FC<ComponentType> = ({ className, withButton }) => {
 						Staking
 					</button>
 				)}
-			</ul>
+			</div>
 		</div>
 	);
 };

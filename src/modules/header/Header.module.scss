@@ -20,14 +20,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 var(--gutters);
+  height: 82px;
+  padding: 0 100px;
+  @include mixin.until(media.$sm) {
+    padding: 0 24px;
+  }
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  width: 600px;
   height: 50px;
   padding: 0 18px 0 30px;
   position: relative;
@@ -43,7 +48,7 @@
     background: transparent
   }
   .navlink {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .wrapper::after{
@@ -63,7 +68,7 @@
 }
 
 .logo {
-  width: 6.5rem;
+  width: 150px;
   color: rgba(var(--white), 1);
   z-index: 9;
   @include mixin.until(media.$sm) {
@@ -73,7 +78,7 @@
 
 .link {
   color: rgba(var(--white), 1);
-  margin-right: 3rem;
+  // margin-right: 3rem;
   &:hover {
     opacity: 0.8;
   }
@@ -86,7 +91,7 @@
   font-family: 'IMFePIrm';
   font-size: 14px;
   color: rgba(var(--white), 1);
-  margin-right: 3rem;
+  // margin-right: 3rem;
   cursor: pointer;
   &:hover {
     color: #A5FFBE;
@@ -103,7 +108,7 @@
 .selectBox {
   font-family: 'IMFePIrm';
   font-size: 14px;
-  margin-right: 3rem;
+  // margin-right: 3rem;
   position: relative;
   cursor: pointer;
   &:hover ul{
@@ -121,10 +126,10 @@
   margin-right: 8px;
   // font-size: 1.2rem;
   font-family: 'IMFePIrm';
-  font-size: 18px;
+  font-size: 14px;
   color: rgba(var(--white), 1);
   @include mixin.from(media.$lg) {
-    font-size: 18px;
+    font-size: 14px;
   }
   }
   & img {
@@ -139,7 +144,7 @@
     display: none!important;
   }
   @include mixin.from(media.$lg) {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -156,14 +161,14 @@
   & p {
     margin-top: 0;
     margin-right: 8px;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-family: 'IMFePIit';
     // font-style: italic;
     color: #213425;
     font-weight: 700;
     word-spacing: inherit;
     @include mixin.from(media.$lg) {
-      font-size: 13px;
+      // font-size: 13px;
     }
   }
   & img {
