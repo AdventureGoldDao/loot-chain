@@ -291,31 +291,31 @@ const bannerList = [
 		image: banner2,
 		title: "Land, Labor and Capitol (LLC)",
 	},
-	{
-		url: "https://games.lootchain.com/games/archloot",
-		image: banner3,
-		title: "Archloot",
-	},
+	// {
+	// 	url: "https://games.lootchain.com/games/archloot",
+	// 	image: banner3,
+	// 	title: "Archloot",
+	// },
 	{
 		url: "https://games.lootchain.com/games/craft",
 		image: banner4,
 		title: "LootCraft",
 	},
-	{
-		url: "https://games.lootchain.com/games/xLand",
-		image: banner5,
-		title: "X Land",
-	},
+	// {
+	// 	url: "https://games.lootchain.com/games/xLand",
+	// 	image: banner5,
+	// 	title: "X Land",
+	// },
 	{
 		url: "https://games.lootchain.com/games/GabbyWorld",
 		image: banner6,
 		title: "Gabby World",
 	},
-	{
-		url: "https://www.chaquer.xyz/",
-		image: banner7,
-		title: "Chaquer",
-	},
+	// {
+	// 	url: "https://www.chaquer.xyz/",
+	// 	image: banner7,
+	// 	title: "Chaquer",
+	// },
 	{
 		url: "https://www.leagueofthrones.com/",
 		image: banner8,
