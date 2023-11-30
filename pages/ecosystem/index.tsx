@@ -63,12 +63,12 @@ const gamesList = [
 		image: game12,
 		link: "https://llcgame.io/",
 	},
-	{
-		name: "Archloot",
-		des: `ArchLoot is a UGC P2E game that attempts to change the whole gamefi dynamics with its exceptional gameplay and unique infrastructure behind NFT assets. Basically a player assemble his/her own avatar with different parts (NFTs with a diversity of rarity, stats, looks and skills), then start the adventure. Game modes include PvE farm, group dungeons, 1 on 1 PvP, 3 on 3, clan wars, etc. The protocol behind the nft asset, EIP 4985 and BEP 129, which derives from loot, allows in game prop/parts level up, skill change, and interoperability of a single NFT.`,
-		image: game13,
-		link: "https://archloot.com/",
-	},
+	// {
+	// 	name: "Archloot",
+	// 	des: `ArchLoot is a UGC P2E game that attempts to change the whole gamefi dynamics with its exceptional gameplay and unique infrastructure behind NFT assets. Basically a player assemble his/her own avatar with different parts (NFTs with a diversity of rarity, stats, looks and skills), then start the adventure. Game modes include PvE farm, group dungeons, 1 on 1 PvP, 3 on 3, clan wars, etc. The protocol behind the nft asset, EIP 4985 and BEP 129, which derives from loot, allows in game prop/parts level up, skill change, and interoperability of a single NFT.`,
+	// 	image: game13,
+	// 	link: "https://archloot.com/",
+	// },
 	{
 		name: "LootCraft",
 		des: `LootCraft is a fully on-chain 3D voxel world, where every block of the virtual space exists as part of the blockchain. Every action and interaction within the world, whether it's mining resources, crafting items, or building structures, occurs as a series of transactions on the Lootchain.`,
@@ -87,12 +87,12 @@ const gamesList = [
 		image: game18,
 		link: "https://www.bladedao.games/",
 	},
-	{
-		name: "Chaquer",
-		des: `Chaquer is a fully on-chain real time strategy game. Chaquer's design is inspired by the Age of Empires series. `,
-		image: game23,
-		link: "http://chaquer.xyz",
-	},
+	// {
+	// 	name: "Chaquer",
+	// 	des: `Chaquer is a fully on-chain real time strategy game. Chaquer's design is inspired by the Age of Empires series. `,
+	// 	image: game23,
+	// 	link: "http://chaquer.xyz",
+	// },
 	{
 		name: "League of Thrones",
 		des: `League of Thrones is a Modular On-Chain Strategy Game Played in DAOs.`,
