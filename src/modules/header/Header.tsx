@@ -212,7 +212,7 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 						</div>
 						{isHover && (
 							<ul className={styles.selector}>
-								{/* <NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink> */}
+								<NavLink href="https://mainnetv1.lootchain.com">Loot Info</NavLink>
 								<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 								<NavLink href="https://bridge.lootchain.com/bridge">Bridge</NavLink>
 								<NavLink href="https://soswap.rai.finance/#/swap">Soswap</NavLink>

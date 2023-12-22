@@ -99,9 +99,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 					</NavLink>
 				</li>
 				<ul className={styles.childUl}>
-					{/* <li>
-						<NavLink href="https://mainnet.lootchain.com/">Loot Chain</NavLink>
-					</li> */}
+					<li>
+						<NavLink href="https://mainnetv1.lootchain.com">Loot Info</NavLink>
+					</li>
 					<li>
 						<NavLink href="https://explorer.lootchain.com">Loot Scan</NavLink>
 					</li>
