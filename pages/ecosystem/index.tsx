@@ -61,9 +61,9 @@ const gamesList = [
 	},
 	{
 		name: "Dice Game",
-		des: `Coming soon`,
+		des: `Simple Fun dice rolling game, complete 6 moves to get a bonus, good luck!`,
 		image: game26,
-		link: "",
+		link: "https://lootdice.xyz/",
 	},
 	{
 		name: "Mighty Magic HEROES",

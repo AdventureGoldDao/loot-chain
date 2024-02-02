@@ -59,6 +59,8 @@ import { Socials } from "../../modules/header/ui/navigation/Navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ecosystemList } from "../../../pages/ecosystem";
+import game25 from "./assets/ancientForest.png";
+import game26 from "./assets/dice.png";
 type HomeType = {};
 const list1 = [
 	{
@@ -281,6 +283,18 @@ const OS_reverse_arr = [
 ];
 
 const bannerList = [
+	{
+		title: "Ancient Forest",
+		// des: `Coming soon`,
+		image: game25,
+		url: "",
+	},
+	{
+		title: "Dice Game",
+		// des: `Simple Fun dice rolling game, complete 6 moves to get a bonus, good luck!`,
+		image: game26,
+		url: "https://lootdice.xyz/",
+	},
 	{
 		url: "https://games.lootchain.com/games/magic",
 		image: banner1,
@@ -592,7 +606,9 @@ export const Home: FC<HomeType> = () => {
 											{bannerList.map((item) => (
 												<div
 													className={`swiper-slide ${styles.swiperBox}`}
-													onClick={() => window.open(item.url, "_blank")}
+													onClick={() => {
+														openLink(item.url);
+													}}
 												>
 													<div className={styles.swiperBox}>
 														<div className={styles.swiperBox_image}>
