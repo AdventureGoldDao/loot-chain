@@ -27,6 +27,8 @@ import game21 from "./images/game21.jpg";
 import game22 from "./images/game22.jpg";
 import game23 from "./images/game23.png";
 import game24 from "./images/game24.jpg";
+import game25 from "./images/ancientForest.png";
+import game26 from "./images/dice.png";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -51,6 +53,18 @@ const toolsList = [
 	},
 ];
 const gamesList = [
+	{
+		name: "Ancient Forest",
+		des: `Coming soon`,
+		image: game25,
+		link: "",
+	},
+	{
+		name: "Dice Game",
+		des: `Coming soon`,
+		image: game26,
+		link: "",
+	},
 	{
 		name: "Mighty Magic HEROES",
 		des: `Welcome to the exciting world of "Mighty Magic"! In this captivating project, users have the opportunity to unleash their creativity and strategic prowess by participating in the minting and acquisition of unique Non-Fungible Tokens (NFTs) representing mighty heroes. These heroes are destined for epic battles, where their abilities, strengths, and weaknesses come into play.`,
@@ -194,7 +208,9 @@ export const ecosystemList = [
 
 export function Card({ item }) {
 	const goToLink = (link) => {
-		window.open(link);
+		if (link) {
+			window.open(link);
+		}
 	};
 
 	return (

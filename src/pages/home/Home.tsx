@@ -381,6 +381,11 @@ export const Home: FC<HomeType> = () => {
 		// history.push('/ecosystem')
 		window.open("/ecosystem");
 	};
+	const openLink = (link) => {
+		if (link) {
+			window.open(link);
+		}
+	};
 	useEffect(() => {
 		[1, 2, 3, 4, 5].map((item) => {
 			console.log(`lineBox${item}`);
@@ -679,7 +684,9 @@ export const Home: FC<HomeType> = () => {
 										{ecosystemList.map((item) => (
 											<div
 												className={`swiper-slide ${styles.swiperBox}`}
-												onClick={() => window.open(item.link, "_blank")}
+												onClick={() => {
+													openLink(item.link);
+												}}
 											>
 												<div className={styles.swiperBox}>
 													<div className={styles.swiperBox_image}>
