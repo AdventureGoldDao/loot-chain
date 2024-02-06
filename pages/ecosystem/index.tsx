@@ -29,6 +29,7 @@ import game23 from "./images/game23.png";
 import game24 from "./images/game24.jpg";
 import game25 from "./images/ancientForest.png";
 import game26 from "./images/dice.png";
+import game27 from "./images/dwf.png";
 
 import styles from "./styles.module.scss";
 const toolsList = [
@@ -198,6 +199,14 @@ const guildsList = [
 		link: "https://chedao.notion.site/AW-Research-Collection-234dcfb1fc4441f9b0c14725b01fb921",
 	},
 ];
+const investmentList = [
+	{
+		name: "DWF Labs",
+		des: `Global digital asset market maker and multi-stage web3 investment firm.`,
+		image: game27,
+		link: "https://www.dwf-labs.com",
+	},
+];
 export const ecosystemList = [
 	...toolsList,
 	...gamesList,
@@ -263,6 +272,10 @@ export function Ecosystem() {
 									<span className={styles.item_name}>Guilds/Communities</span>
 									<span className={styles.item_num}>{guildsList.length}</span>
 								</a>
+								<a href="#investment" className={styles.nav_item}>
+									<span className={styles.item_name}>Investment</span>
+									<span className={styles.item_num}>{investmentList.length}</span>
+								</a>
 							</div>
 							<div className={styles.form_box} onClick={goToGoogleForm}>
 								<img className={styles.icon_love} src={iconLove} alt="icon"></img>
@@ -321,6 +334,16 @@ export function Ecosystem() {
 									<div className={styles.category_title}>Guilds/Communities</div>
 									<div className={styles.category_list}>
 										{guildsList.map((item) => (
+											<Card item={item}></Card>
+										))}
+									</div>
+								</div>
+							)}
+							{guildsList.length > 0 && (
+								<div id="investment" className={styles.category}>
+									<div className={styles.category_title}>Investment</div>
+									<div className={styles.category_list}>
+										{investmentList.map((item) => (
 											<Card item={item}></Card>
 										))}
 									</div>
