@@ -112,6 +112,9 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 						<NavLink href="https://soswap.rai.finance/#/swap">Soswap</NavLink>
 					</li>
 					<li>
+						<NavLink href="https://market.adventuregold.org/">Market</NavLink>
+					</li>
+					<li>
 						<NavLink href="https://loot-chain.gitbook.io/loot-chain-documentation/getting-started/overview">
 							Documentation
 						</NavLink>
