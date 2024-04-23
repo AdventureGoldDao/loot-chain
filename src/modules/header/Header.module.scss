@@ -21,9 +21,10 @@
   justify-content: space-between;
   align-items: center;
   height: 82px;
-  padding: 0 100px;
+  padding: 0 80px;
   @include mixin.until(media.$sm) {
     padding: 0 24px;
+    height: 72px;
   }
 }
 
@@ -32,7 +33,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 600px;
+  width: 800px;
   height: 50px;
   padding: 0 18px 0 30px;
   position: relative;

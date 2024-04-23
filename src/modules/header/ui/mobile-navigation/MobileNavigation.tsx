@@ -20,6 +20,7 @@ import {
 } from "../../../../ui/icons/Icons";
 import React from "react";
 import { useWindowSize } from "../../../../hooks/use-window-size";
+import iconHot from "../../../../pages/home/assets/hot.svg";
 
 // export type LinkType = {
 //  link: string;
@@ -69,6 +70,11 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 				<li className={styles.item}>
 					<NavLink className={classNames(styles.link)} href={"/"}>
 						Home
+					</NavLink>
+				</li>
+				<li className={styles.item}>
+					<NavLink className={classNames(styles.link)} href="https://games.lootchain.com/games">
+						Adventure Forge <img src={iconHot}></img>
 					</NavLink>
 				</li>
 				<li className={styles.item}>
@@ -150,7 +156,7 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 					</li>
 				</ul>
 			</ul>
-			{/* <ul className={styles.list}>
+			<ul className={styles.list}>
 				{keys.map((key) => {
 					// const lastItem = index === keys.length - 1;
 					return (
@@ -163,12 +169,12 @@ export const MobileNavigation: FC<ComponentType> = ({ className, clickClose, sid
 								size="large"
 								color="white"
 							>
-								{key}
+								{/* {key} */}
 							</NavLink>
 						</li>
 					);
 				})}
-			</ul> */}
+			</ul>
 			{sideEffect}
 		</div>
 	);

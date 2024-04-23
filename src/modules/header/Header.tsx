@@ -19,6 +19,7 @@ import dexIcon1 from "../../pages/home/assets/dex-icon1.png";
 import dexIcon2 from "../../pages/home/assets/dex-icon2.svg";
 import iconOutside from "../../pages/home/assets/outsideLink.svg";
 import iconDownload from "../../pages/home/assets/download.svg";
+import iconHot from "../../pages/home/assets/hot.svg";
 type HeaderType = {};
 
 const dexList = [
@@ -152,6 +153,9 @@ export const Header: FC<HeaderType & MaybeWithClassName> = ({ className }) => {
 				<div className={styles.wrapper}>
 					<NavLink className={styles.navlink} href="/" variant="text">
 						Home
+					</NavLink>
+					<NavLink className={styles.navlink} href="https://adventureforge.xyz/">
+						Adventure Forge <img src={iconHot}></img>
 					</NavLink>
 					<NavLink className={styles.navlink} href="https://games.lootchain.com/games">
 						Loot Console
