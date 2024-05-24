@@ -8,7 +8,7 @@ export const FAQS_PATH = "";
 export const FACEBOOK_PATH = "";
 export const YOUTUBE_PATH = "";
 export const DISCORD_PATH = "https://discord.com/invite/WMXwkcGnNk";
-export const MIRROR_PATH = "https://mirror.xyz/agld.eth";
+export const MIRROR_PATH = "https://mirror.xyz/aglddao.eth";
 export const GITHUB_PATH = "https://github.com/AdventureGoldDao/loot-chain";
 
 export const CONTACT = "";
