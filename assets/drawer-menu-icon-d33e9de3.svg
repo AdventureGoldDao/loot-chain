@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" data-name="=">
+  <rect width="20" height="2" fill="#e59d4b" data-name="사각형 1" rx="1"/>
+  <rect width="20" height="2" fill="#e59d4b" data-name="사각형 2" rx="1" transform="translate(0 7)"/>
+  <rect width="20" height="2" fill="#e59d4b" data-name="사각형 3" rx="1" transform="translate(0 14)"/>
+</svg>
